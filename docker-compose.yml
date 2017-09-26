@@ -18,6 +18,8 @@ maria_db:
   environment:
     MYSQL_ROOT_PASSWORD: toto
     MYSQL_DATABASE: sqli
+  volumes:
+    - $PWD/database/sql:/docker-entrypoint-initdb.d
 phpmyadmin:
   image: phpmyadmin/phpmyadmin
   links:
