@@ -1,0 +1,31 @@
+httpd:
+  build: $PWD
+  links:
+   - maria_db:db
+  ports:
+   - 8080:80
+  volumes:
+   - $PWD:/var/www/html
+  environment:
+    DB_ENV_MYSQL_USER: root
+    DB_ENV_MYSQL_PASSWORD: docker
+    BUILD_STAGE: docker-compose
+maria_db:
+  container_name: mariadb
+  image: mariadb
+  expose:
+   - "3306"
+  environment:
+    MYSQL_ROOT_PASSWORD: toto
+    MYSQL_DATABASE: sqli
+phpmyadmin:
+  image: phpmyadmin/phpmyadmin
+  links:
+   - maria_db:db
+  ports:
+   - 8181:80
+  environment:
+    PMA_USER: root
+    PMA_PASSWORD: toto
+composer:
+  image: composer/composer
