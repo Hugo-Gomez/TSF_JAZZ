@@ -29,3 +29,6 @@ phpmyadmin:
     PMA_PASSWORD: toto
 composer:
   image: composer/composer
+  command: install
+  volumes:
+   - $PWD:/var/www/html

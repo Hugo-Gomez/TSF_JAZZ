@@ -6,3 +6,4 @@ RUN docker-php-ext-install pdo pdo_mysql
 RUN apt-get install -y openssl
 RUN docker-php-ext-install mbstring
 RUN docker-php-ext-install tokenizer
+RUN docker-php-ext-install composer
