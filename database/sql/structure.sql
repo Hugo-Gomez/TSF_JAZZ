@@ -35,7 +35,7 @@ ALTER TABLE podcast_item ADD CONSTRAINT FK_podcast_item_id_podcast FOREIGN KEY (
 # Table: Program
 #------------------------------------------------------------
 
-CREATE TABLE Program(
+CREATE TABLE program(
         id              int (11) Auto_increment  NOT NULL ,
         thumbnail_image Varchar (25) NOT NULL ,
         title           Varchar (25) NOT NULL ,
@@ -50,7 +50,7 @@ CREATE TABLE Program(
 # Table: Jazz_News
 #------------------------------------------------------------
 
-CREATE TABLE Jazz_News(
+CREATE TABLE jazz_news(
         id          int (11) Auto_increment  NOT NULL ,
         news_date   Date ,
         title       Varchar (25) NOT NULL ,
@@ -63,7 +63,7 @@ CREATE TABLE Jazz_News(
 # Table: Jazz_Blog
 #------------------------------------------------------------
 
-CREATE TABLE Jazz_Blog(
+CREATE TABLE jazz_blog(
         id              int (11) Auto_increment  NOT NULL ,
         thumbnail_image Varchar (25) ,
         author          Varchar (25) NOT NULL ,
@@ -76,7 +76,7 @@ CREATE TABLE Jazz_Blog(
 # Table: Auditors_treasure
 #------------------------------------------------------------
 
-CREATE TABLE Auditors_treasure(
+CREATE TABLE auditors_treasure(
         id                int (11) Auto_increment  NOT NULL ,
         last_name         Varchar (25) NOT NULL ,
         first_name        Varchar (25) NOT NULL ,
