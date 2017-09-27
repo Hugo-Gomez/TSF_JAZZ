@@ -80,7 +80,7 @@
             <div class="content">
                 <div class="title m-b-md">
                     This is the INDEX page<br>
-                    {{ $jazzblog[0]->Hugo }}<br>
+                    {{ $jazzblog[0]->author }}<br>
                 </div>
 
                 <div class="links">
