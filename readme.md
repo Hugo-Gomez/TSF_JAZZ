@@ -1,6 +1,13 @@
-To access to routing system, url is : localhost:8080/server.php/'something'
+To run the website, it's pretty easy. Just open the TSF_JAZZ folder in your terminal and run this command :
+docker-compose up -d
 
-List of routes :
+To access to the website, url is : localhost:8080/server.php/
+To acces to the phpmyadmin interface, url is : localhost:8181
+
+If you want to save some lines in tables of the database, you must run this command before killing containers :
+'Manu's command'
+
+<h3>List of routes :<h3>
 
 - ('/') Index -> Homepage // view called == welcome
 - ('program') Program -> Show program page // view called == program
