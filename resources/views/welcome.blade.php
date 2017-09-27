@@ -80,7 +80,9 @@
             <div class="content">
                 <div class="title m-b-md">
                     This is the INDEX page<br>
-                    {{ $jazzblog[0]->author }}<br>
+                    @foreach ($jazzblog as $jazzs)
+                        {{ $jazzs->author }}<br>
+                    @endforeach
                 </div>
 
                 <div class="links">
