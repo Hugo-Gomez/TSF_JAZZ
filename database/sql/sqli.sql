@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : db
--- Généré le :  mar. 26 sep. 2017 à 16:55
+-- Généré le :  mer. 27 sep. 2017 à 08:29
 -- Version du serveur :  10.2.8-MariaDB-10.2.8+maria~jessie
 -- Version de PHP :  7.0.21
 
@@ -162,7 +162,27 @@ INSERT INTO `podcast_item` (`id`, `title`, `author`, `file`, `date_`, `duration`
 (41, 'Jean Moulin, une pièce de jean-Marie Besset', 'Thierry Lebon', 'podcasts/COUPDEPROJECTEUR 092217.mp3', '2017-09-22 00:00:00', '03:16', 8),
 (42, 'Niels, un livre d\'Alexis Ragougneau', 'Laurent Sapir', 'podcasts/COUPDEPROJECTEUR_210917.mp3', '2017-09-21 00:00:00', '03:16', 8),
 (43, 'Mon Garçon, un film de Christian Carion', 'Thierry Lebon', 'podcasts/COUPDEPROJECTEUR 200917.mp3', '2017-09-20 00:00:00', '04:00', 8),
-(44, 'Panama Al Brown, une bande dessinée d\'Alex W. Inker', 'Laurent Sapir', 'podcasts/COUPDEPROJECTEUR 150917.mp3', '2017-09-15 00:00:00', '02:43', 8);
+(44, 'Panama Al Brown, une bande dessinée d\'Alex W. Inker', 'Laurent Sapir', 'podcasts/COUPDEPROJECTEUR 150917.mp3', '2017-09-15 00:00:00', '02:43', 8),
+(45, 'Bon Temps Rouler : \"House\"', 'Jean-Jacques Milteau', 'podcasts/BTR HOUSE 120917.mp3', '2017-09-27 08:05:10', '50:37', 9),
+(46, 'Bon Temps Rouler : \"Stevie Winwood Live\"', 'Jean-Jacques Milteau', 'podcasts/BTR_STEVIEWINWOODLIVE_050917.mp3', '2017-09-05 00:00:00', '50:37', 9),
+(47, 'Bon Temps Rouler : \"Bonne Humeur\"', 'Jean-Jacques Milteau', 'podcasts/BTR_2017-06-27.mp3', '2017-06-27 00:00:00', '50:37', 9),
+(48, 'Bon Temps Rouler : \"Expression\"', 'Jean-Jacques Milteau', 'podcasts/BTR_2017-06-20.mp3', '2017-06-20 00:00:00', '50:37', 9),
+(49, 'Bon Temps Rouler : \"Hi / Don Bryant\"', 'Jean-Jacques Milteau', 'podcasts/BTR_2017-06-13.mp3', '2017-06-13 00:00:00', '50:37', 9),
+(50, 'Jamie Cullum Show : Focus sur le batteur Richard Spaven', 'Laure Albernhe', 'podcasts/JCS PART_150917.mp3', '2017-09-15 00:00:00', '54:41', 10),
+(51, 'Jamie Cullum Show', 'Laure Albernhe', 'podcasts/JCS_2017-06-30.mp3', '2017-06-30 00:00:00', '43:45', 10),
+(52, 'Jamie Cullum Show', 'Laure Albernhe', 'podcasts/JCS_2017-06-23.mp3', '2017-06-23 00:00:00', '41:45', 10),
+(53, 'Jamie Cullum Show', 'Laure Albernhe', 'podcasts/JCS_2017-06-16.mp3', '2017-06-16 00:00:00', '43:37', 10),
+(54, 'Jamie Cullum Show', 'Laure Albernhe', 'podcasts/JCS_2017-06-09.mp3', '2017-06-09 00:00:00', '45:10', 10),
+(55, 'Voodoo et Compagnie, épisode 1 : La Nouvelle Orléans', 'Jean-Charles Doukhan', 'podcasts/VOODOOEPISODE1.mp3', '2017-09-08 00:00:00', '27:32', 11),
+(56, 'Voodoo et Compagnie, épisode 2 : Les Blacks Panthers', 'Jean-Charles Doukhan', 'podcasts/20h de tsf voodoo et compagnie episode 2 les blacks panthers.mp3', '2017-09-08 00:00:00', '28:25', 11),
+(57, 'Voodoo et Compagnie, épisode 3 : Jamaïque', 'Jean-Charles Doukhan', 'podcasts/20h de tsf voodoo et compagnie episode 3 haiti.mp3', '2017-09-08 00:00:00', '28:15', 11),
+(58, 'Voodoo et Compagnie, épisode 4 : Haïti', 'Jean-Charles Doukhan', 'podcasts/20h de tsf voodoo et compagnie episode 4 haiti.mp3', '2017-09-27 08:22:14', '29:09', 11),
+(59, 'Voodoo et Compagnie, épisode 5 : L\'Afrique du Sud', 'Jean-Charles Doukhan', 'podcasts/20h de tsf voodoo et compagnie episode 5 l afrique du sud.mp3', '2017-09-27 08:22:36', '29:14', 11),
+(60, 'La Chronique Hi-Fi: \"L\'Enceinte Abscisse\"', 'Laure Albernhe', 'podcasts/CHRONIQUE-HIFI_2806.mp3', '2017-06-28 00:00:00', '02:09', 12),
+(61, 'La Chronique Hi-Fi : \"NuPrime Audio\"', 'Laure Albernhe', 'podcasts/CHRONIQUE-HIFI_2106.mp3', '2017-06-21 00:00:00', '02:17', 12),
+(62, 'La Chronique Hi-Fi : \"ADL GT40 Alpha\"', 'Laure Albernhe', 'podcasts/CHRONIQUE-HIFI_1406.mp3', '2017-06-14 00:00:00', '02:18', 12),
+(63, 'La Chronique Hi-Fi : \"Le FiiO X5 III\"', 'Laure Albernhe', 'podcasts/CHRONIQUE-HIFI_0806.mp3', '2017-06-07 00:00:00', '02:13', 12),
+(64, 'La Chronique Hi-Fi : \"Le Nano iOne iFi Audio\"', 'Laure Albernhe', 'podcasts/CHRONIQUE-HIFI_0106.mp3', '2017-05-31 00:00:00', '02:26', 12);
 
 -- --------------------------------------------------------
 
@@ -252,7 +272,7 @@ ALTER TABLE `podcast`
 -- AUTO_INCREMENT pour la table `podcast_item`
 --
 ALTER TABLE `podcast_item`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=65;
 
 --
 -- AUTO_INCREMENT pour la table `program`
