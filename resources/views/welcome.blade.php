@@ -79,7 +79,8 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    This is the INDEX page
+                    This is the INDEX page<br>
+                    {{ $jazzblog[0]->Hugo }}<br>
                 </div>
 
                 <div class="links">
