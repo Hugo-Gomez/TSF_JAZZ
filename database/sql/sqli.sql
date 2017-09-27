@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : db
--- Généré le :  mer. 27 sep. 2017 à 08:29
+-- Généré le :  mer. 27 sep. 2017 à 09:51
 -- Version du serveur :  10.2.8-MariaDB-10.2.8+maria~jessie
 -- Version de PHP :  7.0.21
 
@@ -48,10 +48,10 @@ CREATE TABLE `auditors_treasure` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `jazz_blog`
+-- Structure de la table `blog`
 --
 
-CREATE TABLE `jazz_blog` (
+CREATE TABLE `blog` (
   `id` int(11) NOT NULL,
   `thumbnail_image` varchar(25) DEFAULT NULL,
   `author` varchar(25) NOT NULL,
@@ -61,15 +61,31 @@ CREATE TABLE `jazz_blog` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `jazz_news`
+-- Structure de la table `news`
 --
 
-CREATE TABLE `jazz_news` (
+CREATE TABLE `news` (
   `id` int(11) NOT NULL,
   `news_date` date DEFAULT NULL,
-  `title` varchar(25) NOT NULL,
-  `description` varchar(25) NOT NULL
+  `title` varchar(50) NOT NULL,
+  `description` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `news`
+--
+
+INSERT INTO `news` (`id`, `news_date`, `title`, `description`) VALUES
+(1, '2017-09-27', 'Swing again à Moscou', 'La ville de Saint-Petersbourg va accueillir, les 17 et 18 novembre, une grande conférence sur le jazz présentée par les organisateurs comme une première. Sous l\'égide du ministère russe de la Culture, cet événement, baptisé \"Jazz Across Borders\", devrait notamment valoriser les jeunes talents de la scène jazzistique russe devant un parterre de professionnels et de directeurs de grands festivals internationaux.'),
+(2, '2017-09-27', 'Jazz à St-Nom-la-Bretèche', 'La 2e édition du festival Jazz à Saint-Nom-la-Bretèche, dans les Yvelines, aura lieu les samedis 7 et 14 octobre. Le premier week-end, c\'est le pianiste Franck Avitabile qui se produira tandis que la journée du 14 devrait valoriser Laurent Cugny et son Gil Evans Paris Workshop.'),
+(3, '2017-09-26', 'Rémi Panossian fait appel à ELYX', 'Le trio de Rémi Panossian, RP3, revient dans l\'actualité discographique. Leur nouvel opus,Morning Smile, sortira le 20 octobre sur le label Jazz Family avec notamment un concert trois jours plus tôt, le 17, au Sunside dans le cadre du festival Jazz sur Seine à Paris. Le groupe s\'est par ailleurs associé à Yacine Ait Kaci, le créateur de ELYX, ce joyeux petit bonhomme créé sur Internet et devenu ambassadeur virtuel de l\'ONU, pour donner naissance à un spectacle visuel qui accompagnera leurs prestations.'),
+(4, '2017-09-26', 'Nouvelle tournée pour The Bridge', 'Tournée hexagonale pour Twins, un groupe de musiciens français et de Chicago qui réunit les saxophonistes Stéphane Payen et Fred Jackson Jr ainsi que les batteurs Makaya McCraven et Edward Perraud. Quartet tout en ébullition (double sax et double drums...) que l\'on pourra notamment découvrir le 5 octobre au Carré Bleu à Poitiers, le 10 octobre au Petit Faucheux, à Tours, et le 16 à la Dynamo de Pantin avec la participation du vocaliste Mike Ladd... Une tournée qui entre dans le cadre de l\'opération \"The Bridge\", cette passerelle permanente entre la France et Chicago initiée par Alexandre Pierrepont,en partenariat avec l\'ambassade des Etats-Unis en France.'),
+(5, '2017-09-25', 'Thomas et David Enhco ont perdu leur aïeule', 'On a appris la nuit dernière le décès de Gisèle Casadesus, doyenne des comédiennes. Elle avait 103 ans. Sociétaire de la Comédie Française, Gisèle Casadesus était la mère du chef d’orchestre Jean-Claude Casadesus et l’arrière grand-mère de deux musiciens de jazz qui nous sont chers, le pianiste Thomas Ehnco et le trompettiste David Enhco.'),
+(6, '2017-09-25', 'Le Rhino Jazz Festival célèbre David Bowie', 'La 39e édition du Rhino Jazz Festival, créé autour de Rive-de-Gier, dans La Loire, aura comme fil conducteur cette année David Bowie. Ce sera du 5 au 29 octobre et pour l\'occasion, l\'ancien directeur de l\'Orchestre National de Jazz, Daniel Yvinec ,devrait assurer la direction artistique de trois soirées différentes avec notamment, le 21 octobre, à Saint-Etienne, la présence de Donny McCaslin, Mark Guiliana, Tim Lefebvre et Jason Lindner qui avaient collaboré avec Bowie sur son dernier album, Black Star'),
+(7, '2017-09-24', 'Le chanteur soul Charles Bradley est décédé', 'C\'est sa maison de disques, Daptone Records, qui a annoncé ce samedi le décès à 68 ans du chanteur soul Charles Bradley des suites d\'un cancer. En novembre 2016, déjà, le même label annonçait la disparition de Sharon Jones... Né en Floride, Charles Bradley avait grandi à Brooklyn, découvert la musique de James Brown, et véritablement lancé sa carrière en 2001 avec l\'album No Time for daydreaming, rapidement suivi, en 2013, par Victim of Love. Son dernier disque, Changes, était paru l\'an passé.'),
+(8, '2017-09-22', 'Une soirée éclectique au Vésinet', 'Le Théâtre du Vésinet, dans les Yvelines, proposera une grande soirée le vendredi 6 octobre pour fêter les 20 ans du Jazz Club de la Boucle, situé dans la même ville. Au programme, une partie de Boogie-Woogie enflammée avec notamment un maître du genre, Jean-Paul Amouroux, un hommage à Django Reinhardt avec Claude Tissendier et un orchestre New Orleans, le Mem\'Ory septet.'),
+(9, '2017-09-22', 'Le nouveau projet d\'Olivier Bogé', 'Après deux albums qui ne sont pas passés inaperçus, \"The World Begins Today et Expanded Places, le multi-instrumentiste Olivier Bogé s\'est lancé dans un nouveau projet en partenariat avec le label participatif français Jazz & People. Dans When Ghosts Were Young, son nouvel opus pour lequel un appel aux dons vient d\'être lancé sur la plateforme KissKissBankBank, Olivier Bogé a surtout travaillé la guitare électrique même si l\'on entendra aussi au saxophone et au piano, avec toujours le désir de dissiper des frontières qui riment parfois trop souvent avec œillères entre jazz, folk, rock et musique classique.'),
+(10, '2017-09-21', 'Mavis Staples repart au combat', 'Monument vivant du chant soul/gospel et Rhythm & Blues de Chicago, Mavis Staples vient d\'annoncer pour le 17 novembre la sortie d\'un nouvel album, \"If All I Was Was Black\". A 78 ans passés, et alors qu\'elle avait illuminé de sa présence la dernière édition du Cahors Blues Festival, la chanteuse promet un disque fortement engagé... Peut-être dans la lignée de ce qu\'a fait récemment Mightmy Mo Rodgers en baptisant un morceau \"Charlottesville Blues\" après les événements de Charlottesville à la mi-août aux Etats-Unis.');
 
 -- --------------------------------------------------------
 
@@ -210,15 +226,15 @@ ALTER TABLE `auditors_treasure`
   ADD PRIMARY KEY (`id`);
 
 --
--- Index pour la table `jazz_blog`
+-- Index pour la table `blog`
 --
-ALTER TABLE `jazz_blog`
+ALTER TABLE `blog`
   ADD PRIMARY KEY (`id`);
 
 --
--- Index pour la table `jazz_news`
+-- Index pour la table `news`
 --
-ALTER TABLE `jazz_news`
+ALTER TABLE `news`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -251,16 +267,16 @@ ALTER TABLE `auditors_treasure`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT pour la table `jazz_blog`
+-- AUTO_INCREMENT pour la table `blog`
 --
-ALTER TABLE `jazz_blog`
+ALTER TABLE `blog`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT pour la table `jazz_news`
+-- AUTO_INCREMENT pour la table `news`
 --
-ALTER TABLE `jazz_news`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `news`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT pour la table `podcast`
