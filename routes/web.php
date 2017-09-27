@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-	$jazzblog = DB::table('Jazz_Blog')->get();
+	$jazzblog = DB::table('blog')->get();
     return view('welcome', compact('jazzblog'));
 });
 
