@@ -79,7 +79,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    This is the INDEX page
                 </div>
 
                 <div class="links">

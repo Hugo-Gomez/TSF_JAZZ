@@ -15,7 +15,38 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('program', function () {
+    return view('program');
+});
+
+Route::get('jazzenda', function () {
+    return view('jazzenda');
+});
+
+Route::get('podcast', function () {
+    return view('podcast');
+});
+
+Route::get('jazzblog', function () {
+    return view('jazzblog');
+});
+
+Route::get('audtre', function () {
+    return view('audtre');
+});
+
+Route::get('trackhist', function () {
+    return view('trackhist');
+});
+
+Route::get('media', function () {
+    return view('media');
+});
 
 Route::get('about', function () {
-    return view('about', ["name" => "Hugo"]);
+    return view('about');
+});
+
+Route::get('contact', function () {
+    return view('contact');
 });
