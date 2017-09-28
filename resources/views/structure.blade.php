@@ -177,12 +177,19 @@
               <div class="sidebar-content">
                 <!-- Titre à donner (partie bleue à modif) -->
                 <div class="sidebar-top group">
-                  <p>Module de Pub</p>
+                  <p>Actualités</p>
                 </div>
                 <!-- Contenu ici -->
-                <div id="alxposts-3" class="widget widget_alx_posts">
-                  <h3>Ici module de pub et d'autres</h3>
+                <div id="alxposts-1" class="widget widget_alx_posts">
+                  <h3>Derniers Podcasts</h3>
+                  <p> Ici on rajoutera les podcasts </p>
                 </div>
+
+                <div id="alxposts-2" class="widget widget_alx_posts">
+                  <h3>Derniers Jazzblogs</h3>
+                  <p> Ici on rajoutera les jazzblogs </p>
+                </div>
+
               </div>
             </div>
             <!-- Fin du module à gauche -->
@@ -194,20 +201,22 @@
               <div class="sidebar-content">
                 <!-- Titre à donner (partie verte à modif) -->
                 <div class="sidebar-top group">
-                  <p>More</p>
+                  <p>Publicité</p>
                 </div>
                 <!-- Contenu ici -->
-                <div id="alxposts-2" class="widget widget_alx_posts pub">
+                <div id="alxposts-1" class="widget widget_alx_posts pub">
 
                   <a href="http://bit.ly/QRA_QwestTV" target="_blank"><img src="../public/img/BANNER3_v5.gif" alt=""></a>
 
                 </div>
-                <div id="alxposts-2" class="widget widget_alx_posts ">
 
-                  <p> Ici on pourra mettre liste des fréquences par exemple </p>
-                  
+                <div id="alxposts-2" class="widget widget_alx_posts ">
+                  <h3>Liste des fréquences</h3>
+                  <p> Ici on rajoutera les fréquences (à voir) </p>
                 </div>
+
               </div>
+
             </div>
             <!-- Fin du module de gauche-->
           </div>
@@ -230,7 +239,7 @@
 
             <div class="footer-widget-1 grid one-third ">
               <div id="recent-posts-3" class="widget widget_recent_entries">
-                <h3>Recent Posts</h3>
+                <h3>Les dernières News</h3>
                 <ul>
                   <li>
                     <a href="2013/10/gabrielle-aplin-with-the-power-of-love/index.html">Gabrielle Aplin with The Power Of Love</a>
@@ -251,7 +260,7 @@
 
             <div class="footer-widget-2 grid one-third ">
               <div id="recent-comments-3" class="widget widget_recent_comments">
-                <h3>Recent Comments</h3>
+                <h3>Communautés</h3>
                 <ul id="recentcomments">
                   <li class="recentcomments"><span class="comment-author-link">Alexander</span> on <a href="2013/10/take-a-deep-breath-and-just-be/index.html#comment-116">Take a Deep Breath and Just Be</a></li>
                   <li class="recentcomments"><span class="comment-author-link">Norah Jones</span> on <a href="2013/08/last-minutes-with-oden/index.html#comment-114">Last Minutes with ODEN</a></li>
@@ -264,14 +273,12 @@
 
             <div class="footer-widget-3 grid one-third last">
               <div id="alxtabs-4" class="widget widget_alx_tabs">
-                <h3>Highlights</h3>
+                <h3>Contacts</h3>
                 <div class="alx-tabs-container">
                   <ul id="tab-popular" class="alx-tab group thumbs-enabled">
-
                     <li>
                       <div class="tab-item-thumbnail">
-                        <a href="2013/10/starting-to-actually-listen-to-the-lyrics-in-music/index.html" title="Starting to Actually Listen to The Lyrics in Music">
-															<img width="160" height="160" src="wp-content/uploads/sites/2/2013/10/tumblr_mpp6w0dxAm1st5lhmo1_1280-160x160.jpg" class="attachment-thumb-small wp-post-image" alt="Play that record." />																					<span class="thumb-icon small"><i class="fa fa-volume-up"></i></span>													</a>
+                        Contactez nous
                       </div>
                       <div class="tab-item-inner group">
                         <p class="tab-item-category"><a href="category/music/index.html" rel="category tag">Music</a></p>
@@ -279,6 +286,7 @@
                         <p class="tab-item-date">16 Oct, 2013</p>
                       </div>
                     </li>
+                    <li class="recentcomments"><span class="comment-author-link">Sarah</span> on <a href="2013/07/gallery-format-post/index.html#comment-112">Gallery Format Post</a></li>
                   </ul>
                 </div>
               </div>
@@ -313,11 +321,11 @@
 
             <div class="grid one-half last">
               <ul class="social-links">
-                <li><a rel="nofollow" class="social-tooltip" title="Twitter" href="http://twitter.com/AlxBeing"><i class="fa fa-twitter" ></i></a></li>
-                <li><a rel="nofollow" class="social-tooltip" title="Facebook" href="index.html#"><i class="fa fa-facebook" ></i></a></li>
-                <li><a rel="nofollow" class="social-tooltip" title="Google+" href="index.html#"><i class="fa fa-google-plus" ></i></a></li>
-                <li><a rel="nofollow" class="social-tooltip" title="Dribbble" href="index.html#"><i class="fa fa-dribbble" ></i></a></li>
-                <li><a rel="nofollow" class="social-tooltip" title="RSS Feed" href="feed/index.html"><i class="fa fa-rss" ></i></a></li>
+                <li><a rel="nofollow" class="social-tooltip" title="Twitter" href="https://twitter.com/radiotsfjazz?lang=fr"><i class="fa fa-twitter" ></i></a></li>
+                <li><a rel="nofollow" class="social-tooltip" title="Facebook" href="https://www.facebook.com/TSFJazz/"><i class="fa fa-facebook" ></i></a></li>
+                <li><a rel="nofollow" class="social-tooltip" title="Youtube" href="https://www.instagram.com/tsfjazz/"><i class="fa fa-instagram" ></i></a></li>
+                <li><a rel="nofollow" class="social-tooltip" title="Instagram" href="https://www.youtube.com/user/TSFJAZZRadio"><i class="fa fa-youtube" ></i></a></li>
+                <li><a rel="nofollow" class="social-tooltip" title="Soundcloud" href="https://soundcloud.com/tsfjazz"><i class="fa fa-soundcloud" ></i></a></li>
               </ul>
             </div>
 
