@@ -49,7 +49,6 @@
 
   <meta name="generator" content="WordPress 4.1" />
 
-  <link rel="shortcut icon" href="../public/img/favicon1.png" />
   <!--[if lt IE 9]>
 <script src="wp-content/themes/hueman/js/ie/html5.js"></script>
 <script src="wp-content/themes/hueman/js/ie/selectivizr.js"></script>
