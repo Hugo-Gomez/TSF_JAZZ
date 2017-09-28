@@ -11,46 +11,25 @@
 |
 */
 
-Route::get('/', function () {
-	$news = DB::table('news')->get();
-    return view('welcome', compact('news'));
-});
+Route::get('/', 'StructureController@welcome');
 
-Route::get('program', function () {
-    return view('program');
-});
+Route::get('program', 'StructureController@program');
 
-Route::get('jazzenda', function () {
-    return view('jazzenda');
-});
+Route::get('jazzenda', 'StructureController@jazzenda');
 
-Route::get('podcast', function () {
-    return view('podcast');
-});
+Route::get('podcast', 'StructureController@podcast');
 
-Route::get('jazzblog', function () {
-    return view('jazzblog');
-});
+Route::get('jazzblog', 'StructureController@jazzblog');
 
-Route::get('audtre', function () {
-    return view('audtre');
-});
+Route::get('audtre', 'StructureController@audtre');
 
-Route::get('trackhist', function () {
-    return view('trackhist');
-});
+Route::get('trackhist', 'StructureController@trackhist');
 
-Route::get('media', function () {
-    return view('media');
-});
+Route::get('media', 'StructureController@media');
 
-Route::get('about', function () {
-    return view('about');
-});
+Route::get('about', 'StructureController@about');
 
-Route::get('contact', function () {
-    return view('contact');
-});
+Route::get('contact', 'StructureController@contact');
 
 Route::get('structure', function () {
     return view('structure');
