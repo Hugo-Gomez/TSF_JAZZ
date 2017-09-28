@@ -12,8 +12,8 @@
 */
 
 Route::get('/', function () {
-	$jazzblog = DB::table('blog')->get();
-    return view('welcome', compact('jazzblog'));
+	$news = DB::table('news')->get();
+    return view('welcome', compact('news'));
 });
 
 Route::get('program', function () {
