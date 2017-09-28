@@ -21,7 +21,8 @@ class StructureController extends Controller
 	}
 
 	function podcast() {
-    	return view('podcast');
+		$podcasts = DB::table('podcast')->get();
+    	return view('podcast', compact('podcasts'));
 	}
 
 	function jazzblog() {
