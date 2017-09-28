@@ -40,8 +40,9 @@ When you update your theme, backup this file and re-add it after.
     padding-top: 20px;
 }
 
+/* Module de Pub */
 .pub {
-	text-align:center;
+	text-align: center;
 }
 
 .separator {

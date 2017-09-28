@@ -31,6 +31,11 @@ Route::get('about', 'StructureController@about');
 
 Route::get('contact', 'StructureController@contact');
 
+Route::get('frequences', 'StructureController@frequences');
+
+Route::get('newsletter', 'StructureController@newsletter');
+
+
 /* DATABASE DEV
 *
 *
