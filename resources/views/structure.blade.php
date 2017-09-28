@@ -157,8 +157,8 @@
       <div class="container-inner">
         <div class="main">
           <div class="main-inner group">
-            <section class="content">
 
+            <section class="content">
               <!-- Nom de la page qui changera en fonction de l'onglet -->
               <div class="page-title pad group">
                 @yield('titre')
@@ -241,18 +241,11 @@
               <div id="recent-posts-3" class="widget widget_recent_entries">
                 <h3>Les dernières News</h3>
                 <ul>
-                  <li>
-                    <a href="2013/10/gabrielle-aplin-with-the-power-of-love/index.html">Gabrielle Aplin with The Power Of Love</a>
-                  </li>
-                  <li>
-                    <a href="2013/10/learning-more-about-macaws-in-the-amazon-jungle/index.html">Learning More About Macaws in The Amazon Jungle</a>
-                  </li>
-                  <li>
-                    <a href="2013/10/the-importance-of-water-and-drinking-lots-of-it/index.html">The Importance of Water and Drinking Lots Of It</a>
-                  </li>
-                  <li>
-                    <a href="2013/10/being-outside-in-fresh-air-how-your-body-loves-it/index.html">Being Outside in Fresh Air &#038; How Your Body Loves It</a>
-                  </li>
+                  @for ($i = 0; $i < 4; $i++)
+                    <li>
+                      <a href="{{ url('/') }}">{{ $news[$i]->title }}</a>
+                    </li>
+                  @endfor
                 </ul>
               </div>
             </div>
