@@ -47,4 +47,12 @@ class StructureController extends Controller
 	function contact() {
     	return view('contact');
 	}
+
+  function frequences() {
+    	return view('frequences');
+	}
+
+  function newsletter() {
+    	return view('newsletter');
+	}
 }

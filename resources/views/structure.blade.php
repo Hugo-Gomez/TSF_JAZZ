@@ -79,46 +79,39 @@
         <!-- Menu -->
         <div class="nav-wrap container">
           <ul id="menu-topbar-menu" class="nav container-inner group">
-            <li id="menu-item-2400" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-2400"><a href="index.html">Home</a></li>
-            <li id="menu-item-2680" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2680"><a href="index.html#">Categories</a>
-              <ul class="sub-menu">
-                <li id="menu-item-2683" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2683"><a href="category/post-formats/index.html">Post Formats</a></li>
-                <li id="menu-item-2681" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2681"><a href="category/lifestyle/index.html">Lifestyle</a></li>
-                <li id="menu-item-2685" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2685"><a href="category/music/index.html">Music</a></li>
-                <li id="menu-item-2829" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2829"><a href="category/food/index.html">Food</a></li>
-                <li id="menu-item-2686" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2686"><a href="category/mixed/index.html">Mixed</a></li>
-              </ul>
+            <li id="menu-item-2400" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-2400">
+              <a href="{{ url('/') }}">Accueil</a>
             </li>
-            <li id="menu-item-2758" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2758"><a href="index.html#">Styling</a>
-              <ul class="sub-menu">
-                <li id="menu-item-2769" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2769"><a href="2013/08/go-outside-and-discover-earths-wonders/index.html">Style test 1</a></li>
-                <li id="menu-item-2774" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2774"><a href="2013/10/starting-to-actually-listen-to-the-lyrics-in-music/index.html">Style test 2</a></li>
-                <li id="menu-item-2779" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2779"><a href="2013/09/independent-artists-make-their-own-way-without-big-record-labels/index.html">Style test 3</a></li>
-                <li id="menu-item-2958" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2958"><a href="2013/07/image-format-post/index.html">Style test 4</a></li>
-              </ul>
+            <li id="menu-item-2680" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2680">
+              <a href="{{ url('/program') }}">Programmes</a>
             </li>
-            <li id="menu-item-2700" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-2700"><a href="demo/layouts/index.html">Layouts</a>
+            <li id="menu-item-2680" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2680">
+              <a href="{{ url('/podcast') }}">Podcast</a>
+            </li>
+            <li id="menu-item-2680" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2680">
+              <a href="{{ url('/jazzblog') }}">Jazz blog</a>
+            </li>
+            <li id="menu-item-2680" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2680">
+              <a href="{{ url('/jazzenda') }}">Jazzenda</a>
+            </li>
+            <li id="menu-item-2680" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2680">
+              <a href="{{ url('/frequences') }}">Liste des fréquences</a>
+            </li>
+            <li id="menu-item-2399" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2399">
+              <a href="">Contacts</a>
               <ul class="sub-menu">
-                <li id="menu-item-2714" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2714"><a href="demo/layouts/default/index.html">Default</a></li>
-                <li id="menu-item-2715" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-2715"><a href="demo/layouts/full-width/index.html">Full Width</a>
-                  <ul class="sub-menu">
-                    <li id="menu-item-2340" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2340"><a href="index.html#">Third Level Nav</a></li>
-                    <li id="menu-item-2339" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2339"><a href="index.html#">Test Lorem Ipsum</a></li>
-                    <li id="menu-item-2338" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2338"><a href="index.html#">Test here</a></li>
-                  </ul>
+                <li id="menu-item-2698" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2698">
+                  <a href="{{ url('/about') }}">À propos</a>
                 </li>
-                <li id="menu-item-2712" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2712"><a href="demo/layouts/child-menu-left/index.html">Child Menu Left</a></li>
-                <li id="menu-item-2713" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2713"><a href="demo/layouts/child-menu-right/index.html">Child Menu Right</a></li>
-                <li id="menu-item-2716" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2716"><a href="demo/layouts/double-sidebar-left/index.html">Double Sidebar Left</a></li>
-                <li id="menu-item-2717" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2717"><a href="demo/layouts/double-sidebar-right/index.html">Double Sidebar Right</a></li>
-              </ul>
-            </li>
-            <li id="menu-item-2399" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2399"><a href="index.html#">More</a>
-              <ul class="sub-menu">
-                <li id="menu-item-2698" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2698"><a href="demo/galleries/index.html">Galleries</a></li>
-                <li id="menu-item-2739" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2739"><a href="demo/typography/index.html">Typography</a></li>
-                <li id="menu-item-2708" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2708"><a href="demo/shortcodes/tables/index.html">Tables</a></li>
-                <li id="menu-item-2699" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2699"><a href="demo/shortcodes/columns/index.html">Columns</a></li>
+                <li id="menu-item-2739" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2739">
+                  <a href="{{ url('/audtre') }}">Trésor des auditeurs</a>
+                </li>
+                <li id="menu-item-2708" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2708">
+                  <a href="{{ url('/contact') }}">Nous écrire</a>
+                </li>
+                <li id="menu-item-2699" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2699">
+                  <a href="{{ url('/newsletter') }}">Newsletter</a>
+                </li>
               </ul>
             </li>
           </ul>
