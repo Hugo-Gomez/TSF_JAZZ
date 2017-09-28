@@ -1,3 +1,10 @@
+<h1>LPDW_Jazz Project</h1>
+
+This website is an update of the Tsf Jazz Website, a french jazz radio. We are a group of students and we do this for a school project of
+our Professionnal License in Web Development.
+
+<h5>There is no commercial purpose on this project or anything that we can exploit ro take out of Tsf Jazz Radio business.</h5>
+
 To run the website, it's pretty easy. Just open the TSF_JAZZ folder in your terminal and run this command :
 docker-compose up -d
 
@@ -7,7 +14,7 @@ To acces to the phpmyadmin interface, url is : localhost:8181
 If you want to save some lines in tables of the database, you must run this command before killing containers :
 'Manu's command'
 
-<h3>List of routes :<h3>
+<h3>List of routes :</h3>
 
 - ('/') Index -> Homepage // view called == welcome
 - ('program') Program -> Show program page // view called == program
