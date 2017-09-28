@@ -15,18 +15,18 @@
     document.documentElement.className = document.documentElement.className.replace("no-js", "js");
   </script>
 
-  <link href="../public/css/styles.css" type="text/css" rel="stylesheet">
+  <link href="../public/css/style.css" type="text/css" rel="stylesheet">
   <link href="../public/css/responsive.css" rel="stylesheet">
   <link href="../public/css/custom.css" rel="stylesheet">
   <link href="../public/css/default-ver=4.1.css" rel="stylesheet">
   <link href="../public/css/nivo-lightbox-ver=4.1.css" rel="stylesheet">
-  <link href="{{ URL::asset('/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css" >
+  <link href="../public/fonts/font-awesome.min.css" rel="stylesheet" type="text/css" >
 
   <script type='text/javascript' src='../../webpack.mix.js'></script>
 
-  <script type='text/javascript' src='js/jquery-ver=1.11.1.js'></script>
-  <script type='text/javascript' src='js/jquery-migrate.min-ver=1.2.1.js'></script>
-  <script type='text/javascript' src='js/nivo-lightbox.min-ver=4.1.js'></script>
+  <script type='text/javascript' src='../public/js/jquery-ver=1.11.1.js'></script>
+  <script type='text/javascript' src='../public/js/jquery-migrate.min-ver=1.2.1.js'></script>
+  <script type='text/javascript' src='../public/js/nivo-lightbox.min-ver=4.1.js'></script>
 
   <script type='text/javascript'>
     var rlArgs = {
@@ -41,15 +41,15 @@
     };
   </script>
 
-  <script type='text/javascript' src='js/front-ver=4.1.js'></script>
-  <script type='text/javascript' src='js/jquery.flexslider.min.js'></script>
+  <script type='text/javascript' src='../public/js/front-ver=4.1.js'></script>
+  <script type='text/javascript' src='../public/js/jquery.flexslider.min.js'></script>
 
   <link rel="EditURI" type="application/rsd+xml" title="RSD" href="xmlrpc.php-rsd.xml" />
   <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="wp-includes/wlwmanifest.xml" />
 
   <meta name="generator" content="WordPress 4.1" />
 
-  <link rel="shortcut icon" href="../../public/img/favicon1.png" />
+  <link rel="shortcut icon" href="../public/img/favicon1.png" />
   <!--[if lt IE 9]>
 <script src="wp-content/themes/hueman/js/ie/html5.js"></script>
 <script src="wp-content/themes/hueman/js/ie/selectivizr.js"></script>
@@ -147,7 +147,7 @@
         <div class="container-inner">
           <div class="group pad">
             <!-- Image ici à changer -->
-            <h1 class="site-title"><a href="index.html" rel="home"><img src="../../public/img/logo-header.png" alt="LP JAZZ"></a></h1>
+            <h1 class="site-title"><a href="index.html" rel="home"><img src="../public/img/logo-header.png" alt="LP JAZZ"></a></h1>
             <p class="site-description">Jazz Radio</p>
           </div>
         </div>
@@ -198,8 +198,15 @@
                   <p>More</p>
                 </div>
                 <!-- Contenu ici -->
-                <div id="alxposts-2" class="widget widget_alx_posts">
-                  <h3>What&#8217;s Hot?</h3>
+                <div id="alxposts-2" class="widget widget_alx_posts pub">
+
+                  <a href="http://bit.ly/QRA_QwestTV" target="_blank"><img src="../public/img/BANNER3_v5.gif" alt=""></a>
+
+                </div>
+                <div id="alxposts-2" class="widget widget_alx_posts ">
+
+                  <p> Ici on pourra mettre liste des fréquences par exemple </p>
+                  
                 </div>
               </div>
             </div>
@@ -261,17 +268,6 @@
                 <h3>Highlights</h3>
                 <div class="alx-tabs-container">
                   <ul id="tab-popular" class="alx-tab group thumbs-enabled">
-                    <li>
-                      <div class="tab-item-thumbnail">
-                        <a href="2013/10/an-ode-to-earth-baba-yetu/index.html" title="An Ode To Earth &#8211; Baba Yetu">
-															<img width="160" height="160" src="wp-content/uploads/sites/2/2013/10/little-girl-205220_1280-160x160.jpg" class="attachment-thumb-small wp-post-image" alt="little-girl-205220_1280" />														<span class="thumb-icon small"><i class="fa fa-play"></i></span>																				</a>
-                      </div>
-                      <div class="tab-item-inner group">
-                        <p class="tab-item-category"><a href="category/music/index.html" rel="category tag">Music</a></p>
-                        <p class="tab-item-title"><a href="2013/10/an-ode-to-earth-baba-yetu/index.html" rel="bookmark" title="An Ode To Earth &#8211; Baba Yetu">An Ode To Earth &#8211; Baba Yetu</a></p>
-                        <p class="tab-item-date">31 Oct, 2013</p>
-                      </div>
-                    </li>
 
                     <li>
                       <div class="tab-item-thumbnail">
@@ -311,7 +307,7 @@
 
             <div class="grid one-half">
 
-              <img id="footer-logo" src="../../public/img/logo-header.png" alt="">
+              <img id="footer-logo" src="../public/img/logo-header.png" alt="">
 
 
             </div>
@@ -361,8 +357,8 @@
       display: none;
     }
   </style>
-  <script type='text/javascript' src='js/jquery.jplayer.min.js'></script>
-  <script type='text/javascript' src='js/scripts.js'></script>
+  <script type='text/javascript' src='../public/js/jquery.jplayer.min.js'></script>
+  <script type='text/javascript' src='../public/js/scripts.js'></script>
   <!--[if lt IE 9]>
 <script src="wp-content/themes/hueman/js/ie/respond.js"></script>
 <![endif]-->

@@ -39,3 +39,7 @@ When you update your theme, backup this file and re-add it after.
 #footer-bottom .social-links {
     padding-top: 20px;
 }
+
+.pub {
+	text-align:center;
+}
