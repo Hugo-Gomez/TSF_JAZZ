@@ -48,3 +48,8 @@ When you update your theme, backup this file and re-add it after.
 	box-shadow: 40px 0px 12px #aaa;
 	border: solid 0.5px #aaa;
 }
+
+.container{
+	width: 100%;
+	max-width: 100%;
+}

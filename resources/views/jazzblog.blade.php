@@ -1,9 +1,26 @@
 @extends('structure')
 
+<link rel="stylesheet" type="text/css" href="../public/css/jazzblog.css">
+
 @section('titre')
-    <h2>Le nom de ta page <span>Amuse toi bien</span></h2>
+    <h2>Jazz Blog</h2>
 @endsection
 
 @section('contenu')
-    <p>Ici tu peux mettre le contenu</p>
+<div class="row">
+	@foreach ($blog as $blogs)
+    	
+    		<div class="col m4 s10 offset-s1 blog-cards">
+    			<div class="card-panel">
+    				<a href="#!"><img src="../public/img/{{ $blogs->thumbnail }}"></a>
+       				<br><br>
+        			<p>{{ $blogs->author }}</p>
+        			<p>{{ $blogs->description }}</p>
+        			<br>
+    			</div>
+    		</div>
+    		
+    @endforeach
+</div>
 @endsection
+

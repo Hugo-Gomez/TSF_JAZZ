@@ -31,10 +31,6 @@ Route::get('about', 'StructureController@about');
 
 Route::get('contact', 'StructureController@contact');
 
-Route::get('structure', function () {
-    return view('structure');
-});
-
 /* DATABASE DEV
 *
 *

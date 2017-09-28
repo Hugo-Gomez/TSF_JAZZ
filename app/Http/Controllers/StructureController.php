@@ -25,7 +25,8 @@ class StructureController extends Controller
 	}
 
 	function jazzblog() {
-    	return view('jazzblog');
+		$blog = DB::table('blog')->get();
+    	return view('jazzblog', compact('blog'));
 	}
 
 	function audtre() {
