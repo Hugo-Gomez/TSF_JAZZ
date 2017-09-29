@@ -11,6 +11,8 @@
 |
 */
 
+/* Routes normales */
+
 Route::get('/', 'StructureController@welcome');
 
 Route::get('program', 'StructureController@program');
@@ -39,6 +41,15 @@ Route::get('frequences', 'StructureController@frequences');
 
 Route::get('newsletter', 'StructureController@newsletter');
 
+/* Routes admin */
+
+Route::get('/admin', 'AdminController@home');
+Route::get('/admin/{news}', 'AdminController@show');
+Route::post('/admin', 'AdminController@store');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
 
 /* DATABASE DEV
 *
@@ -79,3 +90,18 @@ Route::get('fetch_events', function () {
     }
     return "done";
 });
+
+Route::get('contact', function () {
+    return view('contact');
+});
+
+
+Route::get('/admin', 'AdminController@home');
+Route::get('/admin/{news}', 'AdminController@show');
+Route::post('/admin', 'AdminController@store');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+
