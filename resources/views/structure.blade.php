@@ -4,9 +4,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="profile" href="http://gmpg.org/xfn/11">
-  <link rel="pingback" href="xmlrpc.php">
-
 
   <!-- Compiled and minified CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
@@ -78,7 +75,13 @@
     <header id="header">
 
       <nav class="nav-container group" id="nav-topbar">
+        <div class="nav-toggle">
+          <i class="fa fa-bars"></i>
+        </div>
 
+        <div class="nav-text">
+
+        </div>
         <!-- Menu -->
         <div class="nav-wrap container">
           <ul id="menu-topbar-menu" class="nav container-inner group">
@@ -130,7 +133,7 @@
               <div class="search-expand-inner">
                 <form method="get" class="searchform themeform" action="http://demo.alxmedia.se/hueman/">
                   <div>
-                    <input type="text" class="search" name="s" onblur="if(this.value=='')this.value='To search type and hit enter';" onfocus="if(this.value=='To search type and hit enter')this.value='';" value="Tapez votre recherche ici" />
+                    <input type="text" class="search" name="s" onblur="if(this.value=='')this.value='To search type and hit enter';" placeholder="Tapez votre recherche ici" />
                   </div>
                 </form>
               </div>
@@ -144,8 +147,8 @@
         <div class="container-inner">
           <div class="group pad">
             <!-- Image ici à changer -->
-            <h1 class="site-title"><a href="{{ url('/') }}" rel="home"><img src="../public/img/logo-header.png" alt="LP JAZZ"></a></h1>
-            <p class="site-description">Jazz Radio</p>
+            <h1 class="site-title"><a href="{{ url('/') }}" rel="home"><img src="../public/img/logo.png" alt=""></a></h1>
+            <p class="site-description">- Radio de Jazz</p>
           </div>
         </div>
       </div>
@@ -306,7 +309,7 @@
 
             <div class="grid one-half">
 
-              <img id="footer-logo" src="../public/img/logo-header.png" alt="">
+              <img id="footer-logo" src="../public/img/logo.png" alt="">
 
 
             </div>
