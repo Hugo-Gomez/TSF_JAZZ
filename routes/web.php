@@ -45,6 +45,10 @@ Route::get('/admin', 'AdminController@home');
 Route::get('/admin/{news}', 'AdminController@show');
 Route::post('/admin', 'AdminController@store');
 
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
 /* DATABASE DEV
 *
 *
@@ -84,3 +88,18 @@ Route::get('fetch_events', function () {
     }
     return "done";
 });
+
+Route::get('contact', function () {
+    return view('contact');
+});
+
+
+Route::get('/admin', 'AdminController@home');
+Route::get('/admin/{news}', 'AdminController@show');
+Route::post('/admin', 'AdminController@store');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+
