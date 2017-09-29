@@ -566,13 +566,13 @@ box-shadow: 0 0 2px rgba(255,255,255,0.4);
 
 /*  header : search
 /* ------------------------------------ */
-.toggle-search { padding-bottom: 0px; padding-top: 20px; height: 64px; color: #fff; font-size: 18px; line-height: 20px; cursor: pointer; display: block; position: absolute; right: 0; top: -50px;
+.toggle-search { padding-bottom: 0px; padding-top: 15px; padding-left: 15px; width: 45px; height: 53px; color: #fff; font-size: 18px; line-height: 20px; cursor: pointer; display: block; position: absolute; right: 0; top: -50px;
 -webkit-box-shadow: -1px 0 0 rgba(255,255,255,0.1);
 box-shadow: -1px 0 0 rgba(255,255,255,0.1);
  }
 .toggle-search:hover,
 .toggle-search.active { background: rgba(0,0,0,0.15); color: #fff; }
-.search-expand { display: none; background: #26272b; position: absolute; top: 0; right: 0; width: 340px;
+.search-expand { padding-top: 5px; display: none; background: #26272b; position: absolute; top: 0; right: 0; width: 340px;
 -webkit-box-shadow: 0 1px 0 rgba(255,255,255,0.1);
 box-shadow: 0 1px 0 rgba(255,255,255,0.1); }
 .search-expand-inner { background: rgba(0,0,0,0.15); padding: 15px; }
@@ -594,7 +594,7 @@ box-shadow: inset 1px 0 0 rgba(255,255,255,0.06); }
 	.full-width.topbar-enabled #header { padding-top: 50px; }
 	.full-width #nav-topbar.nav-container { position: fixed; top: 0; left: 0; right: 0; width: 100%; z-index: 999; }
 	.full-width #footer-bottom { position: fixed; bottom: 0; left: 0; right: 0; width: 100%; z-index: 999; }
-	.full-width #footer-widgets { padding-bottom: 90px; }
+	.full-width #footer-widgets { padding-bottom: 70px; padding-top: 0px;}
 	.full-width.admin-bar #nav-topbar.nav-container { top: 32px; }
 }
 
@@ -695,7 +695,7 @@ box-shadow: 0 1px 1px rgba(0,0,0,0.1); }
 #footer { background: #fff; color: #777; width: 100%; }
 #footer a { color: #777; }
 #footer a:hover { color: #ccc; }
-#footer .pad { padding-bottom: 30px; }
+#footer .pad { padding-bottom: 30px; padding-top: 0px;}
 
 #footer-ads { text-align: center; padding: 10px 0; border-bottom: 1px solid #eee; }
 #footer #footer-ads .widget { padding-bottom: 0; font-size: 0; line-height: 0; }

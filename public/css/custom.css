@@ -54,3 +54,7 @@ When you update your theme, backup this file and re-add it after.
 	width: 100%;
 	max-width: 100%;
 }
+
+nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
+	height: 53px;
+}
