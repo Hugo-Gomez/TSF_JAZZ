@@ -78,10 +78,6 @@
     <header id="header">
 
       <nav class="nav-container group" id="nav-topbar">
-        <div class="nav-toggle"><i class="fa fa-bars"></i></div>
-        <div class="nav-text">
-
-        </div>
 
         <!-- Menu -->
         <div class="nav-wrap container">
@@ -125,22 +121,22 @@
         </div>
 
         <!-- Barre de recherche -->
-        <div class="container">
           <div class="container-inner">
             <div class="toggle-search">
               <i class="fa fa-search"></i>
             </div>
+
             <div class="search-expand">
               <div class="search-expand-inner">
                 <form method="get" class="searchform themeform" action="http://demo.alxmedia.se/hueman/">
                   <div>
-                    <input type="text" class="search" name="s" onblur="if(this.value=='')this.value='To search type and hit enter';" onfocus="if(this.value=='To search type and hit enter')this.value='';" value="To search type and hit enter" />
+                    <input type="text" class="search" name="s" onblur="if(this.value=='')this.value='To search type and hit enter';" onfocus="if(this.value=='To search type and hit enter')this.value='';" value="Tapez votre recherche ici" />
                   </div>
                 </form>
               </div>
             </div>
           </div>
-        </div>
+
       </nav>
 
       <!-- Banière - Logo -->
@@ -148,7 +144,7 @@
         <div class="container-inner">
           <div class="group pad">
             <!-- Image ici à changer -->
-            <h1 class="site-title"><a href="index.html" rel="home"><img src="../public/img/logo-header.png" alt="LP JAZZ"></a></h1>
+            <h1 class="site-title"><a href="{{ url('/') }}" rel="home"><img src="../public/img/logo-header.png" alt="LP JAZZ"></a></h1>
             <p class="site-description">Jazz Radio</p>
           </div>
         </div>
