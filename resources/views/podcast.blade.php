@@ -11,7 +11,7 @@
     <div class="tiles">
         <div class="col m10 offset-m1">
             @foreach ($podcasts as $podcast)
-                <a class="tile" href="#!">
+                <a class="tile" href="{{ url('/podcast'.$podcast->id) }}">
                     <img src="../public/img/{{ $podcast->thumbnail }}"/>
                     <div class="details">
                         <span class="title">{{ $podcast->title }}</span>

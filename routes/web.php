@@ -19,6 +19,8 @@ Route::get('jazzenda', 'StructureController@jazzenda');
 
 Route::get('podcast', 'StructureController@podcast');
 
+Route::get('podcast{podcast_id}', 'StructureController@podcast_item');
+
 Route::get('jazzblog', 'StructureController@jazzblog');
 
 Route::get('audtre', 'StructureController@audtre');
