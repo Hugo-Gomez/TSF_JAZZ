@@ -1,0 +1,23 @@
+.about-img {
+	text-align: center;
+}
+
+.img-desc {
+	font-size: 10px;
+	text-align: center;
+}
+
+.about-title {
+	font-size: 30px;
+	margin: 35px 0px;
+}
+
+.about-description {
+	margin-bottom: 30px;
+}
+
+.about-crew {
+	text-align: center;
+	line-height: 28.2px;
+	font-size: 14px;
+}
