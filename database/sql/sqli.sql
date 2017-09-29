@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : db
--- Généré le :  mer. 27 sep. 2017 à 16:38
+-- Généré le :  ven. 29 sep. 2017 à 14:18
 -- Version du serveur :  10.2.8-MariaDB-10.2.8+maria~jessie
 -- Version de PHP :  7.0.21
 
@@ -457,7 +457,7 @@ CREATE TABLE `blog` (
 
 INSERT INTO `blog` (`id`, `thumbnail`, `author`, `description`) VALUES
 (1, 'blog/Sapir/sapir.jpg', 'Laurent Sapir', 'Journaliste à TSFJAZZ (17h-20h)'),
-(2, 'blog/Sapir/koperhant.jpg', 'David Koperhant', 'Animateur à TSFJAZZ (14h-17h) '),
+(2, 'blog/Koperhant/koperhant.jpg', 'David Koperhant', 'Animateur à TSFJAZZ (14h-17h) '),
 (3, 'blog/Albernhe/albernhe.jpg', 'Laure Albernhe', 'Animatrice à TSFJAZZ (10h-14h)');
 
 -- --------------------------------------------------------
@@ -516,7 +516,7 @@ INSERT INTO `podcast` (`id`, `title`, `description`, `thumbnail`) VALUES
 (7, 'Made in China', 'TSF Jazz, la seule radio 100% JAZZ', 'podcast/TSF_MIC.jpg'),
 (8, 'Coup de Projecteur', 'Un regard décalé sur la scène culturelle, par ceux qui la font et qui traverse toutes les formes artistiques.', 'podcast/TSF_CO.jpg'),
 (9, 'Bon temps rouler', 'L\'émission blues et soul hebdomadaire de l\'harmoniciste Jean-Jacques Milteau... Histoire, actu, perles rares et nouveautés !', 'podcast/TSF_BO.jpg'),
-(10, 'Jamie Cullum Show', 'Tous les vendredis, de 19h à 20h, le chanteur et pianiste anglais Jamie Cullum s\'installe sur les ondes de TSFJAZZ !', 'pocast/TSF_JCS.jpg'),
+(10, 'Jamie Cullum Show', 'Tous les vendredis, de 19h à 20h, le chanteur et pianiste anglais Jamie Cullum s\'installe sur les ondes de TSFJAZZ !', 'podcast/TSF_JCS.jpg'),
 (11, 'Emissions Spéciales', 'Retrouvez toutes les émissions exceptionnelles de TSFJAZZ !', 'podcast/TSF_EM.jpg'),
 (12, 'La chronique Hi-Fi', 'TSF Jazz, la seule radio 100% JAZZ', 'podcast/TSF_CHRO.jpg');
 
