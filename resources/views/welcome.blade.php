@@ -1,3 +1,4 @@
+
 @extends('structure')
 
 @section('titre')
@@ -16,3 +17,4 @@
         <br>
     @endforeach
 @endsection
+
