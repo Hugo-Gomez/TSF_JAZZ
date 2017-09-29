@@ -51,3 +51,20 @@ Route::get('about', function () {
 Route::get('contact', function () {
     return view('contact');
 });
+
+
+Route::get('/admin', 'AdminController@home');
+Route::get('/admin/{news}', 'AdminController@show');
+Route::post('/admin', 'AdminController@store');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
