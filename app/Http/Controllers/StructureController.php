@@ -25,8 +25,15 @@ class StructureController extends Controller
 	function podcast() {
     	$news = DB::table('news')->get();
 		$podcasts = DB::table('podcast')->get();
-    	return view('podcast', compact('podcasts'), compact('news'));
+    	return view('podcast', compact('podcasts', 'news'));
 	}
+
+    function podcast_item($podcast_id) {
+        $news = DB::table('news')->get();
+        $podcasts = DB::table('podcast')->get()->where('id', $podcast_id);
+        $podcast_items = DB::table('podcast_item')->get()->where('id_podcast', $podcast_id);
+        return view('podcast_item', compact('news', 'podcast_items', 'podcasts'));
+    }
 
 	function jazzblog() {
     	$news = DB::table('news')->get();

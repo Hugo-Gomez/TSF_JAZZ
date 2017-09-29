@@ -95,3 +95,27 @@
   -webkit-transition-delay: 0.25s;
           transition-delay: 0.25s;
 }
+
+/* ----------------- */
+
+.pod-title {
+  font-size: 35px;
+  margin: 55px 0px;
+}
+
+.separator {
+  margin: 40px 0px;
+}
+
+.pod-thread {
+  margin: 10px 0px;
+  font-size: 14px;
+}
+
+.poditem-date {
+  color: #8F4D0B;
+}
+
+.poditem-title {
+  color: #D38A45;
+}
