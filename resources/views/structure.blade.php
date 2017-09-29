@@ -133,7 +133,7 @@
               <div class="search-expand-inner">
                 <form method="get" class="searchform themeform" action="http://demo.alxmedia.se/hueman/">
                   <div>
-                    <input type="text" class="search" name="s" onblur="if(this.value=='')this.value='To search type and hit enter';" placeholder="Tapez votre recherche ici" />
+                    <input type="text" class="search" name="s" placeholder="Tapez votre recherche ici" />
                   </div>
                 </form>
               </div>
