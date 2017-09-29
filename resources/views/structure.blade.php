@@ -127,7 +127,9 @@
         <!-- Barre de recherche -->
         <div class="container">
           <div class="container-inner">
-            <div class="toggle-search"><i class="fa fa-search"></i></div>
+            <div class="toggle-search">
+              <i class="fa fa-search"></i>
+            </div>
             <div class="search-expand">
               <div class="search-expand-inner">
                 <form method="get" class="searchform themeform" action="http://demo.alxmedia.se/hueman/">
@@ -241,7 +243,7 @@
               <div id="recent-posts-3" class="widget widget_recent_entries">
                 <h3>Les dernières News</h3>
                 <ul>
-                  @for ($i = 0; $i < 4; $i++)
+                  @for ($i = 0; $i < 5; $i++)
                     <li>
                       <a href="{{ url('/') }}">{{ $news[$i]->title }}</a>
                     </li>
@@ -252,34 +254,35 @@
 
 
             <div class="footer-widget-2 grid one-third ">
-              <div id="recent-comments-3" class="widget widget_recent_comments">
+              <div id="recent-comments-3" class="widget widget_meta">
                 <h3>Communautés</h3>
                 <ul id="recentcomments">
-                  <li class="recentcomments"><span class="comment-author-link">Alexander</span> on <a href="2013/10/take-a-deep-breath-and-just-be/index.html#comment-116">Take a Deep Breath and Just Be</a></li>
-                  <li class="recentcomments"><span class="comment-author-link">Norah Jones</span> on <a href="2013/08/last-minutes-with-oden/index.html#comment-114">Last Minutes with ODEN</a></li>
-                  <li class="recentcomments"><span class="comment-author-link">Lisa</span> on <a href="2013/08/go-outside-and-discover-earths-wonders/index.html#comment-113">Go Outside and Discover Earth&#8217;s Wonders</a></li>
-                  <li class="recentcomments"><span class="comment-author-link">Sarah</span> on <a href="2013/07/gallery-format-post/index.html#comment-112">Gallery Format Post</a></li>
+                  <li class="recentcomments"><span class="comment-author-link">Twitter</span> ici <a rel="nofollow" class="social-tooltip" target="_blank" title="Twitter" href="https://twitter.com/radiotsfjazz?lang=fr"><i class="fa fa-twitter" ></i></a></li>
+                  <li class="recentcomments"><span class="comment-author-link">Facebook</span> ici <a rel="nofollow" class="social-tooltip" target="_blank" title="Facebook" href="https://www.facebook.com/TSFJazz/"><i class="fa fa-facebook" ></i></a></li>
+                  <li class="recentcomments"><span class="comment-author-link">Instagram</span> ici <a rel="nofollow" class="social-tooltip" target="_blank" title="Instagram" href="https://www.instagram.com/tsfjazz/"><i class="fa fa-instagram" ></i></a></li>
+                  <li class="recentcomments"><span class="comment-author-link">Youtube</span> ici <a rel="nofollow" class="social-tooltip" target="_blank" title="Youtube" href="https://www.youtube.com/user/TSFJAZZRadio"><i class="fa fa-youtube" ></i></a></li>
+                  <li class="recentcomments"><span class="comment-author-link">Soundcloud</span> ici <a rel="nofollow" class="social-tooltip" target="_blank" title="Soundcloud" href="https://soundcloud.com/tsfjazz"><i class="fa fa-soundcloud" ></i></a></li>
                 </ul>
               </div>
             </div>
 
 
             <div class="footer-widget-3 grid one-third last">
-              <div id="alxtabs-4" class="widget widget_alx_tabs">
+              <div id="alxtabs-4" class="widget widget_links">
                 <h3>Contacts</h3>
-                <div class="alx-tabs-container">
-                  <ul id="tab-popular" class="alx-tab group thumbs-enabled">
+                  <ul>
                     <li>
-                      <div class="tab-item-thumbnail">
-                        Contactez nous
-                      </div>
-                      <div class="tab-item-inner group">
-                        <p class="tab-item-category"><a href="category/music/index.html" rel="category tag">Music</a></p>
-                        <p class="tab-item-title"><a href="2013/10/starting-to-actually-listen-to-the-lyrics-in-music/index.html" rel="bookmark" title="Starting to Actually Listen to The Lyrics in Music">Starting to Actually Listen to The Lyrics in Music</a></p>
-                        <p class="tab-item-date">16 Oct, 2013</p>
-                      </div>
+                      <a href="{{ url('/about') }}">À propos</a>
                     </li>
-                    <li class="recentcomments"><span class="comment-author-link">Sarah</span> on <a href="2013/07/gallery-format-post/index.html#comment-112">Gallery Format Post</a></li>
+                    <li>
+                      <a href="{{ url('/audtre') }}">Trésor des auditeurs</a>
+                    </li>
+                    <li>
+                      <a href="{{ url('/contact') }}">Nous écrire</a>
+                    </li>
+                    <li>
+                      <a href="{{ url('/newsletter') }}">Newsletter</a>
+                    </li>
                   </ul>
                 </div>
               </div>
