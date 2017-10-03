@@ -63,6 +63,12 @@ nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
     background: #731818;
 }
 
+.page-title {
+	background: #26272b;
+	color: #FFF;
+	padding-bottom: 18px;
+}
 
 .page-title h1, .page-title h2, .page-title h4 {
     color: #fff;
+}

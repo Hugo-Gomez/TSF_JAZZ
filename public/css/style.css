@@ -68,7 +68,7 @@ strong { font-weight: 600; }
 .clear { clear: both; display: block; overflow: hidden; visibility: hidden; width: 0; height: 0; }
 .group:before, .group:after { content: ""; display: table; }
 .group:after { clear: both; }
-.group { zoom: 1; }
+main-inner { zoom: 1; }
 
 /*  base : font awesome square size
 /* ------------------------------------ */
@@ -285,32 +285,32 @@ box-shadow: 6px 0 0 rgba(0,0,0,0.04), -6px 0 0 rgba(0,0,0,0.04); }
 /* ------------------------------------ */
 
 /* 2 column, content left */
-.col-2cl .main-inner { background: url(img/sidebar/s-right-s1.png) repeat-y right 0; padding-right: 340px; }
+.col-2cl .main-inner { background: url(../public/img/sidebar/s-right-s1.png) repeat-y right 0; padding-right: 340px; }
 .col-2cl .s1 { float: right; margin-right: -340px; }
 .col-2cl .content { float: left; }
 
 /* 2 column, content right */
-.col-2cr .main-inner { background: url(img/sidebar/s-left.png) repeat-y left 0; padding-left: 340px; }
+.col-2cr .main-inner { background: url(../public/img/sidebar/s-left.png) repeat-y left 0; padding-left: 340px; }
 .col-2cr .s1 { float: left; margin-left: -340px; }
 .col-2cr .content { float: right; }
 
 /* 3 column, content middle */
-.col-3cm .main { background: url(img/sidebar/s-right-s2.png) repeat-y right 0; }
-.col-3cm .main-inner { background: url(img/sidebar/s-left.png) repeat-y left 0; padding-left: 340px; padding-right: 260px; }
+.col-3cm .main { background: url(../public/img/sidebar/s-right-s2.png) repeat-y right 0; }
+.col-3cm .main-inner { background: url(../public/img/sidebar/s-left.png) repeat-y left 0; padding-left: 340px; padding-right: 260px; }
 .col-3cm .s1 { float: left; margin-left: -340px; }
 .col-3cm .s2 { float: right; margin-right: -260px; /* ingenuity! */ position: relative; right: -100%; }
 .col-3cm .content { float: right; }
 
 /* 3 column, content left */
 .col-3cl .main { background-image: none; }
-.col-3cl .main-inner { background: url(img/sidebar/s-right-dual-full-expand.png) repeat-y right 0; padding-right: 600px; }
+.col-3cl .main-inner { background: url(../public/img/sidebar/s-right-dual-full-expand.png) repeat-y right 0; padding-right: 600px; }
 .col-3cl .s1 { float: right; margin-right: -600px; }
 .col-3cl .s2 { float: right; margin-right: -260px; }
 .col-3cl .content { float: left; }
 
 /* 3 column, content right */
 .col-3cr .main { background-image: none; }
-.col-3cr .main-inner { background: url(img/sidebar/s-left-dual-full-expand.png) repeat-y left 0; padding-left: 600px; }
+.col-3cr .main-inner { background: url(../public/img/sidebar/s-left-dual-full-expand.png) repeat-y left 0; padding-left: 600px; }
 .col-3cr .s1 { float: left; margin-left: -600px; }
 .col-3cr .s2 { float: left; margin-left: -260px; }
 .col-3cr .content { float: right; }
@@ -615,7 +615,7 @@ box-shadow: inset 1px 0 0 rgba(255,255,255,0.06); }
 	#nav-topbar .nav li.current-menu-ancestor > a,
 	#nav-topbar .nav li.current-post-parent > a { color: #fff; }
 	/* level 2 & 3 */
-	#nav-topbar .nav ul { background: #26272b url(img/opacity-10.png) repeat; }
+	#nav-topbar .nav ul { background: #26272b url(../public/img/opacity-10.png) repeat; }
 	#nav-topbar .nav ul li { box-shadow: 0 1px 0 rgba(255,255,255,0.06); -webkit-box-shadow: 0 1px 0 rgba(255,255,255,0.06); }
 	#nav-topbar .nav ul li:last-child { box-shadow: none; -webkit-box-shadow: none; }
 
@@ -660,7 +660,7 @@ box-shadow: inset 1px 0 0 rgba(255,255,255,0.05), -1px 0 0 rgba(0,0,0,0.2); }
 	#nav-header .nav li.current-menu-ancestor > a,
 	#nav-header .nav li.current-post-parent > a { color: #fff; }
 	/* level 2 & 3 */
-	#nav-header .nav ul { background: #33363b url(img/opacity-10.png) repeat; }
+	#nav-header .nav ul { background: #33363b url(../public/img/opacity-10.png) repeat; }
 	#nav-header .nav ul li { box-shadow: 0 1px 0 rgba(255,255,255,0.06); -webkit-box-shadow: 0 1px 0 rgba(255,255,255,0.06); }
 	#nav-header .nav ul li:last-child { box-shadow: none; -webkit-box-shadow: none; }
 
@@ -1580,9 +1580,9 @@ body.ie8,
 .ie8 #nav-header .nav > li:hover > a,
 .ie8 .toggle-search:hover,
 .ie8 .toggle-search.active,
-.ie8 .search-expand-inner { background: url(img/opacity-10.png); }
+.ie8 .search-expand-inner { background: url(../public/img/opacity-10.png); }
 .ie8 .thumb-icon,
 .ie8 .image-caption,
 .ie8 .page-image-text .description i,
-.ie8 .flex-direction-nav a { background: url(img/ie/opacity-70.png); }
-.ie8 .entry .gallery .gallery-caption { background: url(img/ie/opacity-80-light.png); }
+.ie8 .flex-direction-nav a { background: url(../public/img/ie/opacity-70.png); }
+.ie8 .entry .gallery .gallery-caption { background: url(../public/img/ie/opacity-80-light.png); }

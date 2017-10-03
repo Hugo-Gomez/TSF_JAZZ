@@ -6,10 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Compiled and minified CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+ <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css"> -->
 
   <!-- Compiled and minified JavaScript -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script> -->
 
   <title>
     LP JAZZ
@@ -20,11 +20,12 @@
   </script>
 
   <link href="../public/css/style.css" type="text/css" rel="stylesheet">
-  <link href="../public/css/responsive.css" rel="stylesheet">
   <link href="../public/css/custom.css" rel="stylesheet">
+  <link href="../public/fonts/font-awesome.min.css" rel="stylesheet" type="text/css" >
+  <link href="../public/css/responsive.css" rel="stylesheet">
   <link href="../public/css/default-ver=4.1.css" rel="stylesheet">
   <link href="../public/css/nivo-lightbox-ver=4.1.css" rel="stylesheet">
-  <link href="../public/fonts/font-awesome.min.css" rel="stylesheet" type="text/css" >
+
 
   <script type='text/javascript' src='../../webpack.mix.js'></script>
 
