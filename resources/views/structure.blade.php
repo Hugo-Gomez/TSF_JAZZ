@@ -146,10 +146,18 @@
       <div class="container group">
         <div class="container-inner">
           <div class="group pad">
-            <!-- Image ici à changer -->
+            <!-- Image Logo -->
             <h1 class="site-title"><a href="{{ url('/') }}" rel="home"><img src="../public/img/logo.png" alt=""></a></h1>
+           
             <p class="site-description">- Radio de Jazz</p>
-            <img style="padding-left:50px" src="../public/img/banniere2.gif" alt="">
+
+            <!-- Image des notes de musique -->
+            <img style="padding-left:20px" src="../public/img/banniere2.gif" alt="">
+
+            <!-- Lien Pub Header -->
+            <a style="padding-left:20px" href="http://www.sonimage.com/" target="_blank"><img src="../public/img/BANNER-HEADER.jpeg" alt=""></a>
+            
+
           </div>
         </div>
       </div>

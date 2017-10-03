@@ -58,3 +58,11 @@ When you update your theme, backup this file and re-add it after.
 nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
 	height: 53px;
 }
+
+.s2 .sidebar-top, .s2 .sidebar-toggle {
+    background: #731818;
+}
+
+
+.page-title h1, .page-title h2, .page-title h4 {
+    color: #fff;
