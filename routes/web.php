@@ -98,10 +98,10 @@ Route::get('contact', function () {
 
 Route::get('/admin', 'AdminController@home');
 Route::get('/admin/{news}', 'AdminController@show');
-Route::post('/admin', 'AdminController@store');
+
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-
-
+Route::post('/home', 'AdminController@store');
+Route::get('/delete/{news}','AdminController@destroy');

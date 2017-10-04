@@ -23,6 +23,11 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        //return view('home');
+    
+        $data = \DB::table('news')->get()->all();
+        return view('adminHome', compact('data'));
     }
 }
+
+

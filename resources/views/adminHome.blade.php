@@ -13,11 +13,18 @@
       </tr>
     </thead>
     <tbody>
-	@foreach($data as $datas)
+  @foreach($data as $datas)
       <tr>
         <th>{{ $datas->date }}</th>
         <th><a href="{{ url('admin/'.$datas->id) }}" > {{ $datas->title }} </a></th>
         <th>{{ $datas->description }}</th>
+        <th>
+            <a href="{{ url('delete/'.$datas->id) }}" class="btn btn-default">
+                <span class="glyphicon glyphicon-trash" aria-hidden="true">
+                    Effacer
+                </span>
+            </a>
+        </th>
       </tr>
     @endforeach
     </tbody>
@@ -25,8 +32,17 @@
 
   <h3>Add News </h3>
 
-  <form method="POST" action="/server.php/admin">
+  <form method="POST" action="/home">
+
+  {!! csrf_field() !!}
+
     <div class="form-group">
+      <label>The title </label>
+      <input type="text" name="title" class="form-control">
+    </div>
+
+    <div class="form-group">
+      <label>Description</label>
       <textarea name="description" class="form-control"></textarea>
     </div>
 
