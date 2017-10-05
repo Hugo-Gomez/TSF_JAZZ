@@ -105,3 +105,4 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::post('/home', 'AdminController@store');
 Route::get('/delete/{news}','AdminController@destroy');
+Route::post('/admin/{news}','AdminController@update');

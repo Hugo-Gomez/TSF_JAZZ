@@ -47,5 +47,22 @@ class AdminController extends Controller
          return redirect('/home');
          
     }
+
+    public function update(Request $request, $id){
+
+        //$news = \DB::table('news')->where('id', '=', $id);
+        $inputs['title'] = Input::get('title');
+
+        $inputs['description'] = Input::get('description');
+
+        $inputs['date'] = Carbon\Carbon::now();
+
+        \DB::table('news')
+                ->where('id', $id)
+                ->update($inputs);
+
+
+        return redirect('/admin/{news}');
+    }
 }
 
