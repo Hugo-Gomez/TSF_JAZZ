@@ -25,7 +25,7 @@ class HomeController extends Controller
     {
         //return view('home');
     
-        $data = \DB::table('news')->get()->all();
+        $data = \DB::table('news')->orderBy('id', 'DESC')->get()->all();
         return view('adminHome', compact('data'));
     }
 }

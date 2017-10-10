@@ -32,7 +32,7 @@
 
   <h3>Add News </h3>
 
-  <form method="POST" action="/home">
+  <form method="POST" action="/server.php/home">
 
   {!! csrf_field() !!}
 

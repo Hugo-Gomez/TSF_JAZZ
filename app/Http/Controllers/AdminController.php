@@ -8,6 +8,7 @@ use Carbon;
 
 class AdminController extends Controller
 {
+    
     public function home(){
   //    $data = \DB::table('news')->get()->all();
         // return view('adminHome', compact('data'));
@@ -58,11 +59,11 @@ class AdminController extends Controller
         $inputs['date'] = Carbon\Carbon::now();
 
         \DB::table('news')
-                ->where('id', $id)
+                ->where('id', '=', $id)
                 ->update($inputs);
 
 
-        return redirect('/admin/{news}');
+        return redirect('/home');
     }
 }
 
