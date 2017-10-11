@@ -2,10 +2,10 @@
 -- version 4.7.4
 -- https://www.phpmyadmin.net/
 --
--- Hôte : db
--- Généré le :  ven. 29 sep. 2017 à 14:18
--- Version du serveur :  10.2.8-MariaDB-10.2.8+maria~jessie
--- Version de PHP :  7.0.21
+-- Host: db
+-- Generation Time: Oct 11, 2017 at 10:10 AM
+-- Server version: 10.2.9-MariaDB-10.2.9+maria~jessie
+-- PHP Version: 7.0.21
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,13 +19,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de données :  `sqli`
+-- Database: `sqli`
 --
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `agenda`
+-- Table structure for table `agenda`
 --
 
 CREATE TABLE `agenda` (
@@ -44,7 +44,7 @@ CREATE TABLE `agenda` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Déchargement des données de la table `agenda`
+-- Dumping data for table `agenda`
 --
 
 INSERT INTO `agenda` (`id`, `title`, `date`, `time`, `artist`, `info`, `club`, `address`, `town`, `zipcode`, `telephone`, `display`) VALUES
@@ -418,7 +418,7 @@ INSERT INTO `agenda` (`id`, `title`, `date`, `time`, `artist`, `info`, `club`, `
 -- --------------------------------------------------------
 
 --
--- Structure de la table `auditors_treasure`
+-- Table structure for table `auditors_treasure`
 --
 
 CREATE TABLE `auditors_treasure` (
@@ -441,7 +441,7 @@ CREATE TABLE `auditors_treasure` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `blog`
+-- Table structure for table `blog`
 --
 
 CREATE TABLE `blog` (
@@ -452,7 +452,7 @@ CREATE TABLE `blog` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Déchargement des données de la table `blog`
+-- Dumping data for table `blog`
 --
 
 INSERT INTO `blog` (`id`, `thumbnail`, `author`, `description`) VALUES
@@ -463,7 +463,7 @@ INSERT INTO `blog` (`id`, `thumbnail`, `author`, `description`) VALUES
 -- --------------------------------------------------------
 
 --
--- Structure de la table `news`
+-- Table structure for table `news`
 --
 
 CREATE TABLE `news` (
@@ -474,7 +474,7 @@ CREATE TABLE `news` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Déchargement des données de la table `news`
+-- Dumping data for table `news`
 --
 
 INSERT INTO `news` (`id`, `date`, `title`, `description`) VALUES
@@ -487,12 +487,13 @@ INSERT INTO `news` (`id`, `date`, `title`, `description`) VALUES
 (7, '2017-09-24', 'Le chanteur soul Charles Bradley est décédé', 'C\'est sa maison de disques, Daptone Records, qui a annoncé ce samedi le décès à 68 ans du chanteur soul Charles Bradley des suites d\'un cancer. En novembre 2016, déjà, le même label annonçait la disparition de Sharon Jones... Né en Floride, Charles Bradley avait grandi à Brooklyn, découvert la musique de James Brown, et véritablement lancé sa carrière en 2001 avec l\'album No Time for daydreaming, rapidement suivi, en 2013, par Victim of Love. Son dernier disque, Changes, était paru l\'an passé.'),
 (8, '2017-09-22', 'Une soirée éclectique au Vésinet', 'Le Théâtre du Vésinet, dans les Yvelines, proposera une grande soirée le vendredi 6 octobre pour fêter les 20 ans du Jazz Club de la Boucle, situé dans la même ville. Au programme, une partie de Boogie-Woogie enflammée avec notamment un maître du genre, Jean-Paul Amouroux, un hommage à Django Reinhardt avec Claude Tissendier et un orchestre New Orleans, le Mem\'Ory septet.'),
 (9, '2017-09-22', 'Le nouveau projet d\'Olivier Bogé', 'Après deux albums qui ne sont pas passés inaperçus, \"The World Begins Today et Expanded Places, le multi-instrumentiste Olivier Bogé s\'est lancé dans un nouveau projet en partenariat avec le label participatif français Jazz & People. Dans When Ghosts Were Young, son nouvel opus pour lequel un appel aux dons vient d\'être lancé sur la plateforme KissKissBankBank, Olivier Bogé a surtout travaillé la guitare électrique même si l\'on entendra aussi au saxophone et au piano, avec toujours le désir de dissiper des frontières qui riment parfois trop souvent avec œillères entre jazz, folk, rock et musique classique.'),
-(10, '2017-09-21', 'Mavis Staples repart au combat', 'Monument vivant du chant soul/gospel et Rhythm & Blues de Chicago, Mavis Staples vient d\'annoncer pour le 17 novembre la sortie d\'un nouvel album, \"If All I Was Was Black\". A 78 ans passés, et alors qu\'elle avait illuminé de sa présence la dernière édition du Cahors Blues Festival, la chanteuse promet un disque fortement engagé... Peut-être dans la lignée de ce qu\'a fait récemment Mightmy Mo Rodgers en baptisant un morceau \"Charlottesville Blues\" après les événements de Charlottesville à la mi-août aux Etats-Unis.');
+(10, '2017-09-21', 'Mavis Staples repart au combat', 'Monument vivant du chant soul/gospel et Rhythm & Blues de Chicago, Mavis Staples vient d\'annoncer pour le 17 novembre la sortie d\'un nouvel album, \"If All I Was Was Black\". A 78 ans passés, et alors qu\'elle avait illuminé de sa présence la dernière édition du Cahors Blues Festival, la chanteuse promet un disque fortement engagé... Peut-être dans la lignée de ce qu\'a fait récemment Mightmy Mo Rodgers en baptisant un morceau \"Charlottesville Blues\" après les événements de Charlottesville à la mi-août aux Etats-Unis.'),
+(13, '2017-10-10', 'title update test', 'test');
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `podcast`
+-- Table structure for table `podcast`
 --
 
 CREATE TABLE `podcast` (
@@ -503,7 +504,7 @@ CREATE TABLE `podcast` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Déchargement des données de la table `podcast`
+-- Dumping data for table `podcast`
 --
 
 INSERT INTO `podcast` (`id`, `title`, `description`, `thumbnail`) VALUES
@@ -523,7 +524,7 @@ INSERT INTO `podcast` (`id`, `title`, `description`, `thumbnail`) VALUES
 -- --------------------------------------------------------
 
 --
--- Structure de la table `podcast_item`
+-- Table structure for table `podcast_item`
 --
 
 CREATE TABLE `podcast_item` (
@@ -537,7 +538,7 @@ CREATE TABLE `podcast_item` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Déchargement des données de la table `podcast_item`
+-- Dumping data for table `podcast_item`
 --
 
 INSERT INTO `podcast_item` (`id`, `title`, `author`, `file`, `date`, `duration`, `id_podcast`) VALUES
@@ -605,7 +606,7 @@ INSERT INTO `podcast_item` (`id`, `title`, `author`, `file`, `date`, `duration`,
 -- --------------------------------------------------------
 
 --
--- Structure de la table `program`
+-- Table structure for table `program`
 --
 
 CREATE TABLE `program` (
@@ -617,99 +618,135 @@ CREATE TABLE `program` (
   `description` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+-- --------------------------------------------------------
+
 --
--- Index pour les tables déchargées
+-- Table structure for table `users`
+--
+
+CREATE TABLE `users` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `password` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `remember_token` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `name`, `email`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
+(1, 'solomon', 'solomon@solo.so', '$2y$10$8UxfbOGrPqTfDMKm1fqhWOVPVRN8N6HjGDzqVzN2v3jzJ/T4oHrEW', '9gdjtnjjUMTiLX6OrbnfMhtOKfE2HRQuOxzRht6z86t72R7iWsTWrItNnLE6', '2017-10-02 15:15:27', '2017-10-02 15:15:27'),
+(2, 'solomon', 'soli@king.co', '$2y$10$ILu154CO//S36IO8Rjt6Kunp4fCspPxDNrGEym9akwLgLFs9JzdLS', 'Mgdbq90wbLpe9jdkob6Qk6FKCcMhniiIMmcMstkMuhHs3Ri2YFpLE2Gh3zIL', '2017-10-09 18:45:08', '2017-10-09 18:45:08');
+
+--
+-- Indexes for dumped tables
 --
 
 --
--- Index pour la table `agenda`
+-- Indexes for table `agenda`
 --
 ALTER TABLE `agenda`
   ADD PRIMARY KEY (`id`);
 
 --
--- Index pour la table `auditors_treasure`
+-- Indexes for table `auditors_treasure`
 --
 ALTER TABLE `auditors_treasure`
   ADD PRIMARY KEY (`id`);
 
 --
--- Index pour la table `blog`
+-- Indexes for table `blog`
 --
 ALTER TABLE `blog`
   ADD PRIMARY KEY (`id`);
 
 --
--- Index pour la table `news`
+-- Indexes for table `news`
 --
 ALTER TABLE `news`
   ADD PRIMARY KEY (`id`);
 
 --
--- Index pour la table `podcast`
+-- Indexes for table `podcast`
 --
 ALTER TABLE `podcast`
   ADD PRIMARY KEY (`id`);
 
 --
--- Index pour la table `podcast_item`
+-- Indexes for table `podcast_item`
 --
 ALTER TABLE `podcast_item`
   ADD PRIMARY KEY (`id`),
   ADD KEY `FK_podcast_item_id_podcast` (`id_podcast`);
 
 --
--- Index pour la table `program`
+-- Indexes for table `program`
 --
 ALTER TABLE `program`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT pour les tables déchargées
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT pour la table `auditors_treasure`
+-- AUTO_INCREMENT for table `auditors_treasure`
 --
 ALTER TABLE `auditors_treasure`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT pour la table `blog`
+-- AUTO_INCREMENT for table `blog`
 --
 ALTER TABLE `blog`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT pour la table `news`
+-- AUTO_INCREMENT for table `news`
 --
 ALTER TABLE `news`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
--- AUTO_INCREMENT pour la table `podcast`
+-- AUTO_INCREMENT for table `podcast`
 --
 ALTER TABLE `podcast`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
--- AUTO_INCREMENT pour la table `podcast_item`
+-- AUTO_INCREMENT for table `podcast_item`
 --
 ALTER TABLE `podcast_item`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=65;
 
 --
--- AUTO_INCREMENT pour la table `program`
+-- AUTO_INCREMENT for table `program`
 --
 ALTER TABLE `program`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- Contraintes pour les tables déchargées
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- Constraints for dumped tables
 --
 
 --
--- Contraintes pour la table `podcast_item`
+-- Constraints for table `podcast_item`
 --
 ALTER TABLE `podcast_item`
   ADD CONSTRAINT `FK_podcast_item_id_podcast` FOREIGN KEY (`id_podcast`) REFERENCES `podcast` (`id`);

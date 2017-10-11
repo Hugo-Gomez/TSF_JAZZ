@@ -8,7 +8,11 @@ use Carbon;
 
 class AdminController extends Controller
 {
-    
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function home(){
   //    $data = \DB::table('news')->get()->all();
         // return view('adminHome', compact('data'));
@@ -64,6 +68,44 @@ class AdminController extends Controller
 
 
         return redirect('/home');
+    }
+
+    
+    public function homePodcast()
+    {
+    
+        $data_podcasts = \DB::table('podcast')->orderBy('id', 'DESC')->get()->all();
+        return view('podcast/podcastHome', compact('data_podcasts'));
+    } 
+
+    public function storePodcast(){
+
+        $podcastInputs['title'] = Input::get('title');
+
+        $podcastInputs['description'] = Input::get('description');
+
+        if(Input::hasFile('img_file')) {
+        $file = Input::file('img_file');
+        //$file->move(public_path(). '/storage', $file->getClientOriginalName())->save();
+        $podcastInputs['thumbnail'] = $file->getClientOriginalName();
+        }
+
+        \DB::table('podcast')->insert($podcastInputs);
+
+        return redirect('/podcast/admin');
+    }
+
+    public function destroyPodcast($id){
+        
+         $data_podcasts = \DB::table('podcast')->where('id', '=', $id);
+
+         if (!is_null($data_podcasts)) {
+            $data_podcasts->delete();
+        }
+         
+
+         return redirect('/podcast/admin');
+         
     }
 }
 

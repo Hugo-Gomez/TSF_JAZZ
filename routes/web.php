@@ -41,7 +41,7 @@ Route::get('frequences', 'StructureController@frequences');
 
 Route::get('newsletter', 'StructureController@newsletter');
 
-/* Routes admin */
+
 
 
 
@@ -90,6 +90,9 @@ Route::get('contact', function () {
 });
 
 
+
+/* Routes admin */
+
 Route::get('/admin', 'AdminController@home');
 
 
@@ -101,3 +104,11 @@ Route::post('/home', 'AdminController@store');
 Route::get('/delete/{news}','AdminController@destroy');
 Route::get('/admin/{news}', 'AdminController@show');
 Route::post('/admin/{news}','AdminController@update');
+
+/* podcast */
+
+Route::get('/podcast/admin', 'AdminController@homePodcast');
+Route::post('/podcast/admin', 'AdminController@storePodcast');
+Route::get('/podcast/delete/{podcast}','AdminController@destroyPodcast');
+
+/* End routes admin */
