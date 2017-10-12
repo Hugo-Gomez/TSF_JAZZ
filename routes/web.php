@@ -110,5 +110,15 @@ Route::post('/admin/{news}','AdminController@update');
 Route::get('/podcast/admin', 'AdminController@homePodcast');
 Route::post('/podcast/admin', 'AdminController@storePodcast');
 Route::get('/podcast/delete/{podcast}','AdminController@destroyPodcast');
+Route::get('/podcast/admin/{podcast}', 'AdminController@showPodcast');
+Route::post('/podcast/admin/{podcast}','AdminController@updatePodcast');
+
+/* blog */
+
+Route::get('/blog/admin', 'AdminController@homeBlog');
+Route::post('/blog/admin', 'AdminController@storeBlog');
+Route::get('/blog/delete/{blog}','AdminController@destroyBlog');
+Route::get('/blog/admin/{blog}', 'AdminController@showBlog');
+Route::post('/blog/admin/{blog}','AdminController@updateBlog');
 
 /* End routes admin */

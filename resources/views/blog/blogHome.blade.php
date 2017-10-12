@@ -3,23 +3,23 @@
 @section('content')
 
 <div class="container">
-  <h2>Podcast Table</h2>
+  <h2>Blog Table</h2>
   <table class="table">
     <thead>
       <tr>
-        <th>title</th>
+        <th>author</th>
         <th>description</th>
         <th>photo</th>
       </tr>
     </thead>
     <tbody>
-  @foreach($data_podcasts as $data_podcast)
+  @foreach($data_blogs as $data_blog)
       <tr>
-        <th><a href="{{ url('podcast/admin/'.$data_podcast->id) }}" > {{ $data_podcast->title }} </a></th>
-        <th>{{ $data_podcast->description }}</th>  
-        <th><img src="<?php echo asset("public/$data_podcast->thumbnail")?>" alt="podcast Pic" height="50" width="50">
+        <th><a href="{{ url('blog/admin/'.$data_blog->id) }}" > {{ $data_blog->author }} </a></th>
+        <th>{{ $data_blog->description }}</th>  
+        <th><img src="<?php echo asset("public/$data_blog->thumbnail")?>" alt="blog Pic" height="50" width="50">
         <th>
-            <a href="{{ url('podcast/delete/'.$data_podcast->id) }}" class="btn btn-default">
+            <a href="{{ url('blog/delete/'.$data_blog->id) }}" class="btn btn-default">
                 <span class="glyphicon glyphicon-trash" aria-hidden="true">
                     Effacer
                 </span>
@@ -32,13 +32,13 @@
 
   <h3>Add News </h3>
 
-  <form method="POST" action="/server.php/podcast/admin" enctype="multipart/form-data">
+  <form method="POST" action="/server.php/blog/admin" enctype="multipart/form-data">
 
   {!! csrf_field() !!}
 
     <div class="form-group">
-      <label>The title </label>
-      <input type="text" name="title" class="form-control">
+      <label>The author </label>
+      <input type="text" name="author" class="form-control">
     </div>
 
     <div class="form-group">
