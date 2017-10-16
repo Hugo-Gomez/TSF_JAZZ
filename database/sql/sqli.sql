@@ -2,10 +2,10 @@
 -- version 4.7.4
 -- https://www.phpmyadmin.net/
 --
--- Host: db
--- Generation Time: Oct 11, 2017 at 10:10 AM
--- Server version: 10.2.9-MariaDB-10.2.9+maria~jessie
--- PHP Version: 7.0.21
+-- Hôte : db
+-- Généré le :  lun. 16 oct. 2017 à 13:20
+-- Version du serveur :  10.2.8-MariaDB-10.2.8+maria~jessie
+-- Version de PHP :  7.0.21
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,13 +19,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `sqli`
+-- Base de données :  `sqli`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `agenda`
+-- Structure de la table `agenda`
 --
 
 CREATE TABLE `agenda` (
@@ -44,7 +44,7 @@ CREATE TABLE `agenda` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `agenda`
+-- Déchargement des données de la table `agenda`
 --
 
 INSERT INTO `agenda` (`id`, `title`, `date`, `time`, `artist`, `info`, `club`, `address`, `town`, `zipcode`, `telephone`, `display`) VALUES
@@ -418,7 +418,7 @@ INSERT INTO `agenda` (`id`, `title`, `date`, `time`, `artist`, `info`, `club`, `
 -- --------------------------------------------------------
 
 --
--- Table structure for table `auditors_treasure`
+-- Structure de la table `auditors_treasure`
 --
 
 CREATE TABLE `auditors_treasure` (
@@ -441,7 +441,7 @@ CREATE TABLE `auditors_treasure` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `blog`
+-- Structure de la table `blog`
 --
 
 CREATE TABLE `blog` (
@@ -452,7 +452,7 @@ CREATE TABLE `blog` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `blog`
+-- Déchargement des données de la table `blog`
 --
 
 INSERT INTO `blog` (`id`, `thumbnail`, `author`, `description`) VALUES
@@ -463,7 +463,7 @@ INSERT INTO `blog` (`id`, `thumbnail`, `author`, `description`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `news`
+-- Structure de la table `news`
 --
 
 CREATE TABLE `news` (
@@ -474,11 +474,11 @@ CREATE TABLE `news` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `news`
+-- Déchargement des données de la table `news`
 --
 
 INSERT INTO `news` (`id`, `date`, `title`, `description`) VALUES
-(1, '2017-09-27', 'Swing again à Moscou', 'La ville de Saint-Petersbourg va accueillir, les 17 et 18 novembre, une grande conférence sur le jazz présentée par les organisateurs comme une première. Sous l\'égide du ministère russe de la Culture, cet événement, baptisé \"Jazz Across Borders\", devrait notamment valoriser les jeunes talents de la scène jazzistique russe devant un parterre de professionnels et de directeurs de grands festivals internationaux.'),
+(1, '2017-10-16', 'Swing again à Moscou', 'La ville de Saint-Petersbourg va accueillir, les 17 et 18 novembre, une grande conférence sur le jazz présentée par les organisateurs comme une première. Sous l\'égide du ministère russe de la Culture, cet événement, baptisé \"Jazz Across Borders\", devrait notamment valoriser les jeunes talents de la scène jazzistique russe devant un parterre de professionnels et de directeurs de grands festivals internationaux.'),
 (2, '2017-09-27', 'Jazz à St-Nom-la-Bretèche', 'La 2e édition du festival Jazz à Saint-Nom-la-Bretèche, dans les Yvelines, aura lieu les samedis 7 et 14 octobre. Le premier week-end, c\'est le pianiste Franck Avitabile qui se produira tandis que la journée du 14 devrait valoriser Laurent Cugny et son Gil Evans Paris Workshop.'),
 (3, '2017-09-26', 'Rémi Panossian fait appel à ELYX', 'Le trio de Rémi Panossian, RP3, revient dans l\'actualité discographique. Leur nouvel opus,Morning Smile, sortira le 20 octobre sur le label Jazz Family avec notamment un concert trois jours plus tôt, le 17, au Sunside dans le cadre du festival Jazz sur Seine à Paris. Le groupe s\'est par ailleurs associé à Yacine Ait Kaci, le créateur de ELYX, ce joyeux petit bonhomme créé sur Internet et devenu ambassadeur virtuel de l\'ONU, pour donner naissance à un spectacle visuel qui accompagnera leurs prestations.'),
 (4, '2017-09-26', 'Nouvelle tournée pour The Bridge', 'Tournée hexagonale pour Twins, un groupe de musiciens français et de Chicago qui réunit les saxophonistes Stéphane Payen et Fred Jackson Jr ainsi que les batteurs Makaya McCraven et Edward Perraud. Quartet tout en ébullition (double sax et double drums...) que l\'on pourra notamment découvrir le 5 octobre au Carré Bleu à Poitiers, le 10 octobre au Petit Faucheux, à Tours, et le 16 à la Dynamo de Pantin avec la participation du vocaliste Mike Ladd... Une tournée qui entre dans le cadre de l\'opération \"The Bridge\", cette passerelle permanente entre la France et Chicago initiée par Alexandre Pierrepont,en partenariat avec l\'ambassade des Etats-Unis en France.'),
@@ -493,7 +493,7 @@ INSERT INTO `news` (`id`, `date`, `title`, `description`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `podcast`
+-- Structure de la table `podcast`
 --
 
 CREATE TABLE `podcast` (
@@ -504,7 +504,7 @@ CREATE TABLE `podcast` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `podcast`
+-- Déchargement des données de la table `podcast`
 --
 
 INSERT INTO `podcast` (`id`, `title`, `description`, `thumbnail`) VALUES
@@ -524,7 +524,7 @@ INSERT INTO `podcast` (`id`, `title`, `description`, `thumbnail`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `podcast_item`
+-- Structure de la table `podcast_item`
 --
 
 CREATE TABLE `podcast_item` (
@@ -538,7 +538,7 @@ CREATE TABLE `podcast_item` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `podcast_item`
+-- Déchargement des données de la table `podcast_item`
 --
 
 INSERT INTO `podcast_item` (`id`, `title`, `author`, `file`, `date`, `duration`, `id_podcast`) VALUES
@@ -606,22 +606,56 @@ INSERT INTO `podcast_item` (`id`, `title`, `author`, `file`, `date`, `duration`,
 -- --------------------------------------------------------
 
 --
--- Table structure for table `program`
+-- Structure de la table `program`
 --
 
 CREATE TABLE `program` (
   `id` int(11) NOT NULL,
-  `thumbnail` varchar(100) NOT NULL,
-  `title` varchar(100) NOT NULL,
-  `date` date NOT NULL,
-  `subtitle` varchar(100) DEFAULT NULL,
-  `description` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `id_program` int(11) NOT NULL,
+  `thumbnail` varchar(255) NOT NULL,
+  `title` varchar(255) NOT NULL,
+  `date` date DEFAULT NULL,
+  `subtitle` varchar(255) NOT NULL,
+  `description` longtext NOT NULL,
+  `sub_description_title` varchar(255) NOT NULL,
+  `sub_description` longtext NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `program`
+--
+
+INSERT INTO `program` (`id`, `id_program`, `thumbnail`, `title`, `date`, `subtitle`, `description`, `sub_description_title`, `sub_description`) VALUES
+(2, 0, 'podcast/TSF_DE.jpg', 'Deli Express', '2017-10-16', 'Lucky Peterson & RP3', 'Un plateau de luxe pour débuter la semaine :\r\n\r\n- Lucky Peterson : Avant de devenir l\'un des bluesmen les plus charismatiques de sa génération, Lucky Peterson a d\'abord joué de l\'orgue Hammond...Il rend hommage au maître du B3 sur son nouvel album, \"Tribute to Jimmy Smith\", qu\'il présente ce soir au Duc des Lombards.\r\n\r\n- RP3 : A la veille de son concert au Sunside, dans le cadre du festival Jazz sur Seine, le trio de Rémi Panossian vient nous parler de \"Morning Smile\", avant sa sortie vendredi...Un disque enregistré avec de nombreux invités, notamment la chanteuse Maïa Barouh.', 'Jean-Charles Doukhan', 'De 12h à 13h, c\'est toute l\'actualité du\r\njazz qui se déguste à point: ceux qui font l’actualité du jazz d’aujourd’hui\r\npasse par la nouvelle quotidienne de TSFJAZZ, en direct à l’heure du Dej.\r\n\r\ntous les jours entre 12h et 13h'),
+(3, 0, 'podcast/TSF_DE.jpg', 'Deli Express', '2017-10-17', 'Pierrick Pedron - Unknown', 'Après la parenthèse psyché de \"And The\", Pierrick Pedron revient à une formule 100% acoustique et en quartet sur son nouvel album, \"Unknown\", enregistré avec Carl-Henri Morisset (piano), Thomas Bramerie (contrebasse) et Greg Hutchinson (batterie).\r\n\r\nAvant ses concerts, du 23 au 25 octobre au Duc des Lombards, le saxophoniste passe par la case Deli Express.', 'Jean-Charles Doukhan', 'De 12h à 13h, c\'est toute l\'actualité du\r\njazz qui se déguste à point: ceux qui font l’actualité du jazz d’aujourd’hui\r\npasse par la nouvelle quotidienne de TSFJAZZ, en direct à l’heure du Dej.\r\n\r\ntous les jours entre 12h et 13h'),
+(4, 0, 'podcast/TSF_DE.jpg', 'Deli Express', '2017-10-18', 'Kyle Eastwood & Arnaud Dolmen', 'Deux invités ce midi dans Deli Express :\r\n\r\n- Kyle Eastwood : le bassiste continue d\'ancrer son répertoire dans le hard-bop le plus flamboyant sur son nouvel album, \"In Transit\" enregistré en quintet et avec Stefano Di Battista en invité, notamment sur une version émouvante de Cinema Paradiso.\r\n\r\n- Arnaud Dolmen : le batteur et percussionniste nous présente son premier album, \"Tonbé Lévé\"...Un projet entre jazz et tradition Gwoka. Interview et session live en compagnie d\'Adrien Sanchez (saxophone), Leonardo Montana (piano) et Joachim Govin (contrebasse).', 'Jean-Charles Doukhan', 'De 12h à 13h, c\'est toute l\'actualité du\r\njazz qui se déguste à point: ceux qui font l’actualité du jazz d’aujourd’hui\r\npasse par la nouvelle quotidienne de TSFJAZZ, en direct à l’heure du Dej.\r\n\r\ntous les jours entre 12h et 13h'),
+(5, 0, 'podcast/TSF_DE.jpg', 'Deli Express', '2017-10-19', 'Stacey Kent - I Know I Dream', 'Pour son grand retour dans les bacs, Stacey Kent nous propose son premier album orchestral.\r\n\r\n\"I Know I Dream\" a été enregistré avec un ensemble d\'environ 60 musiciens. Au programme : des standards de Jobim, des chansons de Férré, Gainsbourg et Nino Ferrer ou encore deux chansons écrites par le nouveau prix Nobel de littérature, Kazuo Ishiguro.\r\n\r\nOn en parle ce midi dans Deli Express.', 'Jean-Charles Doukhan', 'De 12h à 13h, c\'est toute l\'actualité du\r\njazz qui se déguste à point: ceux qui font l’actualité du jazz d’aujourd’hui\r\npasse par la nouvelle quotidienne de TSFJAZZ, en direct à l’heure du Dej.\r\n\r\ntous les jours entre 12h et 13h'),
+(6, 0, 'podcast/TSF_DE.jpg', 'Deli Express', '2017-10-20', 'The Amazing Keystone Big Band - Django Extended', 'Après son adaptation de \"Pierre et le Loup\" et du \"Carnaval des Animaux\", l\'Amazing Keystone Big Band s\'attaque au répertoire de Django Reinhardt sur l\'album \"Django Extended\" et sa déclinaison pour enfants, \"Monsieur Django et Lady Swing\", un conte raconté par Guillaume Gallienne.\r\n\r\nOn en parle ce midi avec deux des leaders de l\'orchestre, le trompettiste David Enhco et le saxophoniste Jon Boutellier.', 'Jean-Charles Doukhan', 'De 12h à 13h, c\'est toute l\'actualité du\r\njazz qui se déguste à point: ceux qui font l’actualité du jazz d’aujourd’hui\r\npasse par la nouvelle quotidienne de TSFJAZZ, en direct à l’heure du Dej.\r\n\r\ntous les jours entre 12h et 13h'),
+(8, 1, 'podcast/TSF_59RDA.jpg', '59, Rue des archives', NULL, 'Par David Koperhant et Bruno Guermonprez', 'Tous les Dimanches, de 12h à 13h, poussez la porte du 59, rue des Archives, le bureau des Affaires Jazz Non-Classées. David Koperhant et Bruno Guermonprez mènent l’enquête et rouvrent les dossiers secrets du Jazz : Dans les coulisses de Kind Of Blue; au Sands Hotel de Las Vegas avec Frank Sinatra; à la Nouvelle-Orléans en 1903; ou à Chicago en 1925… 59, Rue des Archives, c’est l’émission historique et patrimoniale de TSFJAZZ. ', '', ''),
+(10, 2, 'podcast/TSF_SUM.png', 'Summer of Jazz !', NULL, '', 'Tout l\'été, découvrez TSFJAZZ été plage! Avec des invités, des lives, des chroniques, et de nombreuses surprises...\r\n\r\nDu lundi au vendredi, de 18h à  20h!', '', ''),
+(18, 3, 'podcast/TSF_MA.jpg', 'Les matins jazz', '2017-10-16', 'Le jazz est télégénique', 'Le Disque du Jour : \"Blue Maqams\" - Anouar Brahem (ECM)\r\nLe Concert du Jour : Lucky Peterson au Duc des Lombards\r\nEt le reste :\r\n- les icônes du jazz immortalisées par le photographe Ted Williams (Ed. Gründ)\r\n- des séries télé qui, aux Etats-Unis (une sitcom sur le quotidien de musiciens de jazz) et en Angleterre (une série comique sur un groupe de jazz d\'aujourd\'hui transporté dans les années 20), mettent le jazz en scène\r\n- la dernière newsletter de l\'asso Grands Formats qui cherche les femmes\r\n- le Preservation Hall Jazz Band invité de Chris Thile a \"Prairie Home Companion\"...', 'Par Laure Albernhe et Mathieu Beaudou', 'Au réveil, les nouveaux Matins Jazz,c’est Black Coffee & musique, avec Laure Albernhe et Mathieu Beaudou.\r\nTout le jazz dès le lever du soleil, avec le duo matinalier qui dégourdit vos oreilles et vous tire de votre lit. Des nouveaux disques, des exclusivités, les dernières nouvelles de la planète jazz, des idées de concerts, des invités, de la musique live, une revue de presse et des infos, bref, un réveil 100% jazz, avec un rendez-vous infos toutes les 15mn. (c)Thibaut De Corday\r\n\r\ndu lundi au vendredi, de 6h à 9h30.'),
+(19, 3, 'podcast/TSF_MA.jpg', 'Les matins jazz', '2017-10-17', 'C\'est quoi, le \"mime gospel\"?', 'Le Disque du Jour : \"Waller\" - Mark Lewandowski (Whirlwind Recordings)\r\nLe Concert du Jour : Dianne Reeves à l\'Espace Carpeaux/Courbevoie\r\nEt le reste : des photos de Larry Clark en vente à 100 euros, le \"mime gospel\" de Steffani Jemison au Musée du Jeu de Paume, et tout le reste...', 'Par Laure Albernhe et Mathieu Beaudou', 'Au réveil, les nouveaux Matins Jazz,c’est Black Coffee & musique, avec Laure Albernhe et Mathieu Beaudou.\r\nTout le jazz dès le lever du soleil, avec le duo matinalier qui dégourdit vos oreilles et vous tire de votre lit. Des nouveaux disques, des exclusivités, les dernières nouvelles de la planète jazz, des idées de concerts, des invités, de la musique live, une revue de presse et des infos, bref, un réveil 100% jazz, avec un rendez-vous infos toutes les 15mn. (c)Thibaut De Corday\r\n\r\ndu lundi au vendredi, de 6h à 9h30.'),
+(20, 3, 'podcast/TSF_MA.jpg', 'Les matins jazz', '2017-10-18', 'What A Wonderful World', 'Le Disque du Jour : \"OB 1\" - Or Bareket (Fresh Sound)\r\nLe Concert du Jour : Danilo Perez, John Patitucci et Brian Blade au New Morning\r\nEt le reste, dont l\'histoire de la chanson \"What A Wonderful World\"...', 'Par Laure Albernhe et Mathieu Beaudou', 'Au réveil, les nouveaux Matins Jazz,c’est Black Coffee & musique, avec Laure Albernhe et Mathieu Beaudou.\r\nTout le jazz dès le lever du soleil, avec le duo matinalier qui dégourdit vos oreilles et vous tire de votre lit. Des nouveaux disques, des exclusivités, les dernières nouvelles de la planète jazz, des idées de concerts, des invités, de la musique live, une revue de presse et des infos, bref, un réveil 100% jazz, avec un rendez-vous infos toutes les 15mn. (c)Thibaut De Corday\r\n\r\ndu lundi au vendredi, de 6h à 9h30.'),
+(21, 3, 'podcast/TSF_MA.jpg', 'Les matins jazz', '2017-10-19', 'Un jeudi, à suivre…', 'Le Disque du Jour : \"Tonbé Levé\" - Arnaud Dolmen (autoproduction)\r\nLe Concert du Jour : Christian Sands au Duc des Lombards\r\nEt le reste, dont un livre consacré à Pat Metheny...', 'Par Laure Albernhe et Mathieu Beaudou', 'Au réveil, les nouveaux Matins Jazz,c’est Black Coffee & musique, avec Laure Albernhe et Mathieu Beaudou.\r\nTout le jazz dès le lever du soleil, avec le duo matinalier qui dégourdit vos oreilles et vous tire de votre lit. Des nouveaux disques, des exclusivités, les dernières nouvelles de la planète jazz, des idées de concerts, des invités, de la musique live, une revue de presse et des infos, bref, un réveil 100% jazz, avec un rendez-vous infos toutes les 15mn. (c)Thibaut De Corday\r\n\r\ndu lundi au vendredi, de 6h à 9h30.'),
+(22, 3, 'podcast/TSF_MA.jpg', 'Les matins jazz', '2017-10-20', 'I Know I Dream', 'Le Disque du Jour : \"I Know I Dream\" - Stacey Kent (Okeh Records)\r\nLe Concert du Jour : Django Memories, hommage à Django avec Stochelo Rosenberg au New Morning\r\nEt le reste, à suivre…', 'Par Laure Albernhe et Mathieu Beaudou', 'Au réveil, les nouveaux Matins Jazz,c’est Black Coffee & musique, avec Laure Albernhe et Mathieu Beaudou.\r\nTout le jazz dès le lever du soleil, avec le duo matinalier qui dégourdit vos oreilles et vous tire de votre lit. Des nouveaux disques, des exclusivités, les dernières nouvelles de la planète jazz, des idées de concerts, des invités, de la musique live, une revue de presse et des infos, bref, un réveil 100% jazz, avec un rendez-vous infos toutes les 15mn. (c)Thibaut De Corday\r\n\r\ndu lundi au vendredi, de 6h à 9h30.'),
+(24, 4, 'podcast/TSF_LU.jpg', 'Les lundis du Duc', NULL, 'par Sébastien Vidal & Laurent Sapir', 'Tous les lundis à 18h.', '', ''),
+(25, 5, 'podcast/TSF_JL.jpg', 'Jazzlive', '2017-10-16', 'Lucky Peterson en direct du Duc des Lombards', 'Ce soir, Lucky Peterson monte sur la scène du Duc des Lombards pour nous présenter son dernier album hommage au maitre de l\'Orgue Hammond B3 : Jimmy Smith. Le pianiste sera en compagnie de Nicolas Folmer à la trompette, Kelyn Crapp à la guitare et Ahmad Compaoré à la batterie. Un concert à vivre en direct dans Jazzlive à partir de 19h30. ', 'Par Sébastien Doviane', 'C\'est l\'ambiance d\'un club de jazz chez soi.\r\nTous les soirs de la semaine, Sébastien Doviane promène l\'antenne de TSFJAZZ\r\ndans les clubs, les salles, les centres culturels, les festivals, pour\r\ncapter en direct le jazz au plus près, là  où il se créé et se\r\ndéveloppe. Jazzlive, c\'est aussi des concerts historiques: Ella\r\nFitzgerald Ã  Berlin, Duke Ellington Ã  Newport, John Coltrane Ã \r\nAntibes, Bill Evans au Village Vanguard, Art Blakey au Club\r\nSt-Germain...\r\n\r\n\r\n\r\nDu lundi au vendredi à 21h !'),
+(26, 5, 'podcast/TSF_JL.jpg', 'Jazzlive', '2017-10-17', 'Christian Sands en direct de l\'Automne Club', 'Découvert au sein du trio de Christian McBride, le pianiste Christian Sands mène depuis quelques années une carrière en solo. Ce soir il présente \"Reach\" son nouvel album sur la scène de l\'Automne Club à Toulouse, accompagné par Eric Wheeler à la contrebasse Jerome Jennings à la batterie. Un concert organisé dans le cadre du Festival Jazz sur son 31 qui est à vivre en direct dans Jazzlive à partir de 21h ! ', 'Par Sébastien Doviane', 'C\'est l\'ambiance d\'un club de jazz chez soi.\r\nTous les soirs de la semaine, Sébastien Doviane promène l\'antenne de TSFJAZZ\r\ndans les clubs, les salles, les centres culturels, les festivals, pour\r\ncapter en direct le jazz au plus près, là  où il se créé et se\r\ndéveloppe. Jazzlive, c\'est aussi des concerts historiques: Ella\r\nFitzgerald Ã  Berlin, Duke Ellington Ã  Newport, John Coltrane Ã \r\nAntibes, Bill Evans au Village Vanguard, Art Blakey au Club\r\nSt-Germain...\r\n\r\n\r\n\r\nDu lundi au vendredi à 21h !'),
+(27, 5, 'podcast/TSF_JL.jpg', 'Jazzlive', '2017-10-18', 'Tyler Blanton Electric Band en direct de l\'Automne Club', 'Grand habitué des clubs new-yorkais, le vibraphoniste Tyler Blanton prend ses quartiers à l\'Automne Club de Toulouse ce soir . Accompagné par Massimo Biolcati à la basse et Corey Rawls à la batterie, il nous présentera \"Gotham\" son dernier album sorti chez Village\'s Voice.\r\nUn concert organisé dans le cadre du festival Jazz sur son 31 à vivre en direct dans Jazzlive à partir de 21h30! ', 'Par Sébastien Doviane', 'C\'est l\'ambiance d\'un club de jazz chez soi.\r\nTous les soirs de la semaine, Sébastien Doviane promène l\'antenne de TSFJAZZ\r\ndans les clubs, les salles, les centres culturels, les festivals, pour\r\ncapter en direct le jazz au plus près, là  où il se créé et se\r\ndéveloppe. Jazzlive, c\'est aussi des concerts historiques: Ella\r\nFitzgerald Ã  Berlin, Duke Ellington Ã  Newport, John Coltrane Ã \r\nAntibes, Bill Evans au Village Vanguard, Art Blakey au Club\r\nSt-Germain...\r\n\r\n\r\n\r\nDu lundi au vendredi à 21h !'),
+(28, 5, 'podcast/TSF_JL.jpg', 'Jazzlive', '2017-10-19', 'Wallace Roney en direct de l\'Automne Club', 'A la fin des années 80, Wallace Roney remplace Terence Blanchard dans les Jazz Messengers d\'Art Blakey. En 1991, Miles Davis lui demande venir faire sa doublure sur scène lors de son mythique concert avec Quincy Jones à Montreux. Depuis il est considéré comme l\'un de ses héritiers. Cet élève de Clark Terry et Dizzy Gillespie sera ce soir en quintet sur la scène de l\'Automne Club.\r\nUn concert organisé dans le cadre du Festival Jazz sur son 31 à vivre en direct dans Jazzlive à partir de 21h! ', 'Par Sébastien Doviane', 'C\'est l\'ambiance d\'un club de jazz chez soi.\r\nTous les soirs de la semaine, Sébastien Doviane promène l\'antenne de TSFJAZZ\r\ndans les clubs, les salles, les centres culturels, les festivals, pour\r\ncapter en direct le jazz au plus près, là  où il se créé et se\r\ndéveloppe. Jazzlive, c\'est aussi des concerts historiques: Ella\r\nFitzgerald Ã  Berlin, Duke Ellington Ã  Newport, John Coltrane Ã \r\nAntibes, Bill Evans au Village Vanguard, Art Blakey au Club\r\nSt-Germain...\r\n\r\n\r\n\r\nDu lundi au vendredi à 21h !'),
+(29, 5, 'podcast/TSF_JL.jpg', 'Jazzlive', '2017-10-20', 'Craig Taborn en direct de l\'Automne Club', 'Après un album en solo puis en trio, le pianiste Craig Taborn revient avec \"Daylight Ghosts\" un nouveau projet en quartet sorti chez ECM. C\'est ce répertoire qui nous présentera ce soir sur la scène de l\'Automne Club à Toulouse, accompagné par Chris Speed au saxophone, Chris Lightcap à la basse et Dave King à la batterie.\r\nUn concert organisé dans le cadre du festival Jazz sur son 31 à vivre en direct dans Jazzlive à partir de 21h !', 'Par Sébastien Doviane', 'C\'est l\'ambiance d\'un club de jazz chez soi.\r\nTous les soirs de la semaine, Sébastien Doviane promène l\'antenne de TSFJAZZ\r\ndans les clubs, les salles, les centres culturels, les festivals, pour\r\ncapter en direct le jazz au plus près, là  où il se créé et se\r\ndéveloppe. Jazzlive, c\'est aussi des concerts historiques: Ella\r\nFitzgerald Ã  Berlin, Duke Ellington Ã  Newport, John Coltrane Ã \r\nAntibes, Bill Evans au Village Vanguard, Art Blakey au Club\r\nSt-Germain...\r\n\r\n\r\n\r\nDu lundi au vendredi à 21h !'),
+(30, 6, 'podcast/TSF_DDJ.jpg', 'Disque du jour', NULL, 'par l\'équipe de TSF', 'Une réédition, une nouveauté, un coffret èvènement, une perle rare, tous les jours, l\'équipe de TSF, décrypte pour vous l\'actualité discographique du jazz.\r\n\r\nDu lundi au vendredi Ã  6h20, 08h20, 10h30, 18h30 et 22h30', '', ''),
+(31, 7, 'podcast/TSF_PORT.jpg', 'Portrait in Jazz', NULL, 'par Laurent de Wilde', 'Le jazz intime d\'un invité qui nous ouvre les portes de sa discotheque et nous fait partager ses disques de chevet. Laurent de Wilde va à la rencontre de ces scientifiques, comédiennes, musiciens, femmes politiques, cuisiniers, auteurs ou réalisatrices qui aiment le jazz et veulent partager leur passion. De Barbara Schultz à Agnès Varda, en passant par Pierre Gagnaire, Michel Butor ou Christiane Taubira,\r\nc\'est tout le monde de la culture jazz qui passe dans Portrait In Jazz.\r\n\r\nLe mercredi à 19h', '', ''),
+(32, 8, 'podcast/TSF_CO.jpg', 'Coup de Projecteur', NULL, 'La rédaction de TSFJAZZ', 'Le regard sur la scéne culturelle, par ceux qui la font et qui traverse toutes les formes artistiques. Ils sont comédiens, réalisateurs, metteurs en scéne, écrivains, chorégraphes.\r\nIls interrogent leur temps et la société à  travers cinéma, théatre, livres, danse ou expositions.\r\n\r\nDu lundi au vendredi à 08h30, 13h30 et 16h30 ', '', ''),
+(33, 9, 'podcast/TSF_MIC.jpg', 'Made in China', NULL, 'Made in China', 'Chanteuse,\r\nComédienne, DJ, Chroniqueuse, Diggeuse, Twitteuse hors pair et 100%\r\nsouriante en toute circonstance, China Moses est une figure immanquable\r\nde la scène musicale d’aujourd’hui. Chaque jeudi à 19h, découvrez MADE\r\nIN CHINA, votre nouveau rendez-vous dédié aux voix. Au programme, un\r\nhommage hebdomadaire aux chanteurs et chanteuses d’hier, d’aujourd’hui…\r\net de demain!', '', 'Chanteuse, Comédienne, DJ, Chroniqueuse, Diggeuse, Twitteuse hors pair et 100% souriante en toute circonstance, China Moses est une figure immanquable de la scène musicale d’aujourd’hui. Chaque jeudi à 19h, découvrez MADE IN CHINA, votre nouveau rendez-vous dédié aux voix. Au programme, un hommage hebdomadaire aux chanteurs et chanteuses d’hier, d’aujourd’hui… et de demain!\r\n\r\nTous les jeudis à 19h '),
+(34, 10, 'podcast/TSF_BO.jpg', 'Bon temps rouler', NULL, 'par Jean-Jacques Milteau', 'L\'émission blues et soul présentée par Jean-Jacques Milteau. Depuis plus de 30 ans, Jean-Jacques écume les scènes du monde entier avec son harmonica, et multiplie les collaborations, d\'Eddy Mitchell Ã  Gil Scott-Heron, en passant par Mighty Mo Rodgers ou Terry Callier. Pour TSFJAZZ, il sélectionne chaque samedi des classiques du blues et de la soul, mais aussi des nouveautés, des perles rares et des inédits. Embarquement immédiat pour un voyage qui nous amènera de la Nouvelle- Orléans au Delta, avec des escales à  Memphis ou à Chicago, et bien d\'autres surprises.\r\n\r\nles mardis et samedis à 19h ! ', '', ''),
+(35, 11, 'podcast/TSF_JCF.jpg', 'Jamie Cullum Show', NULL, 'Jamie Cullum', 'Tous les vendredis, de 19h à  20h, le chanteur et pianiste anglais Jamie Cullum s\'installe sur les ondes de TSFJAZZ et vous fait partager l\'émission qu\'il produit pour la station londonienne BBC RADIO 2.\r\n\r\nAu programme, une heure de musique, d\'interviews et de sessions live pendant laquelle le crooner dévoile sa passion pour tous les types de jazz et son regard sur l\'actualité du disque. \r\n\r\nUne heure avec une simple et belle ambition : partager avec Jamie Cullum l\'amour de la musique.\r\n\r\n\r\n\r\nTous les vendredis à 19h et le dimanche à 11h', '', ''),
+(36, 12, 'podcast/TSF_CHRO.jpg', 'La chronique Hi-Fi', NULL, 'par Laurent Thorin', 'Tous les samedis à  12h', '', '');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `users`
+-- Structure de la table `users`
 --
 
 CREATE TABLE `users` (
@@ -635,118 +669,119 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `users`
+-- Déchargement des données de la table `users`
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
 (1, 'solomon', 'solomon@solo.so', '$2y$10$8UxfbOGrPqTfDMKm1fqhWOVPVRN8N6HjGDzqVzN2v3jzJ/T4oHrEW', '9gdjtnjjUMTiLX6OrbnfMhtOKfE2HRQuOxzRht6z86t72R7iWsTWrItNnLE6', '2017-10-02 15:15:27', '2017-10-02 15:15:27'),
-(2, 'solomon', 'soli@king.co', '$2y$10$ILu154CO//S36IO8Rjt6Kunp4fCspPxDNrGEym9akwLgLFs9JzdLS', 'Mgdbq90wbLpe9jdkob6Qk6FKCcMhniiIMmcMstkMuhHs3Ri2YFpLE2Gh3zIL', '2017-10-09 18:45:08', '2017-10-09 18:45:08');
+(2, 'solomon', 'soli@king.co', '$2y$10$ILu154CO//S36IO8Rjt6Kunp4fCspPxDNrGEym9akwLgLFs9JzdLS', 'Mgdbq90wbLpe9jdkob6Qk6FKCcMhniiIMmcMstkMuhHs3Ri2YFpLE2Gh3zIL', '2017-10-09 18:45:08', '2017-10-09 18:45:08'),
+(3, 'HugoAdmin', 'hugo.gomez9795@gmail.com', '$2y$10$PpJlJAZFX9NLWYmCg6lOF.1nA.ETxdyGoBjFX2CekT1MndA1ltr.G', NULL, '2017-10-16 07:58:58', '2017-10-16 07:58:58');
 
 --
--- Indexes for dumped tables
+-- Index pour les tables déchargées
 --
 
 --
--- Indexes for table `agenda`
+-- Index pour la table `agenda`
 --
 ALTER TABLE `agenda`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `auditors_treasure`
+-- Index pour la table `auditors_treasure`
 --
 ALTER TABLE `auditors_treasure`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `blog`
+-- Index pour la table `blog`
 --
 ALTER TABLE `blog`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `news`
+-- Index pour la table `news`
 --
 ALTER TABLE `news`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `podcast`
+-- Index pour la table `podcast`
 --
 ALTER TABLE `podcast`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `podcast_item`
+-- Index pour la table `podcast_item`
 --
 ALTER TABLE `podcast_item`
   ADD PRIMARY KEY (`id`),
   ADD KEY `FK_podcast_item_id_podcast` (`id_podcast`);
 
 --
--- Indexes for table `program`
+-- Index pour la table `program`
 --
 ALTER TABLE `program`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `users`
+-- Index pour la table `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT pour les tables déchargées
 --
 
 --
--- AUTO_INCREMENT for table `auditors_treasure`
+-- AUTO_INCREMENT pour la table `auditors_treasure`
 --
 ALTER TABLE `auditors_treasure`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `blog`
+-- AUTO_INCREMENT pour la table `blog`
 --
 ALTER TABLE `blog`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT for table `news`
+-- AUTO_INCREMENT pour la table `news`
 --
 ALTER TABLE `news`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
--- AUTO_INCREMENT for table `podcast`
+-- AUTO_INCREMENT pour la table `podcast`
 --
 ALTER TABLE `podcast`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
--- AUTO_INCREMENT for table `podcast_item`
+-- AUTO_INCREMENT pour la table `podcast_item`
 --
 ALTER TABLE `podcast_item`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=65;
 
 --
--- AUTO_INCREMENT for table `program`
+-- AUTO_INCREMENT pour la table `program`
 --
 ALTER TABLE `program`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
 
 --
--- AUTO_INCREMENT for table `users`
+-- AUTO_INCREMENT pour la table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- Constraints for dumped tables
+-- Contraintes pour les tables déchargées
 --
 
 --
--- Constraints for table `podcast_item`
+-- Contraintes pour la table `podcast_item`
 --
 ALTER TABLE `podcast_item`
   ADD CONSTRAINT `FK_podcast_item_id_podcast` FOREIGN KEY (`id_podcast`) REFERENCES `podcast` (`id`);
