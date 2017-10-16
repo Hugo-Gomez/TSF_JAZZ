@@ -127,13 +127,24 @@
 /* ------------------------------------------------------------------------- */
 @media only screen and (max-width: 839px) {
 	
+	#header .container-inner {
+		padding-top: 53px;
+	}
+	#header .container-inner .pad {
+		display: none;
+	}
+	#header .nav-container .container-inner {
+		padding: 0px;
+	}
+
+
 	/* layout */
 	.container { padding: 0; }
 	.grid { width: 100%; margin: 0 0 10px; }
 	
 	/* sidebar toggle 60 > 50px height */
 	.page-title.pad { padding-top: 12px; padding-bottom: 12px; }
-	.sidebar-toggle { height: 50px; }
+	.sidebar-toggle { height: 48px; }
 	.sidebar-toggle i { padding: 5px 0; }
 	
 	/* hide */

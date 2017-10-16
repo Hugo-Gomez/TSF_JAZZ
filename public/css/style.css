@@ -118,6 +118,7 @@ body { font-family: "Titillium", Arial, sans-serif; }
 	font-weight: 400;
 	font-style: italic;
 }
+
 @font-face {
     font-family: 'Titillium';
     src: url('fonts/titillium-semibold-webfont.eot');
@@ -516,6 +517,7 @@ box-shadow: 0 0 2px rgba(255,255,255,0.4);
 @media only screen and (max-width: 839px) {
 
 	.nav { font-weight: 600; }
+	.nav-container .nav-wrap { position: absolute; top: 50px; }
 	.nav-container { text-transform: none; text-align:center; }
 	.nav-toggle,.nav-text,.nav-img { display: inline-block; }
 	.nav-wrap { position: relative; float: left; width: 100%; height: 0; overflow: hidden; }
@@ -708,8 +710,11 @@ box-shadow: 0 1px 1px rgba(0,0,0,0.1); }
 
 #footer-widgets{ padding-top: 20px;}
 
-#footer-bottom { background: #33363b; }
-#footer-bottom .pad { padding-top: 30px; }
+#footer-bottom {
+	margin-bottom: 65px;
+}
+#footer-bottom,#footer-music-player  { background: #33363b; }
+#footer-bottom .pad,#footer-music-player .pad { padding-top: 30px; }
 #footer-bottom a { color: #fff; color: rgba(255,255,255,0.7); }
 #footer-bottom a:hover { color: #fff; }
 #footer-bottom #footer-logo { display: block; margin-bottom: 20px; max-height: 50px; -webkit-border-radius: 0; border-radius: 0; }
@@ -725,6 +730,15 @@ box-shadow: inset 0 1px 0 rgba(0,0,0,0.05); }
 #footer-bottom .social-links a { color: rgba(255,255,255,0.6); }
 #footer-bottom .social-links a:hover { color: #fff; }
 #footer-bottom .social-links .social-tooltip { font-size: 28px; }
+
+#footer-music-player {
+	height: 65px;
+	position: fixed;
+	bottom: 0px;
+	width: 100%;
+	z-index: 999;
+}
+
 
 /*  footer : nav
 /* ------------------------------------ */

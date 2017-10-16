@@ -1,16 +1,17 @@
 @extends('structure')
 
+@section('stylesheet')
+    <link rel="stylesheet" type="text/css" href="../public/css/podcast.css">
+    <!-- NO NEED
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/mterialize.min.css">
+    -->
+@endsection
+
 @section('titre')
     <h2>Podcast</h2>
 @endsection
 
-@section('stylesheet')
-<link rel="stylesheet" type="text/css" href="../public/css/podcast.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
-@endsection
-
 @section('contenu')
-
     <div class="tiles">
         <div class="col m10 offset-m1">
             @foreach ($podcasts as $podcast)
@@ -24,5 +25,4 @@
             @endforeach
         </div>
     </div>
-
 @endsection
