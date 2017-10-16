@@ -1,9 +1,12 @@
 @extends('structure')
 
-<link rel="stylesheet" type="text/css" href="../public/css/jazzblog.css">
-
 @section('titre')
     <h2>Jazz Blog</h2>
+@endsection
+
+@section('stylesheet')
+<link rel="stylesheet" type="text/css" href="../public/css/blog.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
 @endsection
 
 @section('contenu')
@@ -23,4 +26,3 @@
     @endforeach
 </div>
 @endsection
-
