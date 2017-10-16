@@ -85,10 +85,6 @@ Route::get('fetch_events', function () {
     return "done";
 });
 
-Route::get('contact', function () {
-    return view('contact');
-});
-
 
 
 /* Routes admin */

@@ -61,7 +61,7 @@ class StructureController extends Controller
     	return view('about', compact('news'));
 	}
 
-	function contact() {
+  function contact() {
     	$news = DB::table('news')->get();
     	return view('contact', compact('news'));
 	}
