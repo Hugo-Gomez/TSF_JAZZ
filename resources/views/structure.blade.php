@@ -149,7 +149,7 @@
             <!-- Image ici à changer -->
             <h1 class="site-title"><a href="{{ url('/') }}" rel="home"><img src="../public/img/logo.png" alt=""></a></h1>
             <p class="site-description">- Radio de Jazz</p>
-            <img style="padding-left:50px" src="../public/img/banniere2.gif" alt="">
+            <img style="padding-left:50px" src="../public/img/deuxieme.gif" alt="">
           </div>
         </div>
       </div>
