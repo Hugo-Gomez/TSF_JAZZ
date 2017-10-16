@@ -1,4 +1,3 @@
-
 @extends('structure')
 
 @section('stylesheet')
