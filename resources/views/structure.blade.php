@@ -133,7 +133,7 @@
             <!-- Image ici à changer -->
             <h1 class="site-title"><a href="{{ url('/') }}" rel="home"><img src="../public/img/logo.png" alt=""></a></h1>
             <p class="site-description">- Radio de Jazz</p>
-            <img style="padding-left:50px" src="../public/img/deuxieme.gif" alt="">
+            <img src="../public/img/deuxieme.gif" alt="">
           </div>
         </div>
      </div>
@@ -197,7 +197,7 @@
 
                 <div id="alxposts-2" class="widget widget_alx_posts ">
                   <h3>Liste des fréquences</h3>
-                  <p> Ici on rajoutera les fréquences (à voir) </p>
+                  <div id='map'></div>
                 </div>
 
               </div>
