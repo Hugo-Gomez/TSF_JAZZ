@@ -12,7 +12,7 @@
     document.documentElement.className = document.documentElement.className.replace("no-js", "js");
   </script>
 
-    @yield('stylesheet')
+  @yield('stylesheet')
 
   <link href="../public/css/style.css" type="text/css" rel="stylesheet">
   <link href="../public/css/responsive.css" type="text/css" rel="stylesheet">
@@ -136,7 +136,22 @@
             <!-- Image ici à changer -->
             <h1 class="site-title"><a href="{{ url('/') }}" rel="home"><img src="../public/img/logo.png" alt=""></a></h1>
             <p class="site-description">- Radio de Jazz</p>
-            <img src="../public/img/deuxieme.gif" alt="">
+
+            <div class="muzieknootjes">
+              <div class="noot-1">
+                &#9835;&#9833;
+              </div>
+              <div class="noot-2">
+                &#9833;
+              </div>
+              <div class="noot-3">
+                &#9839;&#9834;
+              </div>
+              <div class="noot-4">
+                &#9834;
+              </div>
+            </div>
+
           </div>
         </div>
      </div>
@@ -198,10 +213,8 @@
 
                 </div>
 
-                <div id="alxposts-2" class="widget widget_alx_posts ">
-                  <h3>Liste des fréquences</h3>
-                  <div id='map'></div>
-                </div>
+                <div class="widget widget_alx_posts ">
+                  <h3><a href="{{ url('/frequences') }}">Liste des fréquences</a></h3>
 
               </div>
 
@@ -369,6 +382,7 @@
       display: none;
     }
   </style>
+
   <script type='text/javascript' src='../public/js/jquery.jplayer.min.js'></script>
   <script type='text/javascript' src='../public/js/scripts.js'></script>
   @yield('javascript')
