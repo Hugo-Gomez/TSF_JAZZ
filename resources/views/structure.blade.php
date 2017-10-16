@@ -26,6 +26,7 @@
   <script type='text/javascript' src='../public/js/jquery.flexslider.min.js'></script>
   <script type='text/javascript' src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
   <!--<script type='text/javascript' src='../../webpack.mix.js'></script>-->
+  @yield('stylesheet')
 
   <script type='text/javascript'>
     var rlArgs = {
@@ -332,6 +333,7 @@
   </style>
   <script type='text/javascript' src='../public/js/jquery.jplayer.min.js'></script>
   <script type='text/javascript' src='../public/js/scripts.js'></script>
+  @yield('javascript')
   <!--[if lt IE 9]>
 <script src="wp-content/themes/hueman/js/ie/respond.js"></script>
 <![endif]-->
