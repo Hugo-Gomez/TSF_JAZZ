@@ -25,7 +25,6 @@
   <script type='text/javascript' src='../public/js/front-ver=4.1.js'></script>
   <script type='text/javascript' src='../public/js/jquery.flexslider.min.js'></script>
   <script type='text/javascript' src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-  <!--<script type='text/javascript' src='../../webpack.mix.js'></script>-->
   @yield('stylesheet')
 
   <script type='text/javascript'>
@@ -63,10 +62,13 @@
   <div id="wrapper">
 
     <header id="header">
-      <nav class="nav-container group" id="nav-topbar">
-        <div class="nav-toggle">
-          <i class="fa fa-bars"></i>
-        </div>
+    <nav class="nav-container group" id="nav-topbar">
+      <div class="nav-toggle">
+        <i class="fa fa-bars"></i>
+      </div>
+      <div class="nav-img">
+        <a href="{{ url('/') }}" rel="home"><img src="../public/img/logo.png" alt=""></a>
+      </div>
         <!-- Menu -->
         <div class="nav-wrap container">
           <ul id="menu-topbar-menu" class="nav container-inner group">
