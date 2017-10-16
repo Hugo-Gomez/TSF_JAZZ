@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Compiled and minified CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
 
   <!-- Compiled and minified JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
@@ -20,11 +20,12 @@
   </script>
 
   <link href="../public/css/style.css" type="text/css" rel="stylesheet">
-  <link href="../public/css/responsive.css" rel="stylesheet">
   <link href="../public/css/custom.css" rel="stylesheet">
+  <link href="../public/fonts/font-awesome.min.css" rel="stylesheet" type="text/css" >
+  <link href="../public/css/responsive.css" rel="stylesheet">
   <link href="../public/css/default-ver=4.1.css" rel="stylesheet">
   <link href="../public/css/nivo-lightbox-ver=4.1.css" rel="stylesheet">
-  <link href="../public/fonts/font-awesome.min.css" rel="stylesheet" type="text/css" >
+
 
   <script type='text/javascript' src='../../webpack.mix.js'></script>
 
@@ -152,7 +153,7 @@
             <img style="padding-left:50px" src="../public/img/deuxieme.gif" alt="">
           </div>
         </div>
-      </div>
+     </div>
     </header>
 
     <div class="container" id="page">
@@ -238,9 +239,10 @@
           <div class="pad group">
 
 
-            <div class="footer-widget-1 grid one-third ">
+            <div class="footer-widget-1 grid one-third" style="text-align: center;">
               <div id="recent-posts-3" class="widget widget_recent_entries">
                 <h3>Les dernières News</h3>
+                <div class="separator"></div>
                 <ul>
                   @for ($i = 0; $i < 5; $i++)
                     <li>
@@ -252,29 +254,66 @@
             </div>
 
 
-            <div class="footer-widget-2 grid one-third ">
+            <div class="footer-widget-2 grid one-third" style="text-align: center;">
               <div id="recent-comments-3" class="widget widget_meta">
                 <h3>Communautés</h3>
-                <ul id="recentcomments">
-                  <li class="recentcomments"><span class="comment-author-link">Twitter</span> ici <a rel="nofollow" class="social-tooltip" target="_blank" title="Twitter" href="https://twitter.com/radiotsfjazz?lang=fr"><i class="fa fa-twitter" ></i></a></li>
-                  <li class="recentcomments"><span class="comment-author-link">Facebook</span> ici <a rel="nofollow" class="social-tooltip" target="_blank" title="Facebook" href="https://www.facebook.com/TSFJazz/"><i class="fa fa-facebook" ></i></a></li>
-                  <li class="recentcomments"><span class="comment-author-link">Instagram</span> ici <a rel="nofollow" class="social-tooltip" target="_blank" title="Instagram" href="https://www.instagram.com/tsfjazz/"><i class="fa fa-instagram" ></i></a></li>
-                  <li class="recentcomments"><span class="comment-author-link">Youtube</span> ici <a rel="nofollow" class="social-tooltip" target="_blank" title="Youtube" href="https://www.youtube.com/user/TSFJAZZRadio"><i class="fa fa-youtube" ></i></a></li>
-                  <li class="recentcomments"><span class="comment-author-link">Soundcloud</span> ici <a rel="nofollow" class="social-tooltip" target="_blank" title="Soundcloud" href="https://soundcloud.com/tsfjazz"><i class="fa fa-soundcloud" ></i></a></li>
+                <div class="separator"></div>
+                <ul>
+                  <li>
+                    <a rel="nofollow" class="social-tooltip" target="_blank" title="Twitter" href="https://twitter.com/radiotsfjazz?lang=fr">
+                      <i class="fa fa-twitter" ></i>
+                      <span class="socialnet">
+                        Twitter par ici
+                      </span>
+                    </a>
+                  </li>
+                  <li>
+                    <a rel="nofollow" class="social-tooltip" target="_blank" title="Facebook" href="https://www.facebook.com/TSFJazz/">
+                      <i class="fa fa-facebook" ></i>
+                      <span class="socialnet">
+                        Facebook par ici
+                      </span>
+                    </a>
+                  </li>
+                  <li>
+                    <a rel="nofollow" class="social-tooltip" target="_blank" title="Instagram" href="https://www.instagram.com/tsfjazz/">
+                      <i class="fa fa-instagram" ></i>
+                      <span class="socialnet">
+                        Instagram par ici
+                      </span>
+                    </a>
+                  </li>
+                  <li>
+                    <a rel="nofollow" class="social-tooltip" target="_blank" title="Youtube" href="https://www.youtube.com/user/TSFJAZZRadio">
+                      <i class="fa fa-youtube" ></i>
+                      <span class="socialnet">
+                        Youtube par ici
+                      </span>
+                    </a>
+                  </li>
+                  <li>
+                    <a rel="nofollow" class="social-tooltip" target="_blank" title="Soundcloud" href="https://soundcloud.com/tsfjazz">
+                      <i class="fa fa-soundcloud" ></i>
+                      <span class="socialnet">
+                          Soundcloud par ici
+                      </span>
+                    </a>
+                  </li>
                 </ul>
               </div>
             </div>
 
 
-            <div class="footer-widget-3 grid one-third last">
-              <div id="alxtabs-4" class="widget widget_links">
+            <div class="footer-widget-3 grid one-third last" style="text-align: center;">
+              <div id="recent-posts-3" class="widget widget_meta">
                 <h3>Contacts</h3>
+                <div class="separator"></div>
                   <ul>
                     <li>
-                      <a href="{{ url('/about') }}">À propos</a>
+                      <a href="{{ url('/audtre') }}">Trésor des auditeurs</a>
                     </li>
                     <li>
-                      <a href="{{ url('/audtre') }}">Trésor des auditeurs</a>
+                      <a href="{{ url('/about') }}">À propos</a>
                     </li>
                     <li>
                       <a href="{{ url('/contact') }}">Nous écrire</a>
