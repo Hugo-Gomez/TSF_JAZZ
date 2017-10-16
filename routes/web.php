@@ -17,6 +17,8 @@ Route::get('/', 'StructureController@welcome');
 
 Route::get('program', 'StructureController@program');
 
+Route::get('program{program_id}', 'StructureController@program_item');
+
 Route::get('jazzenda', 'StructureController@jazzenda');
 
 Route::get('podcast', 'StructureController@podcast');

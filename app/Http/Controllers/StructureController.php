@@ -14,8 +14,16 @@ class StructureController extends Controller
 
 	function program() {
     	$news = DB::table('news')->get();
-    	return view('program', compact('news'));
+        $programs = DB::table("program")->get();
+    	return view('program', compact('news', 'programs'));
 	}
+
+    function program_item($program_id) {
+        $news = DB::table('news')->get();
+        $programs = DB::table('program')->get()->where('id_program', $program_id);
+        $program_items = DB::table('program_item')->get()->where('id_program', $program_id);
+        return view('program_item', compact('news', 'programs', 'program_items'));
+    }
 
 	function jazzenda() {
     	$news = DB::table('news')->get();
