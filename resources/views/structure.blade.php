@@ -12,6 +12,8 @@
     document.documentElement.className = document.documentElement.className.replace("no-js", "js");
   </script>
 
+    @yield('stylesheet')
+
   <link href="../public/css/style.css" type="text/css" rel="stylesheet">
   <link href="../public/css/responsive.css" type="text/css" rel="stylesheet">
   <link href="../public/css/custom.css" type="text/css" rel="stylesheet">
@@ -25,7 +27,6 @@
   <script type='text/javascript' src='../public/js/front-ver=4.1.js'></script>
   <script type='text/javascript' src='../public/js/jquery.flexslider.min.js'></script>
   <script type='text/javascript' src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-  @yield('stylesheet')
 
   <script type='text/javascript'>
     var rlArgs = {
@@ -72,37 +73,37 @@
         <!-- Menu -->
         <div class="nav-wrap container">
           <ul id="menu-topbar-menu" class="nav container-inner group">
-            <li id="menu-item-2400" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-2400">
+            <li id="menu-item-2400" class="menu-item current_page_item">
               <a href="{{ url('/') }}">Accueil</a>
             </li>
-            <li id="menu-item-2680" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2680">
+            <li id="menu-item-2680" class="menu-item">
               <a href="{{ url('/program') }}">Programmes</a>
             </li>
-            <li id="menu-item-2680" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2680">
+            <li id="menu-item-2680" class="menu-item">
               <a href="{{ url('/podcast') }}">Podcast</a>
             </li>
-            <li id="menu-item-2680" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2680">
+            <li id="menu-item-2680" class="menu-item">
               <a href="{{ url('/jazzblog') }}">Jazz blog</a>
             </li>
-            <li id="menu-item-2680" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2680">
+            <li id="menu-item-2680" class="menu-item">
               <a href="{{ url('/jazzenda') }}">Jazzenda</a>
             </li>
-            <li id="menu-item-2680" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2680">
+            <li id="menu-item-2680" class="menu-item">
               <a href="{{ url('/frequences') }}">Liste des fréquences</a>
             </li>
-            <li id="menu-item-2399" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2399">
+            <li id="menu-item-2399" class="menu-item">
               <a href="">Contacts</a>
               <ul class="sub-menu">
-                <li id="menu-item-2698" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2698">
+                <li id="menu-item-2698" class="menu-item">
                   <a href="{{ url('/about') }}">À propos</a>
                 </li>
-                <li id="menu-item-2739" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2739">
+                <li id="menu-item-2739" class="menu-item">
                   <a href="{{ url('/audtre') }}">Trésor des auditeurs</a>
                 </li>
-                <li id="menu-item-2708" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2708">
+                <li id="menu-item-2708" class="menu-item">
                   <a href="{{ url('/contact') }}">Nous écrire</a>
                 </li>
-                <li id="menu-item-2699" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2699">
+                <li id="menu-item-2699" class="menu-item">
                   <a href="{{ url('/newsletter') }}">Newsletter</a>
                 </li>
               </ul>
