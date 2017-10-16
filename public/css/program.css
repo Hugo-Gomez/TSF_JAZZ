@@ -87,3 +87,12 @@
   color: #786eab;
   opacity: 1;
 }
+
+.program-title {
+  font-size: 35px;
+  margin: 55px 0px;
+}
+
+.separator {
+  margin: 40px 0px;
+}

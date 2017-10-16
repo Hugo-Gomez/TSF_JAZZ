@@ -13,8 +13,10 @@
 	<div class="container">
 	  <ul class="tiles">
 	    @foreach ($programs as $program)
-	    	<li class="tile" style="background-image: url('../public/img/{{ $program->thumbnail }}');">
-		    </li>
+	    	<a class="tile" href="{{ url('/program'.$program->id_program) }}">
+		    	<li class="tile" style="background-image: url('../public/img/{{ $program->thumbnail }}');">
+			    </li>
+			</a>
 	    @endforeach
 	  </ul>
 	</div>
