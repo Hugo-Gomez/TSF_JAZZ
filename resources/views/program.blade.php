@@ -9,3 +9,5 @@
 @section('contenu')
 
 @endsection
+
+<!-- id // id_program // thumbnail // title // date // subtitle // description // sub_description_title // sub_description -->
