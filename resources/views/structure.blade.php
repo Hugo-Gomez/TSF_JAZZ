@@ -4,13 +4,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- Compiled and minified CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
-
-  <!-- Compiled and minified JavaScript -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-
   <title>
     LP JAZZ
   </title>
@@ -20,17 +13,19 @@
   </script>
 
   <link href="../public/css/style.css" type="text/css" rel="stylesheet">
-  <link href="../public/css/responsive.css" rel="stylesheet">
-  <link href="../public/css/custom.css" rel="stylesheet">
-  <link href="../public/css/default-ver=4.1.css" rel="stylesheet">
-  <link href="../public/css/nivo-lightbox-ver=4.1.css" rel="stylesheet">
-  <link href="../public/fonts/font-awesome.min.css" rel="stylesheet" type="text/css" >
-
-  <script type='text/javascript' src='../../webpack.mix.js'></script>
+  <link href="../public/css/responsive.css" type="text/css" rel="stylesheet">
+  <link href="../public/css/custom.css" type="text/css" rel="stylesheet">
+  <link href="../public/css/default-ver=4.1.css" type="text/css" rel="stylesheet">
+  <link href="../public/css/nivo-lightbox-ver=4.1.css" type="text/css" rel="stylesheet">
+  <link href="../public/fonts/font-awesome.min.css" type="text/css" rel="stylesheet">
 
   <script type='text/javascript' src='../public/js/jquery-ver=1.11.1.js'></script>
   <script type='text/javascript' src='../public/js/jquery-migrate.min-ver=1.2.1.js'></script>
   <script type='text/javascript' src='../public/js/nivo-lightbox.min-ver=4.1.js'></script>
+  <script type='text/javascript' src='../public/js/front-ver=4.1.js'></script>
+  <script type='text/javascript' src='../public/js/jquery.flexslider.min.js'></script>
+  <script type='text/javascript' src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  <!--<script type='text/javascript' src='../../webpack.mix.js'></script>-->
 
   <script type='text/javascript'>
     var rlArgs = {
@@ -45,13 +40,7 @@
     };
   </script>
 
-  <script type='text/javascript' src='../public/js/front-ver=4.1.js'></script>
-  <script type='text/javascript' src='../public/js/jquery.flexslider.min.js'></script>
 
-  <link rel="EditURI" type="application/rsd+xml" title="RSD" href="xmlrpc.php-rsd.xml" />
-  <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="wp-includes/wlwmanifest.xml" />
-
-  <meta name="generator" content="WordPress 4.1" />
 
   <!--[if lt IE 9]>
 <script src="wp-content/themes/hueman/js/ie/html5.js"></script>
@@ -73,14 +62,12 @@
   <div id="wrapper">
 
     <header id="header">
-
       <nav class="nav-container group" id="nav-topbar">
         <div class="nav-toggle">
           <i class="fa fa-bars"></i>
         </div>
-
-        <div class="nav-text">
-
+        <div class="nav-img">
+          <a href="{{ url('/') }}" rel="home"><img src="../public/img/logo.png" alt=""></a>
         </div>
         <!-- Menu -->
         <div class="nav-wrap container">
@@ -124,7 +111,7 @@
         </div>
 
         <!-- Barre de recherche -->
-          <div class="container-inner">
+        
             <div class="toggle-search">
               <i class="fa fa-search"></i>
             </div>
@@ -138,7 +125,6 @@
                 </form>
               </div>
             </div>
-          </div>
 
       </nav>
 
@@ -175,7 +161,7 @@
 
             <!-- Module à gauche -->
             <div class="sidebar s1">
-              <a class="sidebar-toggle" title="Expand Sidebar"><i class="fa icon-sidebar-toggle"></i></a>
+              <a class="sidebar-toggle" title="Expand Sidebar"><i class="fa fa-bars"></i></a>
               <div class="sidebar-content">
                 <!-- Titre à donner (partie bleue à modif) -->
                 <div class="sidebar-top group">
@@ -198,7 +184,7 @@
 
             <!-- Module à droite -->
             <div class="sidebar s2">
-              <a class="sidebar-toggle" title="Expand Sidebar"><i class="fa icon-sidebar-toggle"></i></a>
+              <a class="sidebar-toggle" title="Expand Sidebar"><i class="fa fa-bars"></i></a>
               <div class="sidebar-content">
                 <!-- Titre à donner (partie verte à modif) -->
                 <div class="sidebar-top group">
@@ -338,22 +324,7 @@
   </div>
   <!--/#wrapper-->
 
-  <script>
-    (function(i, s, o, g, r, a, m) {
-      i['GoogleAnalyticsObject'] = r;
-      i[r] = i[r] || function() {
-        (i[r].q = i[r].q || []).push(arguments)
-      }, i[r].l = 1 * new Date();
-      a = s.createElement(o),
-        m = s.getElementsByTagName(o)[0];
-      a.async = 1;
-      a.src = g;
-      m.parentNode.insertBefore(a, m)
-    })(window, document, 'script', 'js/analytics.js', 'ga');
 
-    ga('create', 'UA-57869156-2', 'auto');
-    ga('send', 'pageview');
-  </script>
   <style>
     .home .s2 .alx-posts li:first-child {
       display: none;
