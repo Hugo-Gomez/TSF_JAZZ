@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Request as DBRequest;
 
 class StructureController extends Controller
 {
@@ -69,18 +70,27 @@ class StructureController extends Controller
     	return view('about', compact('news'));
 	}
 
-  function contact() {
+    function contact() {
     	$news = DB::table('news')->get();
     	return view('contact', compact('news'));
 	}
 
-  function frequences() {
+    function frequences() {
     	$news = DB::table('news')->get();
     	return view('frequences', compact('news'));
 	}
 
-  function newsletter() {
+    function newsletter() {
     	$news = DB::table('news')->get();
     	return view('newsletter', compact('news'));
 	}
+
+    function search() {
+        $news = DB::table('news')->get();
+        $keyword = DBRequest::get('keyword');
+        if ($keyword!='') {
+            $query = DB::table('agenda')->where("title", "LIKE", "%$keyword%")->get();
+        }
+        return view('searchResult', compact('query', 'news'));
+    }
 }
