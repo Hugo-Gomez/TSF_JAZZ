@@ -9,78 +9,105 @@ class StructureController extends Controller
 {
     function welcome() {
 		$news = DB::table('news')->get();
-    	return view('welcome', compact('news'));
+    $podcasts = DB::table('podcast')->get();
+    $podcast_items = DB::table('podcast_item')->get();
+    	return view('welcome', compact('news', 'podcasts', 'podcast_items'));
 	}
 
 	function program() {
-    	$news = DB::table('news')->get();
+    	  $news = DB::table('news')->get();
         $programs = DB::table("program")->get();
-    	return view('program', compact('news', 'programs'));
+        $podcasts = DB::table('podcast')->get();
+        $podcast_items = DB::table('podcast_item')->get();
+    	return view('program', compact('news', 'programs', 'podcasts', 'podcast_items'));
 	}
 
     function program_item($program_id) {
         $news = DB::table('news')->get();
         $programs = DB::table('program')->get()->where('id_program', $program_id);
         $program_items = DB::table('program_item')->get()->where('id_program', $program_id);
-        return view('program_item', compact('news', 'programs', 'program_items'));
+        $podcasts = DB::table('podcast')->get();
+        $podcast_items = DB::table('podcast_item')->get();
+        return view('program_item', compact('news', 'programs', 'program_items', 'podcasts', 'podcast_items'));
     }
 
 	function jazzenda() {
     	$news = DB::table('news')->get();
-    	return view('jazzenda', compact('news'));
+      $podcasts = DB::table('podcast')->get();
+      $podcast_items = DB::table('podcast_item')->get();
+    	return view('jazzenda', compact('news', 'podcasts', 'podcast_items'));
 	}
 
 	function podcast() {
     	$news = DB::table('news')->get();
-		$podcasts = DB::table('podcast')->get();
-    	return view('podcast', compact('podcasts', 'news'));
+		  $podcasts = DB::table('podcast')->get();
+      $podcast_items = DB::table('podcast_item')->get();
+    	return view('podcast', compact('podcasts', 'news', 'podcast_items'));
 	}
 
     function podcast_item($podcast_id) {
         $news = DB::table('news')->get();
-        $podcasts = DB::table('podcast')->get()->where('id', $podcast_id);
-        $podcast_items = DB::table('podcast_item')->get()->where('id_podcast', $podcast_id);
-        return view('podcast_item', compact('news', 'podcast_items', 'podcasts'));
+        $podcasts = DB::table('podcast')->get();
+        $podcast_items = DB::table('podcast_item')->get();
+        $podcasts_hugo = DB::table('podcast')->get()->where('id', $podcast_id);
+        $podcast_items_hugo = DB::table('podcast_item')->get()->where('id_podcast', $podcast_id);
+        return view('podcast_item', compact('news', 'podcast_items_hugo', 'podcasts_hugo', 'podcasts', 'podcast_items'));
     }
 
 	function jazzblog() {
     	$news = DB::table('news')->get();
 		$blog = DB::table('blog')->get();
-    	return view('jazzblog', compact('blog'), compact('news'));
+    $podcasts = DB::table('podcast')->get();
+    $podcast_items = DB::table('podcast_item')->get();
+    	return view('jazzblog', compact('blog'), compact('news', 'podcasts', 'podcast_items'));
 	}
 
 	function audtre() {
     	$news = DB::table('news')->get();
-    	return view('audtre', compact('news'));
+      $podcasts = DB::table('podcast')->get();
+      $podcast_items = DB::table('podcast_item')->get();
+    	return view('audtre', compact('news', 'podcasts', 'podcast_items'));
 	}
 
 	function trackhist() {
     	$news = DB::table('news')->get();
-    	return view('trackhist', compact('news'));
+      $podcasts = DB::table('podcast')->get();
+      $podcast_items = DB::table('podcast_item')->get();
+    	return view('trackhist', compact('news', 'podcasts', 'podcast_items'));
 	}
 
 	function media() {
     	$news = DB::table('news')->get();
-    	return view('media', compact('news'));
+      $podcasts = DB::table('podcast')->get();
+      $podcast_items = DB::table('podcast_item')->get();
+    	return view('media', compact('news', 'podcasts', 'podcast_items'));
 	}
 
 	function about() {
     	$news = DB::table('news')->get();
-    	return view('about', compact('news'));
+      $podcasts = DB::table('podcast')->get();
+      $podcast_items = DB::table('podcast_item')->get();
+    	return view('about', compact('news', 'podcasts', 'podcast_items'));
 	}
 
   function contact() {
     	$news = DB::table('news')->get();
-    	return view('contact', compact('news'));
+      $podcasts = DB::table('podcast')->get();
+      $podcast_items = DB::table('podcast_item')->get();
+    	return view('contact', compact('news', 'podcasts', 'podcast_items'));
 	}
 
   function frequences() {
     	$news = DB::table('news')->get();
-    	return view('frequences', compact('news'));
+      $podcasts = DB::table('podcast')->get();
+      $podcast_items = DB::table('podcast_item')->get();
+    	return view('frequences', compact('news', 'podcasts', 'podcast_items'));
 	}
 
   function newsletter() {
     	$news = DB::table('news')->get();
-    	return view('newsletter', compact('news'));
+      $podcasts = DB::table('podcast')->get();
+      $podcast_items = DB::table('podcast_item')->get();
+    	return view('newsletter', compact('news', 'podcasts', 'podcast_items'));
 	}
 }

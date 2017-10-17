@@ -1099,7 +1099,7 @@ box-shadow: inset 0 1px 0 rgba(255,255,255,0.25); }
 /* ------------------------------------------------------------------------- */
 .widget { color: #777; font-size: 15px; overflow: hidden; }
 .widget a { color: #777; }
-.widget a:hover { color: #444; }
+.widget a:hover { color: #731818; }
 .widget > h3 { font-size: 15px; font-weight: 400; text-transform: uppercase; margin-bottom: 6px; }
 .widget > h3 a,
 .widget > h3 a:hover { color: #731818; }
@@ -1109,7 +1109,7 @@ box-shadow: inset 0 1px 0 rgba(255,255,255,0.25); }
 
 .sidebar .widget { padding: 30px 30px 20px; }
 #footer .widget { padding-bottom: 30px; }
-#footer .widget a:hover { color: #666; }
+#footer .widget a:hover { color: #731818; }
 
 /*  widgets : icons
 /* ------------------------------------ */
@@ -1117,7 +1117,7 @@ box-shadow: inset 0 1px 0 rgba(255,255,255,0.25); }
 .widget > ul li a:before,
 .widget > div > ul li a:before,
 .widget_calendar caption:before { font-family: FontAwesome; font-size: 12px; margin-right: 6px; color: #ccc; display: inline-block!important; width: 1em; text-align: center; }
-.widget > ul li a:hover:before { color: #999; }
+.widget > ul li a:hover:before { color: #731818; }
 
 .widget_archive > ul > li a:before { content: "\f073"; }
 .widget_categories > ul > li a:before { content: "\f07c"; }
@@ -1146,7 +1146,7 @@ box-shadow: inset 0 1px 0 rgba(255,255,255,0.25); }
 .widget_pages ul li a,
 .widget_nav_menu ul li a,
 .alx-tab li,
-.alx-posts li { padding: 10px 0; border-bottom: 1px solid #e4e4e4; }
+.alx-posts li { padding: 10px 0; border-bottom: 1px solid #e4e4e4;}
 
 #footer .widget_archive ul li,
 #footer .widget_categories ul li,

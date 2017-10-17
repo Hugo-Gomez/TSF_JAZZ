@@ -14,7 +14,6 @@
         <p>{{ $new->description }}</p>
         <br>
         <div class="separator"></div>
-        <br>
+        <br>  
     @endforeach
 @endsection
-
