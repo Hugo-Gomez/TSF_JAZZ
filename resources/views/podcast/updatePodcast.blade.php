@@ -3,7 +3,7 @@
 @section('content')
 
 <div class="container">
-
+<p><a href="{{ url('podcast/admin') }}" > Return Back </a></p>
 <h3>Update The Podcasts </h3>
 
   <form method="POST" action="/server.php/podcast/admin/{{ $podcast->id }}">
@@ -12,12 +12,12 @@
 
     <div class="form-group">
       <label>The title </label>
-      <input type="text" name="title" class="form-control" value="{{ $podcast->title }}">
+      <input type="text" name="titlePodcast" class="form-control" value="{{ $podcast->title }}">
     </div>
 
     <div class="form-group">
       <label>Description</label>
-      <textarea name="description" class="form-control"><?php echo $podcast->description; ?></textarea>
+      <textarea name="descriptionPodcast" class="form-control"><?php echo $podcast->description; ?></textarea>
     </div>
 
     <div class="form-group">
