@@ -18,7 +18,9 @@
                 <!-- Form Area -->
                 <div class="contact-form">
                     <!-- Form -->
-                    <form id="contact-us" method="post" action="#">
+                    <form id="contact-us" method="post" action="/server.php/">
+											
+											{!! csrf_field() !!}
                         <!-- Left Inputs -->
                         <div class="col-xs-6 wow animated slideInLeft" data-wow-delay=".5s">
                             <!-- Name -->

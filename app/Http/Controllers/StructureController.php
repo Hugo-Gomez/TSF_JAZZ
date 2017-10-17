@@ -9,7 +9,7 @@ use Request as DBRequest;
 class StructureController extends Controller
 {
     function welcome() {
-		$news = DB::table('news')->get();
+		$news = DB::table('news')->orderBy('date', 'DESC')->get();
         $podcasts = DB::table('podcast')->get();
         $podcast_items = DB::table('podcast_item')->get();
     	return view('welcome', compact('news', 'podcasts', 'podcast_items'));
