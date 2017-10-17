@@ -43,6 +43,8 @@ Route::get('frequences', 'StructureController@frequences');
 
 Route::get('newsletter', 'StructureController@newsletter');
 
+Route::get('searchResult', 'StructureController@search');
+
 
 
 

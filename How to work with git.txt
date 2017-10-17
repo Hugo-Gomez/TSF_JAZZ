@@ -1,5 +1,6 @@
 How to work with git
 
+
 The structure looks like this :
 
 MASTER ---- dev

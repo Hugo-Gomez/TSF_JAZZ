@@ -19,7 +19,6 @@
     <script type='text/javascript' src='../public/js/nivo-lightbox.min-ver=4.1.js'></script>
     <script type='text/javascript' src='../public/js/front-ver=4.1.js'></script>
     <script type='text/javascript' src='../public/js/jquery.flexslider.min.js'></script>
-    <script type='text/javascript' src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
     <!--[if lt IE 9]>
       <script src="wp-content/themes/hueman/js/ie/html5.js"></script>
       <script src="wp-content/themes/hueman/js/ie/selectivizr.js"></script>
@@ -91,9 +90,9 @@
           </div>
           <div class="search-expand">
             <div class="search-expand-inner">
-              <form method="get" class="searchform themeform">
+              <form method="get" class="searchform themeform" action="{{ url('/searchResult') }}">
                 <div>
-                  <input type="text" placeholder="Tapez votre recherche ici" />
+                  <input type="text" placeholder="Tapez votre recherche ici" name="keyword" />
                 </div>
               </form>
             </div>
@@ -228,7 +227,7 @@
               </div>
               <div class="footer-widget-2 grid one-third" style="text-align: center;">
                 <div id="recent-comments-3" class="widget widget_meta">
-                  <h3>Communautés</h3>
+                  <h3>Retrouvez-nous sur ...</h3>
                   <div class="separator"></div>
                   <ul>
                     <li>
