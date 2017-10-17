@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : db
--- Généré le :  mar. 17 oct. 2017 à 09:50
+-- Généré le :  mar. 17 oct. 2017 à 10:08
 -- Version du serveur :  10.2.8-MariaDB-10.2.8+maria~jessie
 -- Version de PHP :  7.0.21
 
@@ -448,17 +448,18 @@ CREATE TABLE `blog` (
   `id` int(11) NOT NULL,
   `thumbnail` varchar(100) DEFAULT NULL,
   `author` varchar(50) NOT NULL,
-  `description` text DEFAULT NULL
+  `description` text DEFAULT NULL,
+  `link` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `blog`
 --
 
-INSERT INTO `blog` (`id`, `thumbnail`, `author`, `description`) VALUES
-(1, 'blog/Sapir/sapir.jpg', 'Laurent Sapir', 'Journaliste à TSFJAZZ (17h-20h)'),
-(2, 'blog/Koperhant/koperhant.jpg', 'David Koperhant', 'Animateur à TSFJAZZ (14h-17h) '),
-(3, 'blog/Albernhe/albernhe.jpg', 'Laure Albernhe', 'Animatrice à TSFJAZZ (10h-14h)');
+INSERT INTO `blog` (`id`, `thumbnail`, `author`, `description`, `link`) VALUES
+(1, 'blog/Sapir/sapir.jpg', 'Laurent Sapir', 'Journaliste à TSFJAZZ (17h-20h)', 'http://www.tsfjazz.com/sapir-tsfblog/'),
+(2, 'blog/Koperhant/koperhant.jpg', 'David Koperhant', 'Animateur à TSFJAZZ (14h-17h) ', 'http://www.tsfjazz.com/koperhant-tsfblog/'),
+(3, 'blog/Albernhe/albernhe.jpg', 'Laure Albernhe', 'Animatrice à TSFJAZZ (10h-14h)', 'http://www.tsfjazz.com/albernhe-tsfblog/');
 
 -- --------------------------------------------------------
 
