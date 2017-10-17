@@ -298,7 +298,7 @@ Organizer.prototype.list = function (data) {
 
   content = ""; 
   for (var i = 0; i < data.length; i++) {
-    content += '<li id="' + this.id + '-list-item-' + i + '"><div><span class="' + this.id + ' time" id="' + this.id + '-list-item-' + i + '-time">' + data[i].startTime + ' - ' + data[i].endTime + '</span><span class="' + this.id + ' m" id="' + this.id + '-list-item-' + i + '-m">' + data[i].mTime + '</span></div><p id="' + this.id + '-list-item-' + i + '-text">' + data[i].text + '</p></li>';
+    content += '<li id="' + this.id + '-list-item-' + i + '"><div><span class="' + this.id + ' time" id="' + this.id + '-list-item-' + i + '-time">' + data[i].startTime + data[i].endTime + '</span><span class="' + this.id + ' m" id="' + this.id + '-list-item-' + i + '-m">' + data[i].mTime + '</span></div><p id="' + this.id + '-list-item-' + i + '-text">' + data[i].text + '</p></li>';
   }
 
   document.getElementById(this.id + "-list").innerHTML = content;
@@ -370,130 +370,18 @@ var organizer = new Organizer("organizerContainer", calendar);
 currentDay = calendar.date.getDate(); // used this in order to make anyday today depending on the current today
 
 // my best way of organizing data, maybe that can be the outcome of joining multiple tables in the database and then parsing them in such a manner, easier for the person to push use a date and the events of it
-data = {
-  years: [
-    {
-      int: 1999,
-      months: [
-        {
-          int: 4,
-          days: [
-            {
-              int: 28,
-              events: [
-                {
-                  startTime: "6:00",
-                  endTime: "6:30",
-                  mTime: "pm",
-                  text: "Weirdo was born"
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      int: (new Date().getFullYear()),
-      months: [
-        {
-          int: (new Date().getMonth() + 1),
-          days: [
-            {
-              int: (new Date().getDate()),
-              events: [
-                {
-                  startTime: "6:00",
-                  endTime: "7:00",
-                  mTime: "am",
-                  text: "This is scheduled to show today, anyday."
-                },
-                {
-                  startTime: "5:45",
-                  endTime: "7:15",
-                  mTime: "pm",
-                  text: "WIP Library"
-                },
-                {
-                  startTime: "10:00",
-                  endTime: "11:00",
-                  mTime: "pm",
-                  text: "Probably won't fix that (time width)"
-                },
-                {
-                  startTime: "8:00",
-                  endTime: "9:00",
-                  mTime: "pm",
-                  text: "Next spam is for demonstration purposes only"
-                },
-                {
-                  startTime: "5:45",
-                  endTime: "7:15",
-                  mTime: "pm",
-                  text: "WIP Library"
-                },
-                {
-                  startTime: "10:00",
-                  endTime: "11:00",
-                  mTime: "pm",
-                  text: "Probably won't fix that (time width)"
-                },
-                {
-                  startTime: "5:45",
-                  endTime: "7:15",
-                  mTime: "pm",
-                  text: "WIP Library"
-                },
-                {
-                  startTime: "10:00",
-                  endTime: "11:00",
-                  mTime: "pm",
-                  text: "Probably won't fix that (time width)"
-                },
-                {
-                  startTime: "5:45",
-                  endTime: "7:15",
-                  mTime: "pm",
-                  text: "WIP Library"
-                },
-                {
-                  startTime: "10:00",
-                  endTime: "11:00",
-                  mTime: "pm",
-                  text: "Probably won't fix that (time width)"
-                },
-                {
-                  startTime: "5:45",
-                  endTime: "7:15",
-                  mTime: "pm",
-                  text: "WIP Library"
-                },
-                {
-                  startTime: "10:00",
-                  endTime: "11:00",
-                  mTime: "pm",
-                  text: "Probably won't fix that (time width)"
-                },
-                {
-                  startTime: "5:45",
-                  endTime: "7:15",
-                  mTime: "pm",
-                  text: "WIP Library"
-                },
-                {
-                  startTime: "10:00",
-                  endTime: "11:00",
-                  mTime: "pm",
-                  text: "Probably won't fix that (time width)"
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    }
-  ]
-};
+var data;
+
+jQuery.ajax({
+  type: "get",
+  url: "./ajax-get-events",
+  async: false,
+  success: function(json){
+    data = JSON.parse(json);
+  }
+});
+
+showEvents();
 
 function showEvents() {
   theYear = -1, theMonth = -1, theDay = -1;
@@ -522,7 +410,6 @@ function showEvents() {
   organizer.list(theEvents); // what's responsible for listing
 }
 
-showEvents();
 
 organizer.setOnClickListener('day-slider', function () { showEvents(); console.log("Day back slider clicked"); }, function () { showEvents(); console.log("Day next slider clicked"); });
 organizer.setOnClickListener('days-blocks', function () { showEvents(); console.log("Day block clicked"); }, null);

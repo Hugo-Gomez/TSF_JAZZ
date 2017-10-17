@@ -18,7 +18,7 @@ class StructureController extends Controller
 	}
 
 	function jazzenda() {
-    	$news = DB::table('news')->get();
+		$news = DB::table('news')->get();
     	return view('jazzenda', compact('news'));
 	}
 
