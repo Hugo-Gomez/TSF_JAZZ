@@ -173,7 +173,14 @@
                   </div>
                   <div id="alxposts-2" class="widget widget_alx_posts ">
                     <h3><a href="{{ url('/frequences') }}">Liste des fréquences</a></h3>
-                    <div id='map'></div>
+                    <a href="{{ url('/frequences') }}">
+                      <div id='maptsf'></div>
+                    </a>
+                    <div class="freqtsfdroit">
+                    <a href="{{ url('/frequences') }}">
+                       Nous écouter
+                    </a>
+                  </div>
                   </div>
                 </div>
               </div>
