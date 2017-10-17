@@ -186,3 +186,20 @@ nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
 {
 	color:#731818;
 }
+
+
+.poditem-title {
+  color: #666;
+}
+
+.poditem-title:hover {
+  color: #731818; 
+}
+
+.podraph {
+	text-align: left;
+}
+
+h6 {
+	color: #731818;
+}

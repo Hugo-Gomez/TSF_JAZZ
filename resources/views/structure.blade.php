@@ -147,10 +147,29 @@
                     <p>Actualités</p>
                   </div>
                   <!-- CONTENT -->
-                  <div id="alxposts-1" class="widget widget_alx_posts">
-                    <h3>Derniers Podcasts</h3>
-                    <p> Ici on rajoutera les podcasts </p>
+                  <div id="recent-posts-3" class="widget widget_rss">
+                    <h3><i class="fa fa-music"></i> Derniers Podcasts <i class="fa fa-music"></i></h3>
+                    <div class="separator"></div>
+                    <ul class="podraph">
+                      @php
+                        $o=1
+                      @endphp
+
+                      @for ($i = 0; $i < 60; $i++)
+                        @php
+                          $a=$podcast_items[$i]->id_podcast
+                        @endphp
+
+                        @if ($o === $a)
+                          <li><a href="#!"><span class="poditem-title"><i class="fa fa-play-circle-o"></i> {{ $podcast_items[$i]->title }}</span></a></li>
+                          @php
+                            $o=$o+1
+                          @endphp
+                        @endif
+                      @endfor
+                    </ul>
                   </div>
+
                   <div id="alxposts-2" class="widget widget_alx_posts">
                     <img src="../public/img/cote.png" alt="">
                   </div>
@@ -244,10 +263,10 @@
                   <h3>Contacts</h3>
                   <div class="separator"></div>
                   <ul>
-                    <li><a href="{{ url('/audtre') }}">Trésor des auditeurs</a></li>
-                    <li><a href="{{ url('/about') }}">À propos</a></li>
-                    <li><a href="{{ url('/contact') }}">Nous écrire</a></li>
-                    <li><a href="{{ url('/newsletter') }}">Newsletter</a></li>
+                    <li><a href="{{ url('/audtre') }}"><span class="poditem-title">Trésor des auditeurs</span></a></li>
+                    <li><a href="{{ url('/about') }}"><span class="poditem-title">À propos</span></a></li>
+                    <li><a href="{{ url('/contact') }}"><span class="poditem-title">Nous écrire</span></a></li>
+                    <li><a href="{{ url('/newsletter') }}"><span class="poditem-title">Newsletter</span></a></li>
                   </ul>
                 </div>
               </div>
