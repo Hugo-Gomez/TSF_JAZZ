@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LP JAZZ</title>
-    
+
     @yield('stylesheet')
     <link href="../public/css/style.css" type="text/css" rel="stylesheet">
     <link href="../public/css/responsive.css" type="text/css" rel="stylesheet">
@@ -284,8 +284,8 @@
       }
     </style>
 
-    <!-- NO NEED FOR NOW 
-    <script type='text/javascript' src='../public/js/jquery.jplayer.min.js'></script> 
+    <!-- NO NEED FOR NOW
+    <script type='text/javascript' src='../public/js/jquery.jplayer.min.js'></script>
     -->
     <script type='text/javascript' src='../public/js/responsive-menu.js'></script>
       <!--[if lt IE 9]>

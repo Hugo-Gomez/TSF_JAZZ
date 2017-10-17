@@ -12,7 +12,7 @@
 @section('contenu')
 	<div class="row">
 		@foreach ($blog as $blogs)
-			
+
 				<div class="col m4 s10 offset-s1 blog-cards">
 					<div class="card-panel">
 						<a href="#!"><img src="../public/img/{{ $blogs->thumbnail }}"></a>
@@ -22,7 +22,7 @@
 						<br>
 					</div>
 				</div>
-				
+
 		@endforeach
 	</div>
 @endsection
