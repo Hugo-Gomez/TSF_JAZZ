@@ -118,8 +118,24 @@ class StructureController extends Controller
         $podcast_items = DB::table('podcast_item')->get();
         $keyword = DBRequest::get('keyword');
         if ($keyword!='') {
-            $query = DB::table('agenda')->where("title", "LIKE", "%$keyword%")->get();
+            $queryAgenda = DB::table('agenda')->where("title", "LIKE", "%$keyword%")
+                ->orwhere("artist", "LIKE", "%$keyword%")
+                    ->get();
+            $queryBlog = DB::table('blog')->where("author", "LIKE", "%$keyword%")
+                    ->get();
+            $queryNews = DB::table('news')->where("title", "LIKE", "%$keyword%")
+                    ->get();
+            $queryPodcast_item = DB::table('podcast_item')->where("title", "LIKE", "%$keyword%")
+                ->orwhere("author", "LIKE", "%$keyword%")
+                    ->get();
+            $queryProgram_item = DB::table('program_item')->where("title", "LIKE", "%$keyword%")
+                ->orwhere("subtitle", "LIKE", "%$keyword%")
+                    ->get();
         }
-        return view('searchResult', compact('query', 'news', 'podcasts', 'podcast_items'));
+        else {
+            return view('searchResult', compact('news', 'podcasts', 'podcast_items'));
+            die();
+        }
+        return view('searchResult', compact('queryAgenda', 'queryBlog', 'queryNews', 'queryPodcast_item', 'queryProgram_item', 'news', 'podcasts', 'podcast_items'));
     }
 }
