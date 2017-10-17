@@ -93,6 +93,21 @@
   margin: 55px 0px;
 }
 
+.program-event * {
+  text-align: justify;
+}
+
 .separator {
   margin: 40px 0px;
+}
+
+.separator.progevent {
+  width: 30%;
+}
+
+.progevent-date {
+  font-size: 20px;
+  color: #666;
+  letter-spacing: 1.5px;
+  text-decoration: underline;
 }
