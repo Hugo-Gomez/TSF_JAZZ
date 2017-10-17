@@ -188,12 +188,12 @@ nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
 }
 
 
-.poditem-title {
+.poditem-titlee {
   color: #666;
 }
 
-.poditem-title:hover {
-  color: #731818; 
+.poditem-titlee:hover {
+  color: #731818;
 }
 
 .podraph {
@@ -202,4 +202,8 @@ nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
 
 h6 {
 	color: #731818;
+}
+
+.specialraph:hover {
+	text-decoration: none !important;
 }

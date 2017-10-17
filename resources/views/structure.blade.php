@@ -72,16 +72,16 @@
                 <a>Contacts</a>
                 <ul class="sub-menu">
                   <li class="menu-item">
-                    <a href="{{ url('/audtre') }}">Trésor des auditeurs</a>
+                    <a class="specialraph" href="{{ url('/audtre') }}">Trésor des auditeurs</a>
                   </li>
                   <li class="menu-item">
-                    <a href="{{ url('/about') }}">À propos</a>
+                    <a class="specialraph" href="{{ url('/about') }}">À propos</a>
                   </li>
                   <li class="menu-item">
-                    <a href="{{ url('/contact') }}">Nous écrire</a>
+                    <a class="specialraph" href="{{ url('/contact') }}">Nous écrire</a>
                   </li>
                   <li class="menu-item">
-                    <a href="{{ url('/newsletter') }}">Newsletter</a>
+                    <a class="specialraph" href="{{ url('/newsletter') }}">Newsletter</a>
                   </li>
                 </ul>
               </li>
@@ -149,7 +149,7 @@
                     <p>Actualités</p>
                   </div>
                   <!-- CONTENT -->
-                  <div id="recent-posts-3" class="widget widget_rss">
+                  <div class="widget widget_rss">
                     <h3><i class="fa fa-music"></i> Derniers Podcasts <i class="fa fa-music"></i></h3>
                     <div class="separator"></div>
                     <ul class="podraph">
@@ -163,7 +163,7 @@
                         @endphp
 
                         @if ($o === $a)
-                          <li><a href="#!"><span class="poditem-title"><i class="fa fa-play-circle-o"></i> {{ $podcast_items[$i]->title }}</span></a></li>
+                          <li><a class="specialraph" href="#!"><span class="poditem-titlee"><i class="fa fa-play-circle-o"></i> {{ $podcast_items[$i]->title }}</span></a></li>
                           @php
                             $o=$o+1
                           @endphp
@@ -192,12 +192,12 @@
                     <a href="http://bit.ly/QRA_QwestTV" target="_blank"><img src="../public/img/BANNER3_v5.gif" alt=""></a>
                   </div>
                   <div id="alxposts-2" class="widget widget_alx_posts ">
-                    <h3><a href="{{ url('/frequences') }}">Liste des fréquences</a></h3>
+                    <h3><a class="specialraph" href="{{ url('/frequences') }}">Liste des fréquences</a></h3>
                     <a href="{{ url('/frequences') }}">
                       <div id='maptsf'></div>
                     </a>
                     <div class="freqtsfdroit">
-                    <a href="{{ url('/frequences') }}">
+                    <a class="specialraph" href="{{ url('/frequences') }}">
                        Nous écouter
                     </a>
                   </div>
@@ -222,7 +222,7 @@
                     @isset($news)
                       @for ($i = 0; $i < 5; $i++)
                         <li>
-                          <a href="{{ url('/') }}">{{ $news[$i]->title }}</a>
+                          <a class="specialraph" href="{{ url('/') }}">{{ $news[$i]->title }}</a>
                         </li>
                       @endfor
                     @endisset
@@ -235,27 +235,27 @@
                   <div class="separator"></div>
                   <ul>
                     <li>
-                      <a rel="nofollow" class="social-tooltip" target="_blank" title="Twitter" href="https://twitter.com/radiotsfjazz?lang=fr">
+                      <a class="specialraph" rel="nofollow" class="social-tooltip" target="_blank" title="Twitter" href="https://twitter.com/radiotsfjazz?lang=fr">
                         <i class="fa fa-twitter"></i><span class="socialnet">Twitter par ici</span>
                       </a>
                     </li>
                     <li>
-                      <a rel="nofollow" class="social-tooltip" target="_blank" title="Facebook" href="https://www.facebook.com/TSFJazz/">
+                      <a class="specialraph" rel="nofollow" class="social-tooltip" target="_blank" title="Facebook" href="https://www.facebook.com/TSFJazz/">
                         <i class="fa fa-facebook"></i><span class="socialnet">Facebook par ici</span>
                       </a>
                     </li>
                     <li>
-                      <a rel="nofollow" class="social-tooltip" target="_blank" title="Instagram" href="https://www.instagram.com/tsfjazz/">
+                      <a class="specialraph" rel="nofollow" class="social-tooltip" target="_blank" title="Instagram" href="https://www.instagram.com/tsfjazz/">
                         <i class="fa fa-instagram" ></i><span class="socialnet">Instagram par ici</span>
                       </a>
                     </li>
                     <li>
-                      <a rel="nofollow" class="social-tooltip" target="_blank" title="Youtube" href="https://www.youtube.com/user/TSFJAZZRadio">
+                      <a class="specialraph" rel="nofollow" class="social-tooltip" target="_blank" title="Youtube" href="https://www.youtube.com/user/TSFJAZZRadio">
                         <i class="fa fa-youtube" ></i><span class="socialnet">Youtube par ici</span>
                       </a>
                     </li>
                     <li>
-                      <a rel="nofollow" class="social-tooltip" target="_blank" title="Soundcloud" href="https://soundcloud.com/tsfjazz">
+                      <a class="specialraph" rel="nofollow" class="social-tooltip" target="_blank" title="Soundcloud" href="https://soundcloud.com/tsfjazz">
                         <i class="fa fa-soundcloud" ></i><span class="socialnet">Soundcloud par ici</span>
                       </a>
                     </li>
@@ -267,10 +267,10 @@
                   <h3>Contacts</h3>
                   <div class="separator"></div>
                   <ul>
-                    <li><a href="{{ url('/audtre') }}"><span class="poditem-title">Trésor des auditeurs</span></a></li>
-                    <li><a href="{{ url('/about') }}"><span class="poditem-title">À propos</span></a></li>
-                    <li><a href="{{ url('/contact') }}"><span class="poditem-title">Nous écrire</span></a></li>
-                    <li><a href="{{ url('/newsletter') }}"><span class="poditem-title">Newsletter</span></a></li>
+                    <li><a class="specialraph" href="{{ url('/audtre') }}"><span class="poditem-title">Trésor des auditeurs</span></a></li>
+                    <li><a class="specialraph" href="{{ url('/about') }}"><span class="poditem-title">À propos</span></a></li>
+                    <li><a class="specialraph" href="{{ url('/contact') }}"><span class="poditem-title">Nous écrire</span></a></li>
+                    <li><a class="specialraph" href="{{ url('/newsletter') }}"><span class="poditem-title">Newsletter</span></a></li>
                   </ul>
                 </div>
               </div>
