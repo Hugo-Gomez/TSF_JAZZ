@@ -1,8 +1,9 @@
 @extends('structure')
 
 @section('stylesheet')
-	<link rel="stylesheet" type="text/css" href="../public/css/form.css">
+
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../public/css/form.css">
 @endsection
 
 @section('titre')
@@ -19,7 +20,7 @@
                 <div class="contact-form">
                     <!-- Form -->
                     <form id="contact-us" method="post" action="/server.php/">
-											
+
 											{!! csrf_field() !!}
                         <!-- Left Inputs -->
                         <div class="col-xs-6 wow animated slideInLeft" data-wow-delay=".5s">
