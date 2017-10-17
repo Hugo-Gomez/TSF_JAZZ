@@ -15,7 +15,7 @@
 
 				<div class="col m4 s10 offset-s1 blog-cards">
 					<div class="card-panel">
-						<a href="#!"><img src="../public/img/{{ $blogs->thumbnail }}"></a>
+						<a href="{{ $blogs->link }}" target="_blank"><img src="../public/img/{{ $blogs->thumbnail }}"></a>
 						<br><br>
 						<p>{{ $blogs->author }}</p>
 						<p>{{ $blogs->description }}</p>
