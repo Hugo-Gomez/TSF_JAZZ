@@ -10,13 +10,13 @@ class StructureController extends Controller
 {
     function welcome() {
 		$news = DB::table('news')->get();
-    $podcasts = DB::table('podcast')->get();
-    $podcast_items = DB::table('podcast_item')->get();
+        $podcasts = DB::table('podcast')->get();
+        $podcast_items = DB::table('podcast_item')->get();
     	return view('welcome', compact('news', 'podcasts', 'podcast_items'));
 	}
 
 	function program() {
-    	  $news = DB::table('news')->get();
+    	$news = DB::table('news')->get();
         $programs = DB::table("program")->get();
         $podcasts = DB::table('podcast')->get();
         $podcast_items = DB::table('podcast_item')->get();
@@ -34,15 +34,15 @@ class StructureController extends Controller
 
 	function jazzenda() {
     	$news = DB::table('news')->get();
-      $podcasts = DB::table('podcast')->get();
-      $podcast_items = DB::table('podcast_item')->get();
+        $podcasts = DB::table('podcast')->get();
+        $podcast_items = DB::table('podcast_item')->get();
     	return view('jazzenda', compact('news', 'podcasts', 'podcast_items'));
 	}
 
 	function podcast() {
     	$news = DB::table('news')->get();
-		  $podcasts = DB::table('podcast')->get();
-      $podcast_items = DB::table('podcast_item')->get();
+		$podcasts = DB::table('podcast')->get();
+        $podcast_items = DB::table('podcast_item')->get();
     	return view('podcast', compact('podcasts', 'news', 'podcast_items'));
 	}
 
@@ -58,66 +58,68 @@ class StructureController extends Controller
 	function jazzblog() {
     	$news = DB::table('news')->get();
 		$blog = DB::table('blog')->get();
-    $podcasts = DB::table('podcast')->get();
-    $podcast_items = DB::table('podcast_item')->get();
+        $podcasts = DB::table('podcast')->get();
+        $podcast_items = DB::table('podcast_item')->get();
     	return view('jazzblog', compact('blog'), compact('news', 'podcasts', 'podcast_items'));
 	}
 
 	function audtre() {
     	$news = DB::table('news')->get();
-      $podcasts = DB::table('podcast')->get();
-      $podcast_items = DB::table('podcast_item')->get();
+        $podcasts = DB::table('podcast')->get();
+        $podcast_items = DB::table('podcast_item')->get();
     	return view('audtre', compact('news', 'podcasts', 'podcast_items'));
 	}
 
 	function trackhist() {
     	$news = DB::table('news')->get();
-      $podcasts = DB::table('podcast')->get();
-      $podcast_items = DB::table('podcast_item')->get();
+        $podcasts = DB::table('podcast')->get();
+        $podcast_items = DB::table('podcast_item')->get();
     	return view('trackhist', compact('news', 'podcasts', 'podcast_items'));
 	}
 
 	function media() {
     	$news = DB::table('news')->get();
-      $podcasts = DB::table('podcast')->get();
-      $podcast_items = DB::table('podcast_item')->get();
+        $podcasts = DB::table('podcast')->get();
+        $podcast_items = DB::table('podcast_item')->get();
     	return view('media', compact('news', 'podcasts', 'podcast_items'));
 	}
 
 	function about() {
     	$news = DB::table('news')->get();
-      $podcasts = DB::table('podcast')->get();
-      $podcast_items = DB::table('podcast_item')->get();
+        $podcasts = DB::table('podcast')->get();
+        $podcast_items = DB::table('podcast_item')->get();
     	return view('about', compact('news', 'podcasts', 'podcast_items'));
 	}
 
     function contact() {
     	$news = DB::table('news')->get();
-      $podcasts = DB::table('podcast')->get();
-      $podcast_items = DB::table('podcast_item')->get();
+        $podcasts = DB::table('podcast')->get();
+        $podcast_items = DB::table('podcast_item')->get();
     	return view('contact', compact('news', 'podcasts', 'podcast_items'));
 	}
 
     function frequences() {
     	$news = DB::table('news')->get();
-      $podcasts = DB::table('podcast')->get();
-      $podcast_items = DB::table('podcast_item')->get();
+        $podcasts = DB::table('podcast')->get();
+        $podcast_items = DB::table('podcast_item')->get();
     	return view('frequences', compact('news', 'podcasts', 'podcast_items'));
 	}
 
     function newsletter() {
     	$news = DB::table('news')->get();
-      $podcasts = DB::table('podcast')->get();
-      $podcast_items = DB::table('podcast_item')->get();
+        $podcasts = DB::table('podcast')->get();
+        $podcast_items = DB::table('podcast_item')->get();
     	return view('newsletter', compact('news', 'podcasts', 'podcast_items'));
 	}
 
     function search() {
         $news = DB::table('news')->get();
+        $podcasts = DB::table('podcast')->get();
+        $podcast_items = DB::table('podcast_item')->get();
         $keyword = DBRequest::get('keyword');
         if ($keyword!='') {
             $query = DB::table('agenda')->where("title", "LIKE", "%$keyword%")->get();
         }
-        return view('searchResult', compact('query', 'news'));
+        return view('searchResult', compact('query', 'news', 'podcasts', 'podcast_items'));
     }
 }
