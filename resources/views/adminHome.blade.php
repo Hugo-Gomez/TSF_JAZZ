@@ -3,13 +3,15 @@
 @section('content')
 
 <div class="container">
+  <p><a href="{{ url('admin') }}" > Dashboard </a></p>
   <h2>News Table</h2>
-  <table class="table">
+  <table class="table table-bordered">
     <thead>
-      <tr>
+      <tr class="info">
         <th>date</th>
         <th>title</th>
         <th>description</th>
+        <th>Effacer</th>
       </tr>
     </thead>
     <tbody>
@@ -18,8 +20,8 @@
         <th>{{ $datas->date }}</th>
         <th><a href="{{ url('admin/'.$datas->id) }}" > {{ $datas->title }} </a></th>
         <th>{{ $datas->description }}</th>
-        <th>
-            <a href="{{ url('delete/'.$datas->id) }}" class="btn btn-default">
+        <th class="danger">
+            <a href="{{ url('delete/'.$datas->id) }}" class="btn btn-danger">
                 <span class="glyphicon glyphicon-trash" aria-hidden="true">
                     Effacer
                 </span>
@@ -38,12 +40,12 @@
 
     <div class="form-group">
       <label>The title </label>
-      <input type="text" name="title" class="form-control">
+      <input type="text" name="titleNews" class="form-control">
     </div>
 
     <div class="form-group">
       <label>Description</label>
-      <textarea name="description" class="form-control"></textarea>
+      <textarea name="descriptionNews" class="form-control"></textarea>
     </div>
 
     <div class="form-group">

@@ -3,13 +3,15 @@
 @section('content')
 
 <div class="container">
+  <p><a href="{{ url('admin') }}" > Dashboard </a></p>
   <h2>Blog Table</h2>
-  <table class="table">
+  <table class="table table-bordered">
     <thead>
-      <tr>
+      <tr class="info">
         <th>author</th>
         <th>description</th>
         <th>photo</th>
+        <th>Effacer</th>
       </tr>
     </thead>
     <tbody>
@@ -17,9 +19,9 @@
       <tr>
         <th><a href="{{ url('blog/admin/'.$data_blog->id) }}" > {{ $data_blog->author }} </a></th>
         <th>{{ $data_blog->description }}</th>  
-        <th><img src="<?php echo asset("public/$data_blog->thumbnail")?>" alt="blog Pic" height="50" width="50">
-        <th>
-            <a href="{{ url('blog/delete/'.$data_blog->id) }}" class="btn btn-default">
+        <th><img  src="<?php echo asset("../storage/app/$data_blog->thumbnail")?>" alt="{{ $data_blog->author }}" height="50" width="50"></th>
+        <th class="danger">
+            <a href="{{ url('blog/delete/'.$data_blog->id) }}" class="btn btn-danger">
                 <span class="glyphicon glyphicon-trash" aria-hidden="true">
                     Effacer
                 </span>
@@ -38,12 +40,12 @@
 
     <div class="form-group">
       <label>The author </label>
-      <input type="text" name="author" class="form-control">
+      <input type="text" name="authorBlog" class="form-control">
     </div>
 
     <div class="form-group">
       <label>Description</label>
-      <textarea name="description" class="form-control"></textarea>
+      <textarea name="descriptionBlog" class="form-control"></textarea>
     </div>
 
     <div class="form-group">

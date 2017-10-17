@@ -98,6 +98,7 @@ Route::get('/admin', 'AdminController@home');
 
 
 Auth::routes();
+/* News */
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::post('/home', 'AdminController@store');
@@ -121,4 +122,29 @@ Route::get('/blog/delete/{blog}','AdminController@destroyBlog');
 Route::get('/blog/admin/{blog}', 'AdminController@showBlog');
 Route::post('/blog/admin/{blog}','AdminController@updateBlog');
 
+/* program */
+
+Route::get('/program/admin', 'AdminController@homeProgram');
+Route::post('/program/admin', 'AdminController@storeProgram');
+Route::get('/program/delete/{program}','AdminController@destroyProgram');
+Route::get('/program/admin/{program}', 'AdminController@showProgram');
+Route::post('/program/admin/{program}','AdminController@updateProgram');
+
+/* Agenda */
+
+Route::get('/agenda/admin', 'AdminController@homeAgenda');
+Route::post('/agenda/admin', 'AdminController@storeAgenda');
+Route::get('/agenda/delete/{agenda}','AdminController@destroyAgenda');
+Route::get('/agenda/admin/{agenda}', 'AdminController@showAgenda');
+Route::post('/agenda/admin/{agenda}','AdminController@updateAgenda');
+
+
+/* newsletter, contact */
+
+Route::get('/contact/admin', 'AdminController@homeContact');
+Route::get('/newsletter/admin', 'AdminController@homeNewsletter');
+
+
 /* End routes admin */
+
+
