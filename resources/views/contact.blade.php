@@ -10,6 +10,10 @@
 @endsection
 
 @section('contenu')
+<p>
+  Une question, remarque ou suggestion ? N'hésitez pas à nous contacter, notre équipe se chargera de vous répondre dans les plus brefs délais.
+</p>
+<br />
 <div class="inner contact">
                 <!-- Form Area -->
                 <div class="contact-form">

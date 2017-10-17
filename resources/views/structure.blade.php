@@ -71,10 +71,10 @@
                 <a>Contacts</a>
                 <ul class="sub-menu">
                   <li class="menu-item">
-                    <a href="{{ url('/about') }}">À propos</a>
+                    <a href="{{ url('/audtre') }}">Trésor des auditeurs</a>
                   </li>
                   <li class="menu-item">
-                    <a href="{{ url('/audtre') }}">Trésor des auditeurs</a>
+                    <a href="{{ url('/about') }}">À propos</a>
                   </li>
                   <li class="menu-item">
                     <a href="{{ url('/contact') }}">Nous écrire</a>
