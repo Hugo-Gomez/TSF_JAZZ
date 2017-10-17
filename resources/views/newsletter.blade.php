@@ -1,87 +1,62 @@
-<!doctype html>
-<html lang="{{ app()->getLocale() }}">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('structure')
 
-        <title>Laravel</title>
+@section('stylesheet')
+	<link rel="stylesheet" type="text/css" href="../public/css/form.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+@endsection
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+@section('titre')
+    <h2>S'abonner à la Newsletter</h2>
+@endsection
 
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Raleway', sans-serif;
-                font-weight: 100;
-                height: 100vh;
-                margin: 0;
-            }
+@section('contenu')
+<p>
+  Pour ne rater aucune actualité et recevoir chaque semaine par email des informations sur les émissions et les nouveautés de la radio LP Jazz, n'hésitez pas à vous incrire à notre Newsletter.
+</p>
+<br />
 
-            .full-height {
-                height: 100vh;
-            }
+<div class="inner contact">
+                <!-- Form Area -->
+                <div class="contact-form">
+                    <!-- Form -->
+                    <form id="contact-us" method="post" action="#">
+                        <!-- Left Inputs -->
+                        <div class="col-xs-6 wow animated slideInLeft" data-wow-delay=".5s">
+                            <!-- Name -->
+                            <input type="text" name="name" id="name" required="required" class="form" placeholder="Nom" />
+                        </div><!-- End Left Inputs -->
 
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
+                        <!-- Right Inputs -->
+                        <div class="col-xs-6 wow animated slideInRight" data-wow-delay=".5s">
+                            <!-- Prénom -->
+                            <input type="text" name="firstname" id="firstname" required="required" class="form" placeholder="Prénom" />
+                        </div><!-- End Right Inputs -->
 
-            .position-ref {
-                position: relative;
-            }
+                        <!-- Email center -->
+                        <div class="relative fullwidth col-xs-12">
+                            <!-- Email -->
+                            <input type="email" name="mail" id="mail" required="required" class="form" placeholder="Email" />
+                        </div><!-- End Email center -->
 
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
+                        <!-- Bottom Submit -->
+                        <div class="relative fullwidth col-xs-12">
+                            <!-- Send Button -->
+                            <button type="submit" id="submit" name="submit" class="form-btn semibold">S'abonner</button>
+                        </div><!-- End Bottom Submit -->
+                        <!-- Clear -->
+                        <div class="clear"></div>
+                    </form>
 
-            .content {
-                text-align: center;
-            }
+                    <!-- Your Mail Message -->
+                    <div class="mail-message-area">
+                        <!-- Message -->
+                        <div class="alert gray-bg mail-message not-visible-message">
+                            <strong>Merci !</strong> Votre inscription a bien été prise en compte.
+                        </div>
+                    </div>
 
-            .title {
-                font-size: 84px;
-            }
+                </div><!-- End Contact Form Area -->
+            </div><!-- End Inner -->
 
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 12px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
 
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-                        <a href="{{ route('register') }}">Register</a>
-                    @endauth
-                </div>
-            @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                    This is the NEWSLETTER page
-                </div>
-            </div>
-        </div>
-    </body>
-</html>
+@endsection

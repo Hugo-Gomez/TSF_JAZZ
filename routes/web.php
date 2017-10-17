@@ -17,6 +17,8 @@ Route::get('/', 'StructureController@welcome');
 
 Route::get('program', 'StructureController@program');
 
+Route::get('program{program_id}', 'StructureController@program_item');
+
 Route::get('jazzenda', 'StructureController@jazzenda');
 
 Route::get('podcast', 'StructureController@podcast');
@@ -85,10 +87,6 @@ Route::get('fetch_events', function () {
     return "done";
 });
 
-Route::get('contact', function () {
-    return view('contact');
-});
-
 
 
 /* Routes admin */
@@ -146,4 +144,5 @@ Route::get('/newsletter/admin', 'AdminController@homeNewsletter');
 
 
 /* End routes admin */
+
 

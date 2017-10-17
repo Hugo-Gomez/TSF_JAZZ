@@ -1,87 +1,198 @@
-<!doctype html>
-<html lang="{{ app()->getLocale() }}">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('structure')
 
-        <title>Laravel</title>
+    <style>
+       #map {
+        height: 600px;
+        width: 100%;
+       }
+    </style>
+@section('titre')
+        <h2>Liste des fréqences</h2>
+@endsection
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+@section('contenu')
 
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Raleway', sans-serif;
-                font-weight: 100;
-                height: 100vh;
-                margin: 0;
-            }
+    <div id="map"></div>
 
-            .full-height {
-                height: 100vh;
-            }
+    <script>
 
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
+          // Init
+          function initMap() {
+            var centre = {lat: 47.04018214480667, lng: 2.449951171875};
+            var map = new google.maps.Map(document.getElementById('map'), {
+              // taille du zoom plus le point de centre quand la carte apparait (environ centre de la France actuellement)
+              zoom: 6,
+              center: centre
+            });
 
-            .position-ref {
-                position: relative;
-            }
+            //variable pour éviter de copier/coller tout le longt texte à chaque fois
+            var infowindow = new google.maps.InfoWindow();
 
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
+            // Amiens
+            //positions
+            var amiens = {lat: 49.894067, lng: 2.2957529999999906};
 
-            .content {
-                text-align: center;
-            }
+            // Def du pointeur (position, title : hover)
+            var markeramiens = new google.maps.Marker({
+              position: amiens,
+              map: map,
+              title: 'Amiens : 99.8 MHz'
+            });
 
-            .title {
-                font-size: 84px;
-            }
+            // Déf du text lors d'un click sur le pointeur
+            google.maps.event.addListener(markeramiens, 'click', function() {
+               infowindow.setContent('<h1>Amiens</h1>'+
+                   '<p>Fréquence : 99.8 MHz</p>');
+               infowindow.open(map, this);
+            });
 
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 12px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
+            // Bourg-en-Bresse
+            var bourg = {lat: 46.20516749999999, lng: 5.225500699999998};
 
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-                        <a href="{{ route('register') }}">Register</a>
-                    @endauth
-                </div>
-            @endif
+            var markerbourg = new google.maps.Marker({
+              position: bourg,
+              map: map,
+              title: 'Bourg-en-Bresse : 98.5 MHz'
+            });
 
-            <div class="content">
-                <div class="title m-b-md">
-                    This is the FREQUENCES page
-                </div>
-            </div>
-        </div>
-    </body>
-</html>
+            google.maps.event.addListener(markerbourg, 'click', function() {
+                infowindow.setContent('<h1>Bourg-en-Bresse</h1>'+
+                    '<p>Fréquence : 98.5 MHz</p>');
+                infowindow.open(map, this);
+            });
+
+            // Chambéry
+            var chambery = {lat: 45.564601, lng: 5.917780999999991};
+
+            var markerchambery = new google.maps.Marker({
+              position: chambery,
+              map: map,
+              title: 'Chambéry : 91.4 MHz'
+            });
+
+            google.maps.event.addListener(markerchambery, 'click', function() {
+                infowindow.setContent('<h1>Chambéry</h1>'+
+                    '<p>Fréquence : 91.4 MHz</p>');
+                infowindow.open(map, this);
+            });
+
+            // Côtes d'Azur
+            var cotedazur = {lat: 43.552847, lng: 7.017369000000031};
+
+            var markercotedazur = new google.maps.Marker({
+              position: cotedazur,
+              map: map,
+              title: 'Côtes d\'Azur : 98.1 MHz'
+            });
+
+            google.maps.event.addListener(markercotedazur, 'click', function() {
+                infowindow.setContent('<h1>Côtes d\'Azur</h1>'+
+                    '<p>Fréquence : 98.1 MHz</p>');
+                infowindow.open(map, this);
+            });
+
+            // Laval
+            var laval = {lat: 48.0785146, lng: -0.7669905999999855};
+
+            var markerlaval = new google.maps.Marker({
+              position: laval,
+              map: map,
+              title: 'Laval : 97.7 MHz'
+            });
+
+            google.maps.event.addListener(markerlaval, 'click', function() {
+                infowindow.setContent('<h1>Laval</h1>'+
+                    '<p>Fréquence : 97.7 MHz</p>');
+                infowindow.open(map, this);
+            });
+
+            // Nevers
+            var nevers = {lat: 46.99089600000001, lng: 3.162845000000061};
+
+            var markernevers = new google.maps.Marker({
+              position: nevers,
+              map: map,
+              title: 'Nevers : 90.2 MHz'
+            });
+
+            google.maps.event.addListener(markernevers, 'click', function() {
+                infowindow.setContent('<h1>Nevers</h1>'+
+                    '<p>Fréquence : 90.2 MHz</p>');
+                infowindow.open(map, this);
+            });
+
+            // Orléans
+            var orleans = {lat: 47.902964, lng: 1.9092510000000402};
+
+            var markerorleans = new google.maps.Marker({
+              position: orleans,
+              map: map,
+              title: 'Orléans : 106.7 MHz'
+            });
+
+            google.maps.event.addListener(markerorleans, 'click', function() {
+                infowindow.setContent('<h1>Orléans</h1>'+
+                    '<p>Fréquence : 106.7 MHz</p>');
+                infowindow.open(map, this);
+            });
+
+            // Paris
+            var paris = {lat: 48.856614, lng: 2.3522219000000177};
+
+            var markerparis = new google.maps.Marker({
+              position: paris,
+              map: map,
+              title: 'Paris : 89.9 MHz'
+            });
+
+            google.maps.event.addListener(markerparis, 'click', function() {
+                infowindow.setContent('<h1>Paris</h1>'+
+                    '<p>Fréquence : 89.9 MHz</p>');
+                infowindow.open(map, this);
+            });
+
+            // Poitiers
+            var poitiers = {lat: 46.58022400000001, lng: 0.34037499999999454};
+
+            var markerpoitiers = new google.maps.Marker({
+              position: poitiers,
+              map: map,
+              title: 'Poitiers : 96.6 MHz'
+            });
+
+            google.maps.event.addListener(markerpoitiers, 'click', function() {
+                infowindow.setContent('<h1>Poitiers</h1>'+
+                    '<p>Fréquence : 96.6 MHz</p>');
+                infowindow.open(map, this);
+            });
+
+            // Valence
+            var valence = {lat: 44.933393, lng: 4.892360000000053};
+
+            var markervalence = new google.maps.Marker({
+              position: valence,
+              map: map,
+              title: 'Valence : 89.5 MHz'
+            });
+
+            google.maps.event.addListener(markervalence, 'click', function() {
+                infowindow.setContent('<h1>Valence</h1>'+
+                    '<p>Fréquence : 89.5 MHz</p>');
+                infowindow.open(map, this);
+            });
+
+            // Permet auto close (lors d'un click sur un autre marker ou sur la carte)
+            google.maps.event.addListener(map, 'click', function(){
+               infowindow.close();
+            });
+
+         }
+        </script>
+
+        <!-- Récupération de la map google avec la clé générée sur leur site -->
+        <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAcDJKm5DVpyVTegsrzTCmqSstIDAinnu8&callback=initMap">
+        </script>
+
+
+@endsection
