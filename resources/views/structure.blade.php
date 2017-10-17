@@ -14,7 +14,7 @@
       <link href="../public/css/default-ver=4.1.css" type="text/css" rel="stylesheet">
       <link href="../public/css/nivo-lightbox-ver=4.1.css" type="text/css" rel="stylesheet">
     -->
-    <script type='text/javascript' src='../public/js/jquery-ver=1.11.1.js'></script>
+    <script type='text/javascript' src="{!!url('../public/js/jquery-ver=1.11.1.js')!!}"></script>
     <script type='text/javascript' src='../public/js/jquery-migrate.min-ver=1.2.1.js'></script>
     <script type='text/javascript' src='../public/js/nivo-lightbox.min-ver=4.1.js'></script>
     <script type='text/javascript' src='../public/js/front-ver=4.1.js'></script>
@@ -217,11 +217,13 @@
                   <h3>Les dernières News</h3>
                   <div class="separator"></div>
                   <ul>
-                    @for ($i = 0; $i < 5; $i++)
-                      <li>
-                        <a href="{{ url('/') }}">{{ $news[$i]->title }}</a>
-                      </li>
-                    @endfor
+                    @isset($news)
+                      @for ($i = 0; $i < 5; $i++)
+                        <li>
+                          <a href="{{ url('/') }}">{{ $news[$i]->title }}</a>
+                        </li>
+                      @endfor
+                    @endisset
                   </ul>
                 </div>
               </div>
