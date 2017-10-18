@@ -15,6 +15,14 @@ class StructureController extends Controller
     	return view('welcome', compact('news', 'podcasts', 'podcast_items'));
 	}
 
+    function news($news_id) {
+        $news = DB::table('news')->get();
+        $podcasts = DB::table('podcast')->get();
+        $podcast_items = DB::table('podcast_item')->get();
+        $news_items = DB::table('news')->get()->where('id', $news_id);     
+        return view('news', compact('news', 'news_items', 'podcasts', 'podcast_items'));
+    }
+
 	function program() {
     	$news = DB::table('news')->get();
         $programs = DB::table("program")->get();

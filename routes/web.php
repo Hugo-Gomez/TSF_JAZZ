@@ -15,6 +15,8 @@
 
 Route::get('/', 'StructureController@welcome');
 
+Route::get('/news{news_id}', 'StructureController@news');
+
 Route::get('program', 'StructureController@program');
 
 Route::get('program{program_id}', 'StructureController@program_item');
