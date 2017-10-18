@@ -555,7 +555,7 @@ body.opacityPlaylist .main-music-player .mesh-title {
   font-weight: 100;
 }
 
-.mesh-podcast-action .fa-pause, .mesh-podcast-action .fa-play, {
+.mesh-podcast-action i {
   cursor: pointer;
 }
 
