@@ -27,8 +27,6 @@ Route::get('podcast', 'StructureController@podcast');
 
 Route::get('podcast{podcast_id}', 'StructureController@podcast_item');
 
-// Route::get('search{usersearch}', 'StructureController@searchresult');
-
 Route::get('jazzblog', 'StructureController@jazzblog');
 
 Route::get('audtre', 'StructureController@audtre');

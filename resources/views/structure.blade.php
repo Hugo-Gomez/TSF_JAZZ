@@ -222,7 +222,7 @@
                     @isset($news)
                       @for ($i = 0; $i < 5; $i++)
                         <li>
-                          <a class="specialraph" href="{{ url('/') }}">{{ $news[$i]->title }}</a>
+                          <a class="specialraph" href="{{ url('/news'.$news[$i]->id) }}">{{ $news[$i]->title }}</a>
                         </li>
                       @endfor
                     @endisset
