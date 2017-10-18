@@ -27,7 +27,7 @@
 
     <ul class="playlist hidden">
     @foreach ($podcast_items_hugo as $podcast_item)
-        <li audiourl="http://www.tsfjazz.com/{{ $podcast_item->file }}" cover="../public/img/{{ $podcasts_hugo->thumbnail }}" artist="{{ $podcast_item->author }}">{{ $podcast_item->title }}</li>
+        <li data-podcast="{{ $podcast_item->id }}"audiourl="http://www.tsfjazz.com/{{ $podcast_item->file }}" cover="../public/img/{{ $podcasts_hugo->thumbnail }}" artist="{{ $podcast_item->author }}">{{ $podcast_item->title }}</li>
     @endforeach
 	</ul>
     <table class="table">
@@ -41,8 +41,8 @@
         </thead>
         <tbody>
             @foreach ($podcast_items_hugo as $podcast_item)
-                <tr>
-                    <td><i class="fa fa-play"></i></td>
+                <tr data-podcast="{{ $podcast_item->id }}">
+                    <td class="mesh-podcast-action"><i class="fa fa-play"></i><i class="fa fa-pause hidden"></i></td>
                     <td>{{ $podcast_item->title }}</td>
                     <td>{{ $podcast_item->author }}</td>
                     <td>{{ $podcast_item->duration }}</td>

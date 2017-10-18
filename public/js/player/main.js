@@ -62,10 +62,10 @@ jQuery(document).ready(function() {
                 jQuery('.ui-slider-range').css('width', '100%');
                 setTimeout(function(){
                     jQuery('.mesh-play').trigger('click');
-                }, 2000);
+                }, 1000);
                 setTimeout(function(){
                     jQuery('.mesh-next').trigger('click');
-                }, 1000);
+                }, 500);
                 
                 
             }   
@@ -76,6 +76,13 @@ jQuery(document).ready(function() {
     }
     function playAudio() {
         song.play();
+        $active = $('.playlist .active');
+        id = $active.attr('data-podcast');
+        
+        $tr = $('table tbody').find('[data-podcast='+id+']');
+        $action = $tr.find('.mesh-podcast-action');
+        $action.find('.fa-play').addClass('hidden');
+        $action.find('.fa-pause').removeClass('hidden');
 
         jQuery('.mesh-play').removeClass('visible');
         jQuery('.mesh-play').addClass('hidden');
@@ -85,6 +92,13 @@ jQuery(document).ready(function() {
     }
     function stopAudio() {
         song.pause();
+        $active = $('.playlist .active');
+        id = $active.attr('data-podcast');
+        
+        $tr = $('table tbody').find('[data-podcast='+id+']');
+        $action = $tr.find('.mesh-podcast-action');
+        $action.find('.fa-play').removeClass('hidden');
+        $action.find('.fa-pause').addClass('hidden');
 
         jQuery('.mesh-play').removeClass('hidden');
         jQuery('.mesh-play').addClass('visible');
@@ -131,7 +145,6 @@ jQuery(document).ready(function() {
 
     // forward click
     var playerNext = function (e) {
-        console.log('next');
         e.preventDefault();
         e.stopPropagation();
         stopAudio();
@@ -144,7 +157,7 @@ jQuery(document).ready(function() {
         }
         setTimeout(function(){
             jQuery('.mesh-play').trigger('click');
-        }, 2000);
+        }, 500);
         initAudio(next);
     }
 
@@ -207,9 +220,34 @@ jQuery(document).ready(function() {
     });
 
     // playlist elements - click
-    jQuery('.playlist li').click(function () {
+    jQuery('.mesh-podcast-action .fa-play').click(function () {
+        $button  = $(this).parent();
+        $podcast = $button.parent();
+        
+        $(this).addClass('hidden');
+        $button.find('.fa-pause').removeClass('hidden');
+
+        id = $podcast.attr('data-podcast');
+        audio = $('.playlist').find('[data-podcast='+id+']');
+
         stopAudio();
-        initAudio(jQuery(this));
+        setTimeout(function(){
+            jQuery('.mesh-play').trigger('click');
+        }, 500);
+        initAudio(jQuery(audio));
+    });
+
+    jQuery('.mesh-podcast-action .fa-pause').click(function () {
+        $button  = $(this).parent();
+        $podcast = $button.parent();
+        
+        $(this).addClass('hidden');
+        $button.find('.fa-play').removeClass('hidden');
+
+        id = $podcast.attr('data-podcast');
+        audio = $('.playlist').find('[data-podcast='+id+']');
+
+        jQuery('.mesh-pause').trigger('click');
     });
 
     // initialization - first element in playlist
