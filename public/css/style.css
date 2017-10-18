@@ -251,7 +251,7 @@ h1, h2, h3, h4, h5, h6 { color: #444; font-weight: 600; -ms-word-wrap: break-wor
 .entry h1,.entry h2,.entry h3,.entry h4,.entry h5,.entry h6  { margin-bottom: 14px; font-weight: 400; line-height: 1.3em; }
 .entry h1 { font-size: 38px; letter-spacing: -1px; }
 .entry h2 { font-size: 34px; letter-spacing: -0.7px; }
-.entry h3 { font-size: 28px; letter-spacing: -0.5px; }
+.entry h3 { font-size: 28px; letter-spacing: -0.5px;}
 .entry h4 { font-size: 24px; letter-spacing: -0.3px; }
 .entry h5 { font-size: 20px; font-weight: 600; }
 .entry h6 { font-size: 18px; font-weight: 600; text-transform: uppercase; }
@@ -1101,8 +1101,8 @@ box-shadow: inset 0 1px 0 rgba(255,255,255,0.25); }
 .widget { color: #777; font-size: 15px; overflow: hidden; }
 .widget a { color: #777; }
 .widget a:hover { color: #731818; }
-.widget > h3 { font-size: 15px; font-weight: 400; text-transform: uppercase; margin-bottom: 6px; }
-.widget > h3 a,
+.widget > h3 { font-size: 15px; font-weight: 400; text-transform: uppercase; margin-bottom: 6px;}
+.widget > h3 a { color: #731818; }
 .widget > h3 a:hover { color: #731818; }
 .widget > h3 a img { display: none; float: left; margin: 3px 7px 0 0; }
 .widget select { border: 1px solid #ddd; color: #777; font-size: 15px; padding: 7px; width: 100%; max-width: 100%; }
