@@ -81,7 +81,7 @@
                     <a class="specialraphmenu" href="{{ url('/contact') }}">Nous écrire</a>
                   </li>
                   <li class="menu-item">
-                    <a class="specialraphmenu" href="{{ url('/newsletter') }}">Newsletter</a>
+                    <a class="specialraphmenu" href="{{ url('/membership') }}">Newsletter</a>
                   </li>
                 </ul>
               </li>
@@ -270,7 +270,7 @@
                     <li><a class="specialraph" href="{{ url('/audtre') }}">Trésor des auditeurs</a></li>
                     <li><a class="specialraph" href="{{ url('/about') }}">À propos</a></li>
                     <li><a class="specialraph" href="{{ url('/contact') }}">Nous écrire</span></a></li>
-                    <li><a class="specialraph" href="{{ url('/newsletter') }}">Newsletter</a></li>
+                    <li><a class="specialraph" href="{{ url('/membership') }}">Newsletter</a></li>
                   </ul>
                 </div>
               </div>

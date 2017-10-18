@@ -113,11 +113,11 @@ class StructureController extends Controller
     	return view('frequences', compact('news', 'podcasts', 'podcast_items'));
 	}
 
-    function newsletter() {
+    function membership() {
     	$news = DB::table('news')->get();
         $podcasts = DB::table('podcast')->get();
         $podcast_items = DB::table('podcast_item')->get();
-    	return view('newsletter', compact('news', 'podcasts', 'podcast_items'));
+    	return view('membership', compact('news', 'podcasts', 'podcast_items'));
 	}
 
     function search() {

@@ -41,7 +41,7 @@ Route::get('contact', 'StructureController@contact');
 
 Route::get('frequences', 'StructureController@frequences');
 
-Route::get('newsletter', 'StructureController@newsletter');
+Route::get('membership', 'StructureController@membership');
 
 Route::get('searchResult', 'StructureController@search');
 
