@@ -11,52 +11,52 @@
   {!! csrf_field() !!}
 
     <div class="form-group">
-      <label>The title </label>
-      <input type="text" name="title" class="form-control" value="{{ $agenda->title }}">
+      <label>Le titre </label>
+      <input type="text" name="title" class="form-control" value="{{ $agenda->title }}" required="required">
     </div>
 
     <div class="form-group">
-      <label>Time </label>
-      <input type="text" name="time" class="form-control" value="{{ $agenda->time }}">
+      <label>le temps </label>
+      <input type="text" name="time" class="form-control" value="{{ $agenda->time }}" required="required">
     </div>
 
     <div class="form-group">
-      <label>Artist </label>
-      <input type="text" name="artist" class="form-control" value="{{ $agenda->artist }}">
+      <label>l'artiste </label>
+      <input type="text" name="artist" class="form-control" value="{{ $agenda->artist }}" required="required">
     </div>
 
     <div class="form-group">
       <label>Info </label>
-      <input type="text" name="info" class="form-control" value="{{ $agenda->info }}">
+      <input type="text" name="info" class="form-control" value="{{ $agenda->info }}" required="required">
     </div>
 
     <div class="form-group">
       <label>Club</label>
-      <textarea name="club" class="form-control"><?php echo $agenda->club; ?></textarea>
+      <textarea name="club" class="form-control" required="required"><?php echo $agenda->club; ?></textarea>
     </div>
 
     <div class="form-group">
-      <label>Address </label>
-      <input type="text" name="address" class="form-control" value="{{ $agenda->address }}">
+      <label>L'adresse </label>
+      <input type="text" name="address" class="form-control" value="{{ $agenda->address }}" required="required">
     </div>
 
     <div class="form-group">
-      <label>Town </label>
-      <input type="text" name="town" class="form-control" value="{{ $agenda->town }}">
+      <label>La ville </label>
+      <input type="text" name="town" class="form-control" value="{{ $agenda->town }}" required="required">
     </div>
 
     <div class="form-group">
-      <label>Zipcode </label>
-      <input type="text" name="zipcode" class="form-control" value="{{ $agenda->zipcode }}">
+      <label>Code postal </label>
+      <input type="text" name="zipcode" class="form-control" value="{{ $agenda->zipcode }}" required="required">
     </div>
 
     <div class="form-group">
-      <label>Telephone </label>
+      <label>Téléphone </label>
       <input type="text" name="telephone" class="form-control" value="{{ $agenda->telephone }}">
     </div>
 
     <div class="form-group">
-      <button type="submit" class="btn btn-primary">Update</button>
+      <button type="submit" class="btn btn-primary">Mettre à jour</button>
     </div>
 
   </form>

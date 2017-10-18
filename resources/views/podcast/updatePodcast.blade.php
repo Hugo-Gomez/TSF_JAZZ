@@ -4,24 +4,24 @@
 
 <div class="container">
 <p><a href="{{ url('podcast/admin') }}" > Return Back </a></p>
-<h3>Update The Podcasts </h3>
+<h3>Mettre à jour le Podcasts </h3>
 
   <form method="POST" action="/server.php/podcast/admin/{{ $podcast->id }}">
 
   {!! csrf_field() !!}
 
     <div class="form-group">
-      <label>The title </label>
-      <input type="text" name="titlePodcast" class="form-control" value="{{ $podcast->title }}">
+      <label>Le titre </label>
+      <input type="text" name="titlePodcast" class="form-control" value="{{ $podcast->title }}" required="required">
     </div>
 
     <div class="form-group">
-      <label>Description</label>
-      <textarea name="descriptionPodcast" class="form-control"><?php echo $podcast->description; ?></textarea>
+      <label>La description</label>
+      <textarea name="descriptionPodcast" class="form-control" required="required"><?php echo $podcast->description; ?></textarea>
     </div>
 
     <div class="form-group">
-      <button type="submit" class="btn btn-primary">Update</button>
+      <button type="submit" class="btn btn-primary">Mettre à jour</button>
     </div>
 
   </form>

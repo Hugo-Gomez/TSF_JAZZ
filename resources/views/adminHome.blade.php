@@ -8,9 +8,9 @@
   <table class="table table-bordered">
     <thead>
       <tr class="info">
-        <th>date</th>
-        <th>title</th>
-        <th>description</th>
+        <th>La date</th>
+        <th>le titre</th>
+        <th>La description</th>
         <th>Effacer</th>
       </tr>
     </thead>
@@ -32,24 +32,24 @@
     </tbody>
   </table>
 
-  <h3>Add News </h3>
+  <h3>Ajouter un News </h3>
 
   <form method="POST" action="/server.php/home">
 
   {!! csrf_field() !!}
 
     <div class="form-group">
-      <label>The title </label>
-      <input type="text" name="titleNews" class="form-control">
+      <label>le titre </label>
+      <input type="text" name="titleNews" class="form-control" required="required">
     </div>
 
     <div class="form-group">
-      <label>Description</label>
-      <textarea name="descriptionNews" class="form-control"></textarea>
+      <label>La description</label>
+      <textarea name="descriptionNews" class="form-control" required="required"></textarea>
     </div>
 
     <div class="form-group">
-      <button type="submit" class="btn btn-primary">Add news</button>
+      <button type="submit" class="btn btn-primary">S'ajouter</button>
     </div>
 
   </form>

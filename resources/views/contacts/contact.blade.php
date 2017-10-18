@@ -4,14 +4,14 @@
 
 <div class="container">
   <p><a href="{{ url('admin') }}" > Dashboard </a></p>
-  <h2>Blog Table</h2>
+  <h2>Contact Table</h2>
   <table class="table table-bordered">
     <thead>
       <tr class="info">
-        <th>nom</th>
-        <th>email</th>
-        <th>sujet</th>
-        <th>message</th>
+        <th>Le nom</th>
+        <th>L'email</th>
+        <th>Le sujet</th>
+        <th>La message</th>
       </tr>
     </thead>
     <tbody>
