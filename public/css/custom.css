@@ -187,15 +187,6 @@ nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
 	color:#731818;
 }
 
-
-.poditem-titlee {
-  color: #666;
-}
-
-.poditem-titlee:hover {
-  color: #731818;
-}
-
 .podraph {
 	text-align: left;
 }
@@ -204,6 +195,16 @@ h6 {
 	color: #731818;
 }
 
+.specialraph {
+	color: #777 !important;
+}
+
 .specialraph:hover {
 	text-decoration: none !important;
+	color: #731818 !important;
+}
+
+.specialraphmenu:hover {
+	text-decoration: none !important;
+	color: #fff !important;
 }

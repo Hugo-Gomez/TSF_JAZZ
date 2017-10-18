@@ -25,7 +25,7 @@
         </div>
     @endforeach
 
-    <div class="separator"></div>
+    <div class="separator pod"></div>
 
     @foreach ($podcast_items_hugo as $podcast_item)
             <div class="pod-thread">
