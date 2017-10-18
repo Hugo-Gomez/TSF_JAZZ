@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : db
--- Généré le :  mer. 18 oct. 2017 à 10:34
+-- Généré le :  mer. 18 oct. 2017 à 15:27
 -- Version du serveur :  10.2.8-MariaDB-10.2.8+maria~jessie
 -- Version de PHP :  7.0.21
 
@@ -30,17 +30,17 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `agenda` (
   `id` int(11) NOT NULL,
-  `title` text NOT NULL,
-  `date` date NOT NULL,
-  `time` varchar(5) NOT NULL,
-  `artist` text NOT NULL,
-  `info` text NOT NULL,
-  `club` text NOT NULL,
-  `address` text NOT NULL,
-  `town` varchar(100) NOT NULL,
-  `zipcode` int(5) NOT NULL,
-  `telephone` varchar(20) NOT NULL,
-  `display` tinyint(1) NOT NULL
+  `title` text DEFAULT NULL,
+  `date` date DEFAULT NULL,
+  `time` varchar(5) DEFAULT NULL,
+  `artist` text DEFAULT NULL,
+  `info` text DEFAULT NULL,
+  `club` text DEFAULT NULL,
+  `address` text DEFAULT NULL,
+  `town` varchar(100) DEFAULT NULL,
+  `zipcode` int(5) DEFAULT NULL,
+  `telephone` varchar(20) DEFAULT NULL,
+  `display` tinyint(1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -430,7 +430,7 @@ CREATE TABLE `auditors_treasure` (
   `zipcode` int(5) NOT NULL,
   `telephone` varchar(20) NOT NULL,
   `track_title` varchar(25) NOT NULL,
-  `record` varchar(25) DEFAULT NULL,
+  `album` varchar(25) DEFAULT NULL,
   `artist_name` varchar(25) NOT NULL,
   `year` year(4) NOT NULL,
   `label` varchar(25) DEFAULT NULL,
@@ -447,9 +447,9 @@ CREATE TABLE `auditors_treasure` (
 CREATE TABLE `blog` (
   `id` int(11) NOT NULL,
   `thumbnail` varchar(100) DEFAULT NULL,
-  `author` varchar(50) NOT NULL,
+  `author` varchar(50) DEFAULT NULL,
   `description` text DEFAULT NULL,
-  `link` varchar(255) NOT NULL
+  `link` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -459,7 +459,8 @@ CREATE TABLE `blog` (
 INSERT INTO `blog` (`id`, `thumbnail`, `author`, `description`, `link`) VALUES
 (1, 'blog/Sapir/sapir.jpg', 'Laurent Sapir', 'Journaliste à TSFJAZZ (17h-20h)', 'http://www.tsfjazz.com/sapir-tsfblog/'),
 (2, 'blog/Koperhant/koperhant.jpg', 'David Koperhant', 'Animateur à TSFJAZZ (14h-17h) ', 'http://www.tsfjazz.com/koperhant-tsfblog/'),
-(3, 'blog/Albernhe/albernhe.jpg', 'Laure Albernhe', 'Animatrice à TSFJAZZ (10h-14h)', 'http://www.tsfjazz.com/albernhe-tsfblog/');
+(3, 'blog/Albernhe/albernhe.jpg', 'Laure Albernhe', 'Animatrice à TSFJAZZ (10h-14h)', 'http://www.tsfjazz.com/albernhe-tsfblog/'),
+(9, 'blog/9dODMkifCqtbpYdoR5D4duiuBGRbUEcmNI0wnzDX.jpeg', 'ss', 'sss', 'ss');
 
 -- --------------------------------------------------------
 
@@ -560,7 +561,8 @@ INSERT INTO `podcast` (`id`, `title`, `description`, `thumbnail`) VALUES
 (9, 'Bon temps rouler', 'L\'émission blues et soul hebdomadaire de l\'harmoniciste Jean-Jacques Milteau... Histoire, actu, perles rares et nouveautés !', 'podcast/TSF_BO.jpg'),
 (10, 'Jamie Cullum Show', 'Tous les vendredis, de 19h à 20h, le chanteur et pianiste anglais Jamie Cullum s\'installe sur les ondes de TSFJAZZ !', 'podcast/TSF_JCS.jpg'),
 (11, 'Emissions Spéciales', 'Retrouvez toutes les émissions exceptionnelles de TSFJAZZ !', 'podcast/TSF_EM.jpg'),
-(12, 'La chronique Hi-Fi', 'TSF Jazz, la seule radio 100% JAZZ', 'podcast/TSF_CHRO.jpg');
+(12, 'La chronique Hi-Fi', 'TSF Jazz, la seule radio 100% JAZZ', 'podcast/TSF_CHRO.jpg'),
+(15, 'ss', 'sss', 'blog/DTwKcj5G8x4BZwb44l21xYuo3NtRxHV9LGQCnQ9m.jpeg');
 
 -- --------------------------------------------------------
 
@@ -652,12 +654,12 @@ INSERT INTO `podcast_item` (`id`, `title`, `author`, `file`, `date`, `duration`,
 
 CREATE TABLE `program` (
   `id` int(11) NOT NULL,
-  `id_program` int(11) NOT NULL,
-  `thumbnail` varchar(255) NOT NULL,
-  `title` varchar(255) NOT NULL,
-  `subtitle` varchar(255) NOT NULL,
-  `hebdo_date` varchar(255) NOT NULL,
-  `description` longtext NOT NULL
+  `id_program` int(11) DEFAULT NULL,
+  `thumbnail` varchar(255) DEFAULT NULL,
+  `title` varchar(255) DEFAULT NULL,
+  `subtitle` varchar(255) DEFAULT NULL,
+  `hebdo_date` varchar(255) NOT NULL DEFAULT current_timestamp(),
+  `description` longtext DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -677,7 +679,8 @@ INSERT INTO `program` (`id`, `id_program`, `thumbnail`, `title`, `subtitle`, `he
 (33, 9, 'podcast/TSF_MIC.jpg', 'Made in China', 'Made in China', 'Tous les jeudis à 19h ', 'Chanteuse, Comédienne, DJ, Chroniqueuse, Diggeuse, Twitteuse hors pair et 100% souriante en toute circonstance, China Moses est une figure immanquable de la scène musicale d’aujourd’hui. Chaque jeudi à 19h, découvrez MADE IN CHINA, votre nouveau rendez-vous dédié aux voix. Au programme, un hommage hebdomadaire aux chanteurs et chanteuses d’hier, d’aujourd’hui… et de demain.'),
 (34, 10, 'podcast/TSF_BO.jpg', 'Bon temps rouler', 'par Jean-Jacques Milteau', 'les mardis et samedis à 19h', 'L\'émission blues et soul présentée par Jean-Jacques Milteau. Depuis plus de 30 ans, Jean-Jacques écume les scènes du monde entier avec son harmonica, et multiplie les collaborations, d\'Eddy Mitchell Ã  Gil Scott-Heron, en passant par Mighty Mo Rodgers ou Terry Callier. Pour TSFJAZZ, il sélectionne chaque samedi des classiques du blues et de la soul, mais aussi des nouveautés, des perles rares et des inédits. Embarquement immédiat pour un voyage qui nous amènera de la Nouvelle- Orléans au Delta, avec des escales à  Memphis ou à Chicago, et bien d\'autres surprises.'),
 (35, 11, 'podcast/TSF_JCS.jpg', 'Jamie Cullum Show', 'Jamie Cullum', 'Tous les vendredis à 19h et le dimanche à 11h', 'Tous les vendredis, de 19h à  20h, le chanteur et pianiste anglais Jamie Cullum s\'installe sur les ondes de TSFJAZZ et vous fait partager l\'émission qu\'il produit pour la station londonienne BBC RADIO 2.\r\n\r\nAu programme, une heure de musique, d\'interviews et de sessions live pendant laquelle le crooner dévoile sa passion pour tous les types de jazz et son regard sur l\'actualité du disque. \r\n\r\nUne heure avec une simple et belle ambition : partager avec Jamie Cullum l\'amour de la musique.'),
-(36, 12, 'podcast/TSF_CHRO.jpg', 'La chronique Hi-Fi', 'par Laurent Thorin', 'Tous les samedis à 12h', '');
+(36, 12, 'podcast/TSF_CHRO.jpg', 'La chronique Hi-Fi', 'par Laurent Thorin', 'Tous les samedis à 12h', ''),
+(39, NULL, 'blog/eDExQKgeLbsyWxNMe0f6PSxKdcHFG7ifJ9AGV4tZ.jpeg', 'ss', 'ss', '2017-10-18 15:14:18', 'ss');
 
 -- --------------------------------------------------------
 
@@ -816,6 +819,12 @@ ALTER TABLE `users`
 --
 
 --
+-- AUTO_INCREMENT pour la table `agenda`
+--
+ALTER TABLE `agenda`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25737;
+
+--
 -- AUTO_INCREMENT pour la table `auditors_treasure`
 --
 ALTER TABLE `auditors_treasure`
@@ -825,7 +834,7 @@ ALTER TABLE `auditors_treasure`
 -- AUTO_INCREMENT pour la table `blog`
 --
 ALTER TABLE `blog`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT pour la table `contacts`
@@ -837,7 +846,7 @@ ALTER TABLE `contacts`
 -- AUTO_INCREMENT pour la table `news`
 --
 ALTER TABLE `news`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT pour la table `newsletter`
@@ -849,7 +858,7 @@ ALTER TABLE `newsletter`
 -- AUTO_INCREMENT pour la table `podcast`
 --
 ALTER TABLE `podcast`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT pour la table `podcast_item`
@@ -861,7 +870,7 @@ ALTER TABLE `podcast_item`
 -- AUTO_INCREMENT pour la table `program`
 --
 ALTER TABLE `program`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
 
 --
 -- AUTO_INCREMENT pour la table `program_item`

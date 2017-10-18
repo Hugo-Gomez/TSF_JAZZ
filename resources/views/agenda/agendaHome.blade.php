@@ -9,16 +9,16 @@
   <table class="table table-bordered">
     <thead>
       <tr class="info">
-        <th>Title</th>
-        <th>Date</th>
-        <th>Time</th>
-        <th>Artist</th>
+        <th>Le titre</th>
+        <th>Le date</th>
+        <th>le temps</th>
+        <th>l'artiste</th>
         <th>Info</th>
         <th>Club</th>
-        <th>Address</th>
-        <th>Town</th>
-        <th>Zipcode</th>
-        <th>Telephone</th>
+        <th>L'adresse</th>
+        <th>La ville</th>
+        <th>Code postal</th>
+        <th>Téléphone</th>
         <th>Effacer</th>
       </tr>
     </thead>
@@ -48,55 +48,55 @@
   </table>
   </div>
 
-  <h3>Add News </h3>
+  <h3>Ajouter un nouveau </h3>
 
   <form method="POST" action="/server.php/agenda/admin" enctype="multipart/form-data">
 
   {!! csrf_field() !!}
 
     <div class="form-group">
-      <label>The title </label>
-      <input type="text" name="title" class="form-control">
+      <label>Le titre </label>
+      <input type="text" name="title" class="form-control" required="required">
     </div>
 
     <div class="form-group">
-      <label>Time </label>
-      <input type="text" name="time" class="form-control">
+      <label>le temps </label>
+      <input type="text" name="time" class="form-control" required="required">
     </div>
 
     <div class="form-group">
-      <label>Artist </label>
-      <input type="text" name="artist" class="form-control">
+      <label>l'artiste </label>
+      <input type="text" name="artist" class="form-control" required="required">
     </div>
 
     <div class="form-group">
       <label>Info </label>
-      <input type="text" name="info" class="form-control">
+      <input type="text" name="info" class="form-control" required="required">
     </div>
 
     <div class="form-group">
       <label>Club </label>
-      <input type="text" name="club" class="form-control">
+      <input type="text" name="club" class="form-control" required="required">
     </div>
 
     <div class="form-group">
-      <label>Address </label>
-      <input type="text" name="address" class="form-control">
+      <label>L'adresse </label>
+      <input type="text" name="address" class="form-control" required="required">
     </div>
 
     <div class="form-group">
-      <label>Town </label>
-      <input type="text" name="town" class="form-control">
+      <label>La ville </label>
+      <input type="text" name="town" class="form-control" required="required">
     </div>
 
     <div class="form-group">
-      <label>Zipcode </label>
-      <input type="text" name="zipcode" class="form-control">
+      <label>Code postal </label>
+      <input type="text" name="zipcode" class="form-control" required="required">
     </div>
 
     <div class="form-group">
-      <label>Telephone </label>
-      <input type="text" name="telephone" class="form-control">
+      <label>Téléphone </label>
+      <input type="text" name="telephone" class="form-control" required="required"> 
     </div>
 
 
@@ -106,7 +106,7 @@
     </div> -->
 
     <div class="form-group">
-      <button type="submit" class="btn btn-primary">Add new</button>
+      <button type="submit" class="btn btn-primary">S'ajouter</button>
     </div>
 
   </form> 

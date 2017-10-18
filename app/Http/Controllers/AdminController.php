@@ -26,11 +26,12 @@ class AdminController extends Controller
 /*  Blog variables */
         $this->blogInputs['author'] = Input::get('authorBlog');
         $this->blogInputs['description'] = Input::get('descriptionBlog');
+        $this->blogInputs['link'] = Input::get('linkBlog');
 
 /*  Program variables */
         $this->programInputs['title'] = Input::get('titleProgram');
         $this->programInputs['subtitle'] = Input::get('subtitleProgram');
-        $this->programInputs['date'] = Carbon\Carbon::now();
+        $this->programInputs['hebdo_date'] = Carbon\Carbon::now();
         $this->programInputs['description'] = Input::get('descriptionProgram');
 
 /*  Agenda variables */
@@ -100,7 +101,9 @@ class AdminController extends Controller
     public function storePodcast(Request $request){
 
         if(Input::hasFile('img_podcast')) {
-            $imagePath = $request->file('img_podcast')->store('public/img/podcast');
+            //$imagePath = $request->file('img_podcast')->store('public/img/podcast');
+            $file_content = $request->file('img_podcast');
+            $imagePath = Storage::disk('public')->put('blog', $file_content);
             $this->podcastInputs['thumbnail'] = $imagePath;
         }
         \DB::table('podcast')->insert($this->podcastInputs);
@@ -149,7 +152,8 @@ class AdminController extends Controller
     public function storeBlog(Request $request){
 
         if(Input::hasFile('img_file')) {
-            $imagePath = $request->file('img_file')->store('public/img/blog');
+            $file_content = $request->file('img_file');
+            $imagePath = Storage::disk('public')->put('blog', $file_content);
             $this->blogInputs['thumbnail'] = $imagePath;
         }
 
@@ -198,7 +202,9 @@ class AdminController extends Controller
     public function storeProgram(Request $request){
 
         if(Input::hasFile('img_program')) {
-            $imagePath = $request->file('img_program')->store('public/img/program');
+            //$imagePath = $request->file('img_program')->store('public/img/program');
+            $file_content = $request->file('img_program');
+            $imagePath = Storage::disk('public')->put('blog', $file_content);            
             $this->programInputs['thumbnail'] = $imagePath;
         }
         \DB::table('program')->insert($this->programInputs);

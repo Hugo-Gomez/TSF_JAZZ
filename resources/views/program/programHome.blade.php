@@ -8,11 +8,11 @@
   <table class="table table-bordered">
     <thead>
       <tr class="info">
-        <th>title</th>
-        <th>subtitle</th>
-        <th>description</th>
-        <th>date</th>
-        <th>photo</th>
+        <th>Le titre</th>
+        <th>Le sous-titre</th>
+        <th>La description</th>
+        <th>Le date</th>
+        <th>La photo</th>
         <th>Effacer</th>
       </tr>
     </thead>
@@ -23,7 +23,7 @@
         <th> {{ $data_program->subtitle }} </th>
         <th>{{ $data_program->description }}</th>
         <th> {{ $data_program->hebdo_date }} </th> 
-        <th><img src="<?php echo asset("../storage/app/$data_program->thumbnail")?>" alt="{{ $data_program->title }}" height="50" width="50"></th> 
+        <th><img src="<?php echo asset("../public/img/$data_program->thumbnail")?>" alt="{{ $data_program->title }}" height="50" width="50"></th> 
         <th class="danger">
             <a href="{{ url('program/delete/'.$data_program->id) }}" class="btn btn-danger">
                 <span class="glyphicon glyphicon-trash" aria-hidden="true">
@@ -36,34 +36,34 @@
     </tbody>
   </table>
 
-  <h3>Add News </h3>
+  <h3>Ajouter un nouveau </h3>
 
   <form method="POST" action="/server.php/program/admin" enctype="multipart/form-data">
 
   {!! csrf_field() !!}
 
     <div class="form-group">
-      <label>The title </label>
-      <input type="text" name="titleProgram" class="form-control">
+      <label>Le titre </label>
+      <input type="text" name="titleProgram" class="form-control" required="required">
     </div>
 
     <div class="form-group">
-      <label>The subtitle </label>
-      <input type="text" name="subtitleProgram" class="form-control">
+      <label>Le sous-titre </label>
+      <input type="text" name="subtitleProgram" class="form-control" required="required">
     </div>
 
     <div class="form-group">
-      <label>Description</label>
-      <textarea name="descriptionProgram" class="form-control"></textarea>
+      <label>La description</label>
+      <textarea name="descriptionProgram" class="form-control" required="required"></textarea>
     </div>
 
     <div class="form-group">
-        <label>Select image to upload:</label>
+        <label>Sélectionnez l'image à télécharger:</label>
         <input type="file" name="img_program">
     </div> 
 
     <div class="form-group">
-      <button type="submit" class="btn btn-primary">Add news</button>
+      <button type="submit" class="btn btn-primary">S'ajouter</button>
     </div>
 
   </form> 
