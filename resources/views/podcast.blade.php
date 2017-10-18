@@ -1,4 +1,4 @@
-@extends('structure')
+-@extends('structure')
 
 @section('stylesheet')
     <link rel="stylesheet" type="text/css" href="../public/css/podcast.css">

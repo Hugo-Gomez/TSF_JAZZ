@@ -72,16 +72,16 @@
                 <a>Contacts</a>
                 <ul class="sub-menu">
                   <li class="menu-item">
-                    <a class="specialraph" href="{{ url('/audtre') }}">Trésor des auditeurs</a>
+                    <a class="specialraphmenu" href="{{ url('/audtre') }}">Trésor des auditeurs</a>
                   </li>
                   <li class="menu-item">
-                    <a class="specialraph" href="{{ url('/about') }}">À propos</a>
+                    <a class="specialraphmenu" href="{{ url('/about') }}">À propos</a>
                   </li>
                   <li class="menu-item">
-                    <a class="specialraph" href="{{ url('/contact') }}">Nous écrire</a>
+                    <a class="specialraphmenu" href="{{ url('/contact') }}">Nous écrire</a>
                   </li>
                   <li class="menu-item">
-                    <a class="specialraph" href="{{ url('/newsletter') }}">Newsletter</a>
+                    <a class="specialraphmenu" href="{{ url('/newsletter') }}">Newsletter</a>
                   </li>
                 </ul>
               </li>
@@ -267,10 +267,10 @@
                   <h3>Contacts</h3>
                   <div class="separator"></div>
                   <ul>
-                    <li><a class="specialraph" href="{{ url('/audtre') }}"><span class="poditem-title">Trésor des auditeurs</span></a></li>
-                    <li><a class="specialraph" href="{{ url('/about') }}"><span class="poditem-title">À propos</span></a></li>
-                    <li><a class="specialraph" href="{{ url('/contact') }}"><span class="poditem-title">Nous écrire</span></a></li>
-                    <li><a class="specialraph" href="{{ url('/newsletter') }}"><span class="poditem-title">Newsletter</span></a></li>
+                    <li><a class="specialraph" href="{{ url('/audtre') }}">Trésor des auditeurs</a></li>
+                    <li><a class="specialraph" href="{{ url('/about') }}">À propos</a></li>
+                    <li><a class="specialraph" href="{{ url('/contact') }}">Nous écrire</span></a></li>
+                    <li><a class="specialraph" href="{{ url('/newsletter') }}">Newsletter</a></li>
                   </ul>
                 </div>
               </div>

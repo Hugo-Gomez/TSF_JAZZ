@@ -20,7 +20,7 @@
                 </div>
                 <div class="col m9">
                     <p class="program-title">{{ $program->title }}</p>
-                    <h1>{{ $program->hebdo_date }}</h1>
+                    <h1 class="program-date">{{ $program->hebdo_date }}</h1>
                     <br>
                     <p>{{ $program->description }}</p>
                 </div>
@@ -28,7 +28,7 @@
         </div>
     @endforeach
 
-    <div class="separator"></div>
+    <div class="separator prog"></div>
 
     @foreach ($program_items as $program_item)
         <div class="program-event">
@@ -39,7 +39,7 @@
             <p>{{ $program_item->description }}</p>
             <br>
         </div>
-        <div class="separator progevent"></div>
+        <div class="separator prog progevent"></div>
     @endforeach
 
 @endsection

@@ -66,7 +66,7 @@ strong { font-weight: 600; }
 /*  base : clear
 /* ------------------------------------ */
 .clear { clear: both; display: block; overflow: hidden; visibility: hidden; width: 0; height: 0; }
-.group:before, .group:after { content: ""; display: table; }
+.group:before, .group:after { content: ""; display: table;}
 .group:after { clear: both; }
 main-inner { zoom: 1; }
 
@@ -269,7 +269,7 @@ h1, h2, h3, h4, h5, h6 { color: #444; font-weight: 600; -ms-word-wrap: break-wor
 /* ------------------------------------ */
 #wrapper { min-width: 1024px; height: 100%; }
 /*.container { padding: 0 20px; }*/
-.container-inner { max-width: 1800px; min-width: 1800px; width: 100%; margin: 0 auto; }
+.container-inner { max-width: 1800px; min-width: 1800px; width: 100%; margin: 0 auto;}
 .main { background-color: #fff!important; position: relative; }
 .main-inner { position: relative; min-height: 600px; /* instead of sticky footer */ }
 .content { width: 100%; position: relative; }
@@ -480,9 +480,10 @@ box-shadow: 0 0 2px rgba(255,255,255,0.4);
 
 @media only screen and (min-width: 840px) {
 
-	.nav-wrap { height: auto!important; }
+	.nav-wrap { height: auto!important;}
 	/* common */
-	.nav { font-size: 0; position: relative; }
+	.nav { font-size: 0; position: relative;
+	}
 	.nav li a { color: #ccc; display: block; line-height: 20px; }
 	/* dropdown arrows */
 	.nav li > a:after { content: "\f0da"; float: right; opacity: 0.5; }
@@ -492,8 +493,8 @@ box-shadow: 0 0 2px rgba(255,255,255,0.4);
 	#footer .nav > li > a:after { content: "\f0d8"; }
 	#footer .nav li > a:only-child:after { content: ""; }
 	/* level 1 */
-	.nav > li { font-size: 16px; border-right: 1px solid #999; display: inline-block; position: relative; }
-	.nav > li > a { padding: 15px 14px; }
+	.nav > li { font-size: 16px; border-right: 1px solid #999; display: inline-block; position: relative;}
+	.nav > li > a { padding: 15px 14px;}
 	.nav > li > a:hover,
 	.nav > li:hover > a { background: #777; }
 	.nav li > a:hover,
@@ -506,7 +507,7 @@ box-shadow: 0 0 2px rgba(255,255,255,0.4);
 	.nav li:hover > ul { display: block; }
 	.nav ul { display: none; background: #777; position: absolute; left: 0; top: 50px; width: 180px; padding: 10px 0; z-index: 2; -webkit-transform: translateZ(0);
 	-webkit-box-shadow: 0 2px 2px rgba(0,0,0,0.15);
-	box-shadow: 0 2px 2px rgba(0,0,0,0.15); }
+	box-shadow: 0 2px 2px rgba(0,0,0,0.15);}
 	.nav ul li { font-size: 14px; position: relative; display: block; padding: 0; }
 	.nav ul li a { padding: 10px 20px; }
 	.nav ul li:last-child { border-bottom: 0!important; }
@@ -556,7 +557,7 @@ box-shadow: 0 0 2px rgba(255,255,255,0.4);
 /* ------------------------------------------------------------------------- */
 #header { background: #33363b; position: relative; padding-bottom: 60px; }
 #header .pad { padding-top: 30px; padding-bottom: 30px; }
-#header .container-inner { position: relative; }
+#header .container-inner { position: relative;}
 
 .site-title { font-size: 42px; font-weight: 600; letter-spacing: -0.5px; float: left; line-height: 60px; padding: 10px 0; }
 .site-title a { display: block; color: #fff; max-width: 100%; }
@@ -609,10 +610,10 @@ box-shadow: inset 1px 0 0 rgba(255,255,255,0.06); }
 
 	/* common */
 	#nav-topbar .container { padding-left: 15px; }
-	#nav-topbar .nav {  }
-	#nav-topbar .nav li a { color: #fff; color: rgba(255,255,255,0.7); }
+	#nav-topbar .nav { }
+	#nav-topbar .nav li a { color: #fff; color: rgba(255,255,255,0.7);}
 	/* level 1 */
-	#nav-topbar .nav > li { border-right: none; }
+	#nav-topbar .nav > li { border-right: none;}
 	#nav-topbar .nav > li > a:hover,
 	#nav-topbar .nav > li:hover > a { background-color: rgba(0,0,0,0.1); }
 	#nav-topbar .nav li > a:hover,
@@ -622,7 +623,7 @@ box-shadow: inset 1px 0 0 rgba(255,255,255,0.06); }
 	#nav-topbar .nav li.current-menu-ancestor > a,
 	#nav-topbar .nav li.current-post-parent > a { color: #fff; }
 	/* level 2 & 3 */
-	#nav-topbar .nav ul { background: #26272b url(../public/img/opacity-10.png) repeat; }
+	#nav-topbar .nav ul { background: #26272b url(../public/img/opacity-10.png) repeat;}
 	#nav-topbar .nav ul li { box-shadow: 0 1px 0 rgba(255,255,255,0.06); -webkit-box-shadow: 0 1px 0 rgba(255,255,255,0.06); }
 	#nav-topbar .nav ul li:last-child { box-shadow: none; -webkit-box-shadow: none; }
 

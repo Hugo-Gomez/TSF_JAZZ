@@ -1,5 +1,5 @@
 /* Reset */
-@import url(//codepen.io/chrisdothtml/pen/ojLzJK.css);
+
 .tiles {
   width: 1040px;
   font-size: 0;
@@ -101,9 +101,10 @@
 .pod-title {
   font-size: 35px;
   margin: 55px 0px;
+  color: #731818;
 }
 
-.separator {
+.separator.pod {
   margin: 40px 0px;
 }
 
@@ -113,7 +114,7 @@
 }
 
 .poditem-date {
-  color: #8F4D0B;
+  color: #731818;
 }
 
 .poditem-title {
