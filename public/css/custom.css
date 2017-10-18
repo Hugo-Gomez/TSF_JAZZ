@@ -212,3 +212,15 @@ h3 .specialraph {
 	text-decoration: none !important;
 	color: #fff !important;
 }
+
+@media only screen and (min-width: 840px) {
+	.news1title {
+				padding-top: 90px;
+		    font-size: xx-large;
+				text-align: center;
+	}
+	.news1date {
+		    font-size: larger;
+				text-align: center;
+	}
+}
