@@ -22,7 +22,7 @@
         <th><a href="{{ url('program/admin/'.$data_program->id) }}" > {{ $data_program->title }} </a></th>
         <th> {{ $data_program->subtitle }} </th>
         <th>{{ $data_program->description }}</th>
-        <th> {{ $data_program->date }} </th> 
+        <th> {{ $data_program->hebdo_date }} </th> 
         <th><img src="<?php echo asset("../storage/app/$data_program->thumbnail")?>" alt="{{ $data_program->title }}" height="50" width="50"></th> 
         <th class="danger">
             <a href="{{ url('program/delete/'.$data_program->id) }}" class="btn btn-danger">

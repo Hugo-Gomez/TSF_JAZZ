@@ -14,24 +14,24 @@
                         </div>
                     @endif
 
-                    You are logged in!
+                    Vous êtes connecté!
 
                     <div class="container-fluid">
-                        <h1>Admin Control Page</h1>
+                        <h1>Page Administrateur</h1>
                         <div class="row">
-                            <div class="col-sm-4  col-lg-4" style="background-color:lavender;"><a href="{{ url('home') }}" > NEWS </a></div>
-                            <div class="col-sm-4 col-lg-4" style="background-color:lavenderblush;"><a href="{{ url('blog/admin') }}" > BLOG </a></div>
-                            <div class="col-sm-4  col-lg-4" style="background-color:lavender;"><a href="{{ url('newsletter/admin') }}" > NEWSLETTER </a></div>
+                            <a href="{{ url('home') }}" ><div class="col-sm-4  col-lg-4 panel panel-info well-lg" style="background-color:lavender;"> NEWS </div></a>
+                            <a href="{{ url('blog/admin') }}" ><div class="col-sm-4 col-lg-4 panel panel-info well-lg" style="background-color:lavenderblush;"> BLOG </div></a>
+                            <a href="{{ url('newsletter/admin') }}" ><div class="col-sm-4  col-lg-4 panel panel-info well-lg" style="background-color:lavender;"> NEWSLETTER </div></a>
                         </div>
 
                         <div class="row">
-                            <div class="col-sm-4 col-lg-4" style="background-color:lavenderblush;"><a href="{{ url('podcast/admin') }}" >PODCAST</a></div>
-                            <div class="col-sm-4 col-lg-4" style="background-color:lavender;"><a href="{{ url('program/admin') }}" >PROGRAM</a></div>
-                            <div class="col-sm-4 col-lg-4" style="background-color:lavenderblush;"><a href="{{ url('agenda/admin') }}" >Agenda</a></div>
+                            <a href="{{ url('podcast/admin') }}" ><div class="col-sm-4 col-lg-4 panel panel-info well-lg" style="background-color:lavenderblush;">PODCAST</div></a>
+                            <a href="{{ url('program/admin') }}" ><div class="col-sm-4 col-lg-4 panel panel-info well-lg" style="background-color:lavender;">PROGRAMME</div></a>
+                            <a href="{{ url('agenda/admin') }}" ><div class="col-sm-4 col-lg-4 panel panel-info well-lg" style="background-color:lavenderblush;">Agenda</div></a>
                         </div>
 
                         <div class="row">
-                            <div class="col-sm-4 col-lg-4" style="background-color:lavender;"><a href="{{ url('contact/admin') }}" >CONTACT</a></div>
+                            <a href="{{ url('contact/admin') }}" ><div class="col-sm-4 col-lg-4 panel panel-info well-lg" style="background-color:lavender;">CONTACT</div></a>
                         </div>
 
                 </div>
