@@ -19,7 +19,7 @@
       <tr>
         <th><a href="{{ url('blog/admin/'.$data_blog->id) }}" > {{ $data_blog->author }} </a></th>
         <th>{{ $data_blog->description }}</th>  
-        <th><img  src="<?php echo asset("../storage/app/$data_blog->thumbnail")?>" alt="{{ $data_blog->author }}" height="50" width="50"></th>
+        <th><img  src="<?php echo asset("../public/img/$data_blog->thumbnail")?>" alt="{{ $data_blog->author }}" height="50" width="50"></th>
         <th class="danger">
             <a href="{{ url('blog/delete/'.$data_blog->id) }}" class="btn btn-danger">
                 <span class="glyphicon glyphicon-trash" aria-hidden="true">
