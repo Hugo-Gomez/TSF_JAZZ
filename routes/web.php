@@ -38,10 +38,12 @@ Route::get('media', 'StructureController@media');
 Route::get('about', 'StructureController@about');
 
 Route::get('contact', 'StructureController@contact');
+Route::post('/contact', 'StructureController@storeContact');
 
 Route::get('frequences', 'StructureController@frequences');
 
 Route::get('membership', 'StructureController@membership');
+Route::post('/membership', 'StructureController@storeMembership');
 
 Route::get('searchResult', 'StructureController@search');
 
@@ -106,5 +108,3 @@ Route::get('/newsletter/admin', 'AdminController@homeNewsletter');
 
 
 /* End routes admin */
-
-

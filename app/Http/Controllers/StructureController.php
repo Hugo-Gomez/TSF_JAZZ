@@ -2,12 +2,31 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Input;
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Request as DBRequest;
 
+use Carbon;
+use Storage;
+
 class StructureController extends Controller
 {
+    public function __construct()
+    {
+      /*  membershipvar */
+      $this->membershipInputs['lastname'] = Input::get('namemembership');
+      $this->membershipInputs['name'] = Input::get('firstnamemembership');
+      $this->membershipInputs['email'] = Input::get('mailmembership');
+
+      /*  contactvar */
+      $this->contactInputs['name'] = Input::get('namecontact');
+      $this->contactInputs['email'] = Input::get('mailcontact');
+      $this->contactInputs['subject'] = Input::get('subjectcontact');
+      $this->contactInputs['message'] = Input::get('messagecontact');
+    }
+
     function welcome() {
 		$news = DB::table('news')->orderBy('date', 'DESC')->get();
         $podcasts = DB::table('podcast')->get();
@@ -19,7 +38,7 @@ class StructureController extends Controller
         $news = DB::table('news')->get();
         $podcasts = DB::table('podcast')->get();
         $podcast_items = DB::table('podcast_item')->get();
-        $news_items = DB::table('news')->get()->where('id', $news_id);     
+        $news_items = DB::table('news')->get()->where('id', $news_id);
         return view('news', compact('news', 'news_items', 'podcasts', 'podcast_items'));
     }
 
@@ -145,5 +164,18 @@ class StructureController extends Controller
             die();
         }
         return view('searchResult', compact('queryAgenda', 'queryBlog', 'queryNews', 'queryPodcast_item', 'queryProgram_item', 'news', 'podcasts', 'podcast_items'));
+    }
+    public function storeMembership(Request $request){
+
+        \DB::table('newsletter')->insert($this->membershipInputs);
+
+        return redirect('/membership');
+    }
+
+    public function storeContact(Request $request){
+
+        \DB::table('contacts')->insert($this->contactInputs);
+
+        return redirect('/contact');
     }
 }
