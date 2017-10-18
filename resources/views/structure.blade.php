@@ -8,11 +8,14 @@
     <title>LP JAZZ</title>
 
     @yield('stylesheet')
+    <link href="../public/css/table.css" type="text/css" rel="stylesheet">
     <link href="../public/css/player.css" type="text/css" rel="stylesheet">
     <link href="../public/css/style.css" type="text/css" rel="stylesheet">
     <link href="../public/css/responsive.css" type="text/css" rel="stylesheet">
     <link href="../public/css/custom.css" type="text/css" rel="stylesheet">
     <link href="../public/fonts/font-awesome.min.css" type="text/css" rel="stylesheet">
+
+ 
     <!-- NO NEED FOR NOW
       <link href="../public/css/default-ver=4.1.css" type="text/css" rel="stylesheet">
       <link href="../public/css/nivo-lightbox-ver=4.1.css" type="text/css" rel="stylesheet">
@@ -303,9 +306,9 @@
         <section class="container" id="footer-music-player">
           <div class="container-inner">
             <div class="pad group">
-            <ul class="playlist hidden">
+            <!--<ul class="playlist hidden">
 		<li audiourl="http://tsfjazz.ice.infomaniak.ch/tsfjazz-high.mp3" cover="../public/img/podcast/TSF_JL.jpg" artist=""></li>
-	</ul>
+	</ul>-->
             <div class="main-music-player active">
 		<div id="mesh-main-player" class="jp-jplayer" style="width: 0px; height: 0px;" ><img id="jp_poster_0" style="width: 0px; height: 0px; display: none;"></div>
 		<div id="mesh-main-player-content" class="mesh-main-player">

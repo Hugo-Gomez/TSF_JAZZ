@@ -126,7 +126,8 @@ body.opacityPlaylist .main-music-player .mesh-title {
   /*color: #000;*/
 }
 .main-music-player.active .jplayerButton span {
-  background-color: #848484;
+  /*background-color: #848484;*/
+  background-color: #fff;
 }
 .main-music-player.active .mesh-play i,
 .main-music-player.active .mesh-prev i,

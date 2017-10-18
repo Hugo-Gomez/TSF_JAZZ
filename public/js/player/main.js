@@ -112,7 +112,7 @@ jQuery(document).ready(function() {
         //jQuery('.player-music').show();
 
         buttonPrev.on('click', playerPrev);
-        buttonNext.on('click', playerNext);
+        //buttonNext.on('click', playerNext);
     }
 
     // play click
@@ -131,6 +131,7 @@ jQuery(document).ready(function() {
 
     // forward click
     var playerNext = function (e) {
+        console.log('next');
         e.preventDefault();
         e.stopPropagation();
         stopAudio();
@@ -141,6 +142,9 @@ jQuery(document).ready(function() {
         if (next.length == 0) {
             next = jQuery('.playlist li:first-child');
         }
+        setTimeout(function(){
+            jQuery('.mesh-play').trigger('click');
+        }, 2000);
         initAudio(next);
     }
 
