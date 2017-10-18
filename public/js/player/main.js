@@ -183,9 +183,9 @@ jQuery(document).ready(function() {
             type: "get",
             url: APP_URL + '/ajax-get-live-track',
             success: function(json){
-              data = JSON.parse(json);
-              jQuery('.mesh-title').text(data.title);
-              jQuery('.mesh-artist').text(data.artist);
+              live = JSON.parse(json);
+              jQuery('.mesh-title').text(live.title);
+              jQuery('.mesh-artist').text(live.artist);
             }
           });
     }
@@ -238,8 +238,11 @@ jQuery(document).ready(function() {
         stop: function(event,ui) {}
     });
 
-    jQuery('#playlist-toggle').on('click', playerNext);
+    //jQuery('#playlist-toggle').on('click', playerNext);
 
+
+    if (jQuery('.main-music-player').css('display') === 'none')
+        jQuery('.main-music-player').css('display', 'block');
 
     window.setInterval(function(){
         if (mode == 'live')

@@ -72,7 +72,7 @@ class AjaxController extends Controller
                 if (strlen($month) == 1)
                     $month = '0'.$month;
     
-                $date = new DateTime($day.'-'.$month.'-'.$year);
+                $date = new \DateTime($day.'-'.$month.'-'.$year);
                 $array['date'] = $date->format('Y-m-d');
                 $array['display'] = $array['une'];
                 $array['zipcode'] = $array['zip'];

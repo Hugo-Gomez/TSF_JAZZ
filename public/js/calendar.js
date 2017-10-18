@@ -411,7 +411,7 @@ function showEvents() {
 }
 
 
-organizer.setOnClickListener('day-slider', function () { showEvents(); console.log("Day back slider clicked"); }, function () { showEvents(); console.log("Day next slider clicked"); });
-organizer.setOnClickListener('days-blocks', function () { showEvents(); console.log("Day block clicked"); }, null);
-organizer.setOnClickListener('month-slider', function () { showEvents(); console.log("Month back slider clicked"); }, function () { showEvents(); console.log("Month next slider clicked"); });
-organizer.setOnClickListener('year-slider', function () { showEvents(); console.log("Year back slider clicked"); }, function () { showEvents(); console.log("Year next slider clicked"); });
+organizer.setOnClickListener('day-slider', function () { showEvents(); /*console.log("Day back slider clicked");*/ }, function () { showEvents(); /*console.log("Day next slider clicked");*/ });
+organizer.setOnClickListener('days-blocks', function () { showEvents(); /*console.log("Day block clicked");*/ }, null);
+organizer.setOnClickListener('month-slider', function () { showEvents(); /*console.log("Month back slider clicked");*/ }, function () { showEvents(); /*console.log("Month next slider clicked");*/ });
+organizer.setOnClickListener('year-slider', function () { showEvents(); /*console.log("Year back slider clicked");*/ }, function () { showEvents(); /*console.log("Year next slider clicked");*/ });

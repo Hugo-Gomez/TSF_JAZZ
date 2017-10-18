@@ -39,7 +39,7 @@ button {
   padding-left: 15px;
   padding-right: 15px;
 }
-.row {
+.main-music-player .container .row {
   margin-left: -15px;
   margin-right: -15px;
 }
@@ -84,6 +84,7 @@ body.opacityPlaylist .main-music-player .mesh-title {
   color: #999;
 }
 .main-music-player {
+  display: none;
   left: 0;
   bottom: 0;
   width: 100%;

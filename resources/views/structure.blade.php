@@ -17,13 +17,12 @@
       <link href="../public/css/default-ver=4.1.css" type="text/css" rel="stylesheet">
       <link href="../public/css/nivo-lightbox-ver=4.1.css" type="text/css" rel="stylesheet">
     -->
-
-    <script type="text/javascript" src="../public/js/player/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="../public/js/jquery-1.7.2.min.js"></script>
     <script type='text/javascript' src='../public/js/jquery-migrate.min-ver=1.2.1.js'></script>
     <script type='text/javascript' src='../public/js/nivo-lightbox.min-ver=4.1.js'></script>
     <script type='text/javascript' src='../public/js/front-ver=4.1.js'></script>
     <script type='text/javascript' src='../public/js/jquery.flexslider.min.js'></script>
-    <script type="text/javascript" src="../public/js/player/jquery-ui-1.8.21.custom.min.js"></script>
+    <script type="text/javascript" src="../public/js/jquery-ui-1.8.21.custom.min.js"></script>
     <script type="text/javascript" src="../public/js/player/main.js"></script>
     <!--[if lt IE 9]>
       <script src="wp-content/themes/hueman/js/ie/html5.js"></script>
