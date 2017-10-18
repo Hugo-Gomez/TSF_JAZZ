@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : db
--- Généré le :  mar. 17 oct. 2017 à 10:08
+-- Généré le :  mer. 18 oct. 2017 à 10:34
 -- Version du serveur :  10.2.8-MariaDB-10.2.8+maria~jessie
 -- Version de PHP :  7.0.21
 
@@ -464,6 +464,27 @@ INSERT INTO `blog` (`id`, `thumbnail`, `author`, `description`, `link`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Structure de la table `contacts`
+--
+
+CREATE TABLE `contacts` (
+  `id` int(11) NOT NULL,
+  `name` varchar(30) NOT NULL,
+  `email` varchar(30) NOT NULL,
+  `subject` varchar(60) NOT NULL,
+  `message` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `contacts`
+--
+
+INSERT INTO `contacts` (`id`, `name`, `email`, `subject`, `message`) VALUES
+(1, 'yum', 'sum@yum.co', 'hello', 'hello');
+
+-- --------------------------------------------------------
+
+--
 -- Structure de la table `news`
 --
 
@@ -489,6 +510,26 @@ INSERT INTO `news` (`id`, `date`, `title`, `description`) VALUES
 (8, '2017-09-22', 'Une soirée éclectique au Vésinet', 'Le Théâtre du Vésinet, dans les Yvelines, proposera une grande soirée le vendredi 6 octobre pour fêter les 20 ans du Jazz Club de la Boucle, situé dans la même ville. Au programme, une partie de Boogie-Woogie enflammée avec notamment un maître du genre, Jean-Paul Amouroux, un hommage à Django Reinhardt avec Claude Tissendier et un orchestre New Orleans, le Mem\'Ory septet.'),
 (9, '2017-09-22', 'Le nouveau projet d\'Olivier Bogé', 'Après deux albums qui ne sont pas passés inaperçus, \"The World Begins Today et Expanded Places, le multi-instrumentiste Olivier Bogé s\'est lancé dans un nouveau projet en partenariat avec le label participatif français Jazz & People. Dans When Ghosts Were Young, son nouvel opus pour lequel un appel aux dons vient d\'être lancé sur la plateforme KissKissBankBank, Olivier Bogé a surtout travaillé la guitare électrique même si l\'on entendra aussi au saxophone et au piano, avec toujours le désir de dissiper des frontières qui riment parfois trop souvent avec œillères entre jazz, folk, rock et musique classique.'),
 (10, '2017-09-21', 'Mavis Staples repart au combat', 'Monument vivant du chant soul/gospel et Rhythm & Blues de Chicago, Mavis Staples vient d\'annoncer pour le 17 novembre la sortie d\'un nouvel album, \"If All I Was Was Black\". A 78 ans passés, et alors qu\'elle avait illuminé de sa présence la dernière édition du Cahors Blues Festival, la chanteuse promet un disque fortement engagé... Peut-être dans la lignée de ce qu\'a fait récemment Mightmy Mo Rodgers en baptisant un morceau \"Charlottesville Blues\" après les événements de Charlottesville à la mi-août aux Etats-Unis.');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `newsletter`
+--
+
+CREATE TABLE `newsletter` (
+  `id` int(11) NOT NULL,
+  `lastname` varchar(30) NOT NULL,
+  `name` varchar(30) NOT NULL,
+  `email` varchar(30) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `newsletter`
+--
+
+INSERT INTO `newsletter` (`id`, `lastname`, `name`, `email`) VALUES
+(1, 'sum', 'yum', 'sum@yum.co');
 
 -- --------------------------------------------------------
 
@@ -722,9 +763,21 @@ ALTER TABLE `blog`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Index pour la table `contacts`
+--
+ALTER TABLE `contacts`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Index pour la table `news`
 --
 ALTER TABLE `news`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Index pour la table `newsletter`
+--
+ALTER TABLE `newsletter`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -775,10 +828,22 @@ ALTER TABLE `blog`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
+-- AUTO_INCREMENT pour la table `contacts`
+--
+ALTER TABLE `contacts`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT pour la table `news`
 --
 ALTER TABLE `news`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+
+--
+-- AUTO_INCREMENT pour la table `newsletter`
+--
+ALTER TABLE `newsletter`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT pour la table `podcast`
