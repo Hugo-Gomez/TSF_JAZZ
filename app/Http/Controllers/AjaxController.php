@@ -84,5 +84,17 @@ class AjaxController extends Controller
             }
         }
         return "done";
-    }
+	}
+	
+	public static function getLiveTrack() {
+		$html = file_get_contents('http://www.tsfjazz.com/web_service/live.php');
+		$xml = simplexml_load_string($html, null, LIBXML_NOCDATA);
+		$live = $xml->Live->LiveTitle;
+		$results = array(
+			'artist' => (string)$live->artist,
+			'title'  => (string)$live->title
+		);
+
+		return json_encode($results);
+	}
 }

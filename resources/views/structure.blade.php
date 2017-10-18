@@ -305,19 +305,9 @@
           <div class="container-inner">
             <div class="pad group">
             <ul class="playlist hidden">
-		<li audiourl="http://www.tsfjazz.com/podcasts/59rda_2017-01-22.mp3" cover="../public/img/podcast/TSF_59RDA.jpg" artist="Artist 1">Rockabye (feat. Sean Paul & Anne-Marie)</li>
-		<li audiourl="data/02.mp3" cover="cover2.jpg" artist="Artist 2">02.mp3</li>
-		<li audiourl="data/03.mp3" cover="cover3.jpg" artist="Artist 3">03.mp3</li>
-		<li audiourl="data/04.mp3" cover="cover4.jpg" artist="Artist 4">04.mp3</li>
-		<li audiourl="data/05.mp3" cover="cover5.jpg" artist="Artist 5">05.mp3</li>
-		<li audiourl="http://tsfjazz.ice.infomaniak.ch/tsfjazz-high.mp3" cover="cover6.jpg" artist="Artist 6">06.mp3</li>
-		<li audiourl="http://www.tsfjazz.com/podcasts/59rda_2017-01-22.mp3" cover="cover7.jpg" artist="Artist 7">07.mp3</li>
+		<li audiourl="http://tsfjazz.ice.infomaniak.ch/tsfjazz-high.mp3" cover="../public/img/podcast/TSF_JL.jpg" artist=""></li>
 	</ul>
             <div class="main-music-player active">
-		<a class="hide-player-button">
-			<i class="fa fa-plus"></i>
-			<i class="fa fa-minus"></i>
-		</a>
 		<div id="mesh-main-player" class="jp-jplayer" style="width: 0px; height: 0px;" ><img id="jp_poster_0" style="width: 0px; height: 0px; display: none;"></div>
 		<div id="mesh-main-player-content" class="mesh-main-player">
 			<div class="container">
@@ -383,6 +373,9 @@
       <!--[if lt IE 9]>
     <script src="wp-content/themes/hueman/js/ie/respond.js"></script>
     <![endif]-->
+    <script type="text/javascript">
+      var APP_URL = {!! json_encode(url('/')) !!}
+    </script>
     @yield('javascript')
 
   </body>

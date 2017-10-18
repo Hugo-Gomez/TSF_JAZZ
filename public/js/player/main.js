@@ -32,7 +32,7 @@ jQuery(document).ready(function() {
 
         jQuery('.mesh-title').text(title);
         jQuery('.mesh-artist').text(artist);
-        jQuery('.mesh-thumbnail img').attr('src','data/' + cover);;
+        jQuery('.mesh-thumbnail img').attr('src',cover);;
 
         song = new Audio(url);
   
@@ -97,6 +97,7 @@ jQuery(document).ready(function() {
     function setLiveMode() {
         mode = 'live';
         jQuery('#mesh-main-player-content').addClass('live');
+        getLiveTrack();
         //jQuery('.player-live').show();
         //jQuery('.player-music').hide();
 
@@ -177,6 +178,18 @@ jQuery(document).ready(function() {
         return duration + seconds;
     }
 
+    function getLiveTrack(){
+        $.ajax({
+            type: "get",
+            url: APP_URL + '/ajax-get-live-track',
+            success: function(json){
+              data = JSON.parse(json);
+              jQuery('.mesh-title').text(data.title);
+              jQuery('.mesh-artist').text(data.artist);
+            }
+          });
+    }
+
     buttonNext.on('click',  playerNext);
     buttonPrev.on('click',  playerPrev);
     buttonPlay.on('click',  playerPlay);
@@ -226,4 +239,11 @@ jQuery(document).ready(function() {
     });
 
     jQuery('#playlist-toggle').on('click', playerNext);
+
+
+    window.setInterval(function(){
+        if (mode == 'live')
+            getLiveTrack();
+    }, 150000);
+
 });

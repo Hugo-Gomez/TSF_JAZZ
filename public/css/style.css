@@ -711,7 +711,7 @@ box-shadow: 0 1px 1px rgba(0,0,0,0.1); }
 #footer-widgets{ padding-top: 20px;}
 
 #footer-bottom {
-	margin-bottom: 65px;
+	margin-bottom: 4.6rem;
 }
 #footer-bottom,#footer-music-player  { background: #33363b; }
 #footer-bottom .pad,#footer-music-player .pad { padding-top: 30px; }
@@ -732,7 +732,7 @@ box-shadow: inset 0 1px 0 rgba(0,0,0,0.05); }
 #footer-bottom .social-links .social-tooltip { font-size: 28px; }
 
 #footer-music-player {
-	height: 65px;
+	height: 4.6rem;
 	position: fixed;
 	bottom: 0px;
 	width: 100%;

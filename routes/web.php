@@ -47,8 +47,9 @@ Route::get('searchResult', 'StructureController@search');
 
 
 /* EXPERIMENTAL AJAX ROUTES */
-Route::get('ajax-get-events',   "AjaxController@getAgendaEvents");
-Route::get('ajax-fetch-events', "AjaxController@fetchEvents");
+Route::get('ajax-get-events',     "AjaxController@getAgendaEvents");
+Route::get('ajax-fetch-events',   "AjaxController@fetchEvents");
+Route::get('ajax-get-live-track', "AjaxController@getLiveTrack");
 
 
 /* Routes admin */
