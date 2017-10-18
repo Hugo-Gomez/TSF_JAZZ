@@ -12,11 +12,11 @@
 
 <!-- Agenda section -->
 
-<h1 style="text-transform: uppercase;">Agenda</h1>
+<h1 class="searchtitle" style="text-transform: uppercase;">Agenda</h1>
 <br>
 <div class="separator mini"></div>
 <br>
-<ul>
+<ul class="searchresult">
 	@if ($queryAgenda->isNotEmpty())
 		@foreach ($queryAgenda as $querys)
 			<li>• <a href="{{ url('/jazzenda') }}">{{ $querys->title }}</a></li>
@@ -34,11 +34,11 @@
 <!-- Blog section -->
 
 <br>
-<h1 style="text-transform: uppercase;">Blog</h1>
+<h1 class="searchtitle" style="text-transform: uppercase;">Blog</h1>
 <br>
 <div class="separator mini"></div>
 <br>
-<ul>
+<ul class="searchresult">
 	@if ($queryBlog->isNotEmpty())
 		@foreach ($queryBlog as $querys)
 			<li>• <a href="{{ $querys->link }}" target="_blank">{{ $querys->author }}</a><span> {{ $querys->description }}</span></li>
@@ -55,11 +55,11 @@
 <!-- News section -->
 
 <br>
-<h1 style="text-transform: uppercase;">News</h1>
+<h1 class="searchtitle" style="text-transform: uppercase;">News</h1>
 <br>
 <div class="separator mini"></div>
 <br>
-<ul>
+<ul class="searchresult">
 	@if ($queryNews->isNotEmpty())
 		@foreach ($queryNews as $querys)
 			<li>• <a href="{{ url('/news'.$querys->id) }}">{{ $querys->title }}</a><span> ({{ date('d/m/Y', strtotime($querys->date)) }})</span></li>
@@ -76,14 +76,14 @@
 <!-- Podcast section -->
 
 <br>
-<h1 style="text-transform: uppercase;">Podcast</h1>
+<h1 class="searchtitle" style="text-transform: uppercase;">Podcast</h1>
 <br>
 <div class="separator mini"></div>
 <br>
-<ul>
+<ul class="searchresult">
 	@if ($queryPodcast_item->isNotEmpty())
 		@foreach ($queryPodcast_item as $querys)
-			<li>• <a href="{{ url('/podcast'.$querys->id_podcast) }}">{{ $querys->title }}</a><span> <span class="red">par</span> {{ $querys->author }}</span> (Podcast du : {{ date('d/m/Y', strtotime($querys->date)) }})</li>
+			<li >• <a href="{{ url('/podcast'.$querys->id_podcast) }}">{{ $querys->title }}</a><span> <span class="red">par</span> {{ $querys->author }}</span> (Podcast du : {{ date('d/m/Y', strtotime($querys->date)) }})</li>
 		@endforeach
 	@else
 		<h1 style="text-align: center;">Pas de résultat dans cette catégorie</h1>
@@ -97,11 +97,11 @@
 <!-- Program section -->
 
 <br>
-<h1 style="text-transform: uppercase;">Program</h1>
+<h1 class="searchtitle" style="text-transform: uppercase;">Program</h1>
 <br>
 <div class="separator mini"></div>
 <br>
-<ul>
+<ul class="searchresult">
 	@if ($queryProgram_item->isNotEmpty())
 		@foreach ($queryProgram_item as $querys)
 			<li>• <a href="{{ url('/program'.$querys->id_program) }}">{{ $querys->title }}</a><span> <span class="red">//</span> {{ $querys->subtitle }}</span></li>

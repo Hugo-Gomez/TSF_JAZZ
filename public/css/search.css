@@ -1,4 +1,4 @@
-* {
+.searchtitle {
 	text-align: left;
 }
 
@@ -8,4 +8,8 @@
 
 .separator.mini {
 	width: 20%;
+}
+
+.searchresult {
+	text-align: left;
 }
