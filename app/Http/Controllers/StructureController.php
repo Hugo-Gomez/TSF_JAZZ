@@ -139,6 +139,13 @@ class StructureController extends Controller
     	return view('membership', compact('news', 'podcasts', 'podcast_items'));
 	}
 
+  function legalnotices() {
+      $news = DB::table('news')->get();
+      $podcasts = DB::table('podcast')->get();
+      $podcast_items = DB::table('podcast_item')->get();
+      return view('legalnotices', compact('news', 'podcasts', 'podcast_items'));
+}
+
     function search() {
         $news = DB::table('news')->get();
         $podcasts = DB::table('podcast')->get();

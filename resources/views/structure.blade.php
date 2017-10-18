@@ -83,6 +83,9 @@
                   <li class="menu-item">
                     <a class="specialraphmenu" href="{{ url('/membership') }}">Newsletter</a>
                   </li>
+                  <li class="menu-item">
+                    <a class="specialraphmenu" href="{{ url('/legalnotices') }}">Mentions légales</a>
+                  </li>
                 </ul>
               </li>
             </ul>
@@ -271,6 +274,7 @@
                     <li><a class="specialraph" href="{{ url('/about') }}">À propos</a></li>
                     <li><a class="specialraph" href="{{ url('/contact') }}">Nous écrire</span></a></li>
                     <li><a class="specialraph" href="{{ url('/membership') }}">Newsletter</a></li>
+                    <li><a class="specialraph" href="{{ url('/legalnotices') }}">Mentions légales</a></li>
                   </ul>
                 </div>
               </div>
