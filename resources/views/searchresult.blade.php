@@ -20,7 +20,7 @@
 	@if ($queryAgenda->isNotEmpty())
 		@foreach ($queryAgenda as $querys)
 			<li>• <a href="{{ url('/jazzenda') }}">{{ $querys->title }}</a></li>
-			<p style="margin-left: 5%;"><span class="red">Artiste : </span>{{ $querys->artist }} <span class="red">à</span> {{ date('d/m/Y', strtotime($querys->date)) }} <span class="red">au</span> {{ $querys->address }} {{ $querys->town }} {{ $querys->zipcode }}. <span class="red">Tél</span> : {{ $querys->telephone }}</p>
+			<p style="margin-left: 5%;"><span class="red">Artiste : </span>{{ $querys->artist }} <span class="red">le</span> {{ date('d/m/Y', strtotime($querys->date)) }} <span class="red">au</span> {{ $querys->address }} {{ $querys->town }} {{ $querys->zipcode }}. <span class="red">Tél</span> : {{ $querys->telephone }}</p>
 		@endforeach
 	@else
 		<h1 style="text-align: center;">Pas de résultat dans cette catégorie</h1>
