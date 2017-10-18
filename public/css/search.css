@@ -1,5 +1,6 @@
 .searchtitle {
 	text-align: left;
+	color: #731818;
 }
 
 .red {
@@ -12,4 +13,10 @@
 
 .searchresult {
 	text-align: left;
+}
+
+
+.searchlink:hover {
+	text-decoration: none !important;
+	color: #731818 !important;
 }

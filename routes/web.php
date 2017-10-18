@@ -47,6 +47,8 @@ Route::post('/membership', 'StructureController@storeMembership');
 
 Route::get('searchResult', 'StructureController@search');
 
+Route::get('legalnotices', 'StructureController@legalnotices');
+
 
 /* EXPERIMENTAL AJAX ROUTES */
 Route::get('ajax-get-events',   "AjaxController@getAgendaEvents");
