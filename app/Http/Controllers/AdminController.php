@@ -46,6 +46,17 @@ class AdminController extends Controller
         $this->agendaInputs['zipcode'] = Input::get('zipcode');
         $this->agendaInputs['telephone'] = Input::get('telephone');
 
+/*  Treasure variables */
+        $this->treasureInputs['last_name'] = Input::get('last_nameTreasure');
+        $this->treasureInputs['first_name'] = Input::get('first_nameTreasure');
+        $this->treasureInputs['age'] = Input::get('ageTreasure');
+        $this->treasureInputs['email'] = Input::get('emailTreasure');
+        $this->treasureInputs['telephone'] = Input::get('telephoneTreasure');
+        $this->treasureInputs['track_title'] = Input::get('track_titleTreasure');
+        $this->treasureInputs['artist_name'] = Input::get('artist_nameTreasure');
+        $this->treasureInputs['year'] = Input::get('yearTreasure');
+        $this->treasureInputs['label'] = Input::get('labelTreasure');
+        $this->treasureInputs['track_description'] = Input::get('track_descriptionTreasure');
     }
 
     /*  News section */
@@ -301,4 +312,56 @@ class AdminController extends Controller
         $data_contacts = \DB::table('contacts')->orderBy('id', 'DESC')->get()->all();
         return view('contacts/contact', compact('data_contacts'));
     }
+
+        /*  Treasure section */
+    public function homeTreasure()
+    {
+
+        $data_treasures = \DB::table('auditors_treasure')->orderBy('id', 'DESC')->get()->all();
+        return view('treasure/treasureHome', compact('data_treasures'));
+    }
+
+    public function storeTreasure(Request $request){
+
+        if(Input::hasFile('file_treasure')) {
+            //$imagePath = $request->file('img_treasure')->store('public/img/treasure');
+            $file_content = $request->file('file_treasure');
+            $filePath = Storage::disk('public')->put('treasure', $file_content);            
+            $this->treasureInputs['file'] = $filePath;
+        }
+        \DB::table('auditors_treasure')->insert($this->treasureInputs);
+
+        return redirect('/treasure/admin');
+    }
+
+    public function destroyTreasure($id){
+
+         $data_treasures = \DB::table('auditors_treasure')->where('id', '=', $id);
+
+         if (!is_null($data_treasures)) {
+            $data_treasures->delete();
+        }
+
+
+         return redirect('/treasure/admin');
+
+    }
+
+    public function showTreasure($id){
+
+         $treasure = \DB::table('auditors_treasure')->find($id);
+         return view('treasure/updatetreasure', compact('treasure'));
+
+    }
+
+    public function updateTreasure(Request $request, $id){
+
+        \DB::table('auditors_treasure')
+                ->where('id', '=', $id)
+                ->update($this->treasureInputs);
+
+
+        return redirect('/treasure/admin');
+    }
+
 }
