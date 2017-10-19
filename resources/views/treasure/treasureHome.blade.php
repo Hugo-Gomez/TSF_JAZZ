@@ -3,20 +3,20 @@
 @section('content')
 
 <div class="container">
-  <p><a href="{{ url('admin') }}" > Dashboard </a></p>
-  <h2>Agenda Table</h2>
+  <p><a href="{{ url('admin') }}" >Retourner au Dashboard</a></p>
+  <h2>Trésor des auditeurs</h2>
   <div class="table-responsive">
   <table class="table table-bordered">
     <thead>
       <tr class="info">
         <th>Nom</th>
         <th>Prénom</th>
-        <th>L'âge</th>
+        <th>Âge</th>
         <th>Email</th>
         <th>Téléphone</th>
         <th>Titre de la piste</th>
-        <th>Nom d'artiste</th>
-        <th>L'année</th>
+        <th>Nom de l'artiste</th>
+        <th>Année</th>
         <th>Label</th>
         <th>Description de la piste</th>
         <th>File</th>
@@ -39,7 +39,7 @@
         <th> {{ $data_treasure->file }} </th>  
         <th class="danger">
             <a href="{{ url('treasure/delete/'.$data_treasure->id) }}" class="btn btn-danger">
-                <span class="glyphicon glyphicon-trash" aria-hidden="true">
+                <span aria-hidden="true">
                     Effacer
                 </span>
             </a>
@@ -67,7 +67,7 @@
     </div>
 
     <div class="form-group">
-      <label>L'âge </label>
+      <label>Âge </label>
       <input type="number" name="ageTreasure" class="form-control" required="required">
     </div>
 
@@ -87,12 +87,12 @@
     </div>
 
     <div class="form-group">
-      <label>Nom d'artiste</label>
+      <label>Artiste</label>
       <input type="text" name="artist_nameTreasure" class="form-control" required="required">
     </div>
 
     <div class="form-group">
-      <label>L'année </label>
+      <label>Année </label>
       <input type="number" name="yearTreasure" class="form-control" required="required">
     </div>
 
@@ -112,7 +112,7 @@
     </div> 
 
     <div class="form-group">
-      <button type="submit" class="btn btn-primary">S'ajouter</button>
+      <button type="submit" class="btn btn-primary">Ajouter</button>
     </div>
 
   </form> 

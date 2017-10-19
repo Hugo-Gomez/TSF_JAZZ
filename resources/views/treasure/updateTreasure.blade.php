@@ -21,7 +21,7 @@
     </div>
 
     <div class="form-group">
-      <label>L'âge </label>
+      <label>Âge </label>
       <input type="number" name="ageTreasure" class="form-control" value="{{ $treasure->age }}" required="required">
     </div>
 
@@ -41,12 +41,12 @@
     </div>
 
     <div class="form-group">
-      <label>Nom d'artiste</label>
+      <label>Artiste</label>
       <input type="text" name="artist_nameTreasure" class="form-control" value="{{ $treasure->artist_name }}" required="required">
     </div>
 
     <div class="form-group">
-      <label>L'année </label>
+      <label>Année </label>
       <input type="number" name="yearTreasure" class="form-control" value="{{ $treasure->year }}" required="required">
     </div>
 
