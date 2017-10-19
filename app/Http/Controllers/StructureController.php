@@ -25,6 +25,20 @@ class StructureController extends Controller
       $this->contactInputs['email'] = Input::get('mailcontact');
       $this->contactInputs['subject'] = Input::get('subjectcontact');
       $this->contactInputs['message'] = Input::get('messagecontact');
+
+      /*  audtrevar */
+      $this->audtreInputs['last_name'] = Input::get('name');
+      $this->audtreInputs['first_name'] = Input::get('firstname');
+      $this->audtreInputs['age'] = Input::get('age');
+      $this->audtreInputs['email'] = Input::get('mail');
+      $this->audtreInputs['telephone'] = Input::get('telephone');
+      $this->audtreInputs['track_description'] = Input::get('track_description');
+      $this->audtreInputs['track_title'] = Input::get('track_title');
+      $this->audtreInputs['album'] = Input::get('album');
+      $this->audtreInputs['artist_name'] = Input::get('artist_name');
+      $this->audtreInputs['year'] = Input::get('year');
+      $this->audtreInputs['label'] = Input::get('label');
+      $this->audtreInputs['file'] = Input::get('file');
     }
 
     function welcome() {
@@ -203,5 +217,11 @@ class StructureController extends Controller
         \DB::table('contacts')->insert($this->contactInputs);
 
         return redirect('/confirmcontact');
+    }
+    public function storeAudtre(Request $request){
+
+        \DB::table('auditors_treasure')->insert($this->audtreInputs);
+
+        return redirect('/confirmaudtre');
     }
 }
