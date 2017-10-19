@@ -111,5 +111,14 @@ Route::post('/agenda/admin/{agenda}','AdminController@updateAgenda');
 Route::get('/contact/admin', 'AdminController@homeContact');
 Route::get('/newsletter/admin', 'AdminController@homeNewsletter');
 
+/* Treasure */
+
+Route::get('/treasure/admin', 'AdminController@homeTreasure');
+Route::post('/treasure/admin', 'AdminController@storeTreasure');
+Route::get('/treasure/delete/{treasure}','AdminController@destroyTreasure');
+Route::get('/treasure/admin/{treasure}', 'AdminController@showTreasure');
+Route::post('/treasure/admin/{treasure}','AdminController@updateTreasure');
+
+
 
 /* End routes admin */

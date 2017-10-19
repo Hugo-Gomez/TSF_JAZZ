@@ -32,6 +32,8 @@
 
                         <div class="row">
                             <a href="{{ url('contact/admin') }}" ><div class="col-sm-4 col-lg-4 panel well-lg" style="background-color:lavender;">CONTACT</div></a>
+                            <a href="{{ url('treasure/admin') }}" ><div class="col-sm-4 col-lg-4 panel well-lg" style="background-color:lavenderblush;">Auditor treasure</div></a>
+
                         </div>
 
                 </div>
