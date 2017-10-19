@@ -11,13 +11,12 @@
     @endphp
     @foreach ($news as $new)
         @if ($i === 0)
-        <img src="../public/img/news1.png" style="float:right;" alt="">
+        <img src="../public/img/news1.png" class="news1img"  alt="">
             <h6 class="news1title">{{ $new->title }}</h6>
-            <br>
             <p class="news1date">{{ date('d/m/Y', strtotime($new->date)) }}</p>
-            <br>
-
-            <p style="clear:both;"><br>{{ $new->description }}</p>
+            <div class="news1both">
+              </div>
+              <p class="news1desc"><br>{{ $new->description }}</p>
             <br>
             <div class="separator"></div>
             <br>

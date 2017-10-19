@@ -124,3 +124,12 @@ center{
 input {
    position: relative;
 }
+
+.div_tres {
+  text-align: left;
+  color: #731818;
+}
+
+.label_tres {
+  padding-left: 10px;
+}
