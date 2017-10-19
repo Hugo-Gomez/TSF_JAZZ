@@ -30,6 +30,7 @@ Route::get('podcast{podcast_id}', 'StructureController@podcast_item');
 Route::get('jazzblog', 'StructureController@jazzblog');
 
 Route::get('audtre', 'StructureController@audtre');
+Route::get('confirmaudtre', 'StructureController@confirmaudtre');
 
 Route::get('trackhist', 'StructureController@trackhist');
 
@@ -38,11 +39,13 @@ Route::get('media', 'StructureController@media');
 Route::get('about', 'StructureController@about');
 
 Route::get('contact', 'StructureController@contact');
+Route::get('confirmcontact', 'StructureController@confirmcontact');
 Route::post('/contact', 'StructureController@storeContact');
 
 Route::get('frequences', 'StructureController@frequences');
 
 Route::get('membership', 'StructureController@membership');
+Route::get('confirmmembership', 'StructureController@confirmmembership');
 Route::post('/membership', 'StructureController@storeMembership');
 
 Route::get('searchResult', 'StructureController@search');

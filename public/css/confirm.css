@@ -1,0 +1,17 @@
+.confirmlink {
+	color: #777 !important;
+}
+
+.confirmlink:hover {
+	text-decoration: none !important;
+	color: #731818 !important;
+}
+
+.confirmlink a {
+	color: #777 !important;
+}
+
+.confirmlink:hover a {
+	text-decoration: none !important;
+	color: #731818 !important;
+}

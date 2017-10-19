@@ -20,7 +20,7 @@
                 <!-- Form Area -->
                 <div class="contact-form">
                     <!-- Form -->
-                    <form method="POST" action="#">
+                    <form method="POST" action="/server.php/contact">
 
 											{!! csrf_field() !!}
                         <!-- Left Inputs -->

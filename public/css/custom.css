@@ -223,4 +223,40 @@ h3 .specialraph {
 		    font-size: larger;
 				text-align: center;
 	}
+
+	.news1desc {
+				font-size: larger;
+	}
+}
+
+@media only screen and (min-width: 1300px) {
+	.news1img {
+		float:right;
+	}
+	.news1title {
+				padding-top: 100px;
+		    font-size: xx-large;
+				text-align: center;
+				padding-bottom: 20px;
+	}
+	.news1both {
+		clear:both;
+	}
+	.news1date {
+		    font-size: larger;
+				text-align: center;
+	}
+
+	.news1desc {
+				font-size: larger;
+	}
+}
+
+@media only screen and (max-width: 1299px) {
+	.news1title {
+				padding-top: 10px;
+		    font-size: xx-large;
+				padding-bottom: 20px;
+	}
+
 }

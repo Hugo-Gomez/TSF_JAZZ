@@ -16,24 +16,42 @@
                 <!-- Form Area -->
                 <div class="contact-form">
                     <!-- Form -->
-                    <form id="contact-us" method="post" action="#">
+                    <form method="POST" action="#">
                         <!-- Left Inputs -->
                         <div class="col-xs-6 wow animated slideInLeft" data-wow-delay=".5s">
                             <!-- Name -->
-                            <input type="text" name="name" id="name" required="required" class="form" placeholder="Nom" />
+                            <input type="text" name="name" required="required" class="form" placeholder="Nom" />
                             <!-- Prénom -->
-                            <input type="text" name="firstname" id="firstname" required="required" class="form" placeholder="Prénom" />
+                            <input type="text" name="firstname" required="required" class="form" placeholder="Prénom" />
+														<!-- Age -->
+                            <input type="text" name="age" class="form" placeholder="Age" />
                             <!-- Email -->
-                            <input type="email" name="mail" id="mail" required="required" class="form" placeholder="Email" />
+                            <input type="email" name="mail" required="required" class="form" placeholder="Email" />
+														<!-- Numéro de téléphone -->
+                            <input type="number" name="telephone" class="form" placeholder="Numéro de téléphone" />
+														<!-- Track description -->
+														<textarea name="track_description" class="form textarea"  placeholder="Description du morceau"></textarea>
                         </div><!-- End Left Inputs -->
                         <!-- Right Inputs -->
                         <div class="col-xs-6 wow animated slideInRight" data-wow-delay=".5s">
                             <!-- Titre du morceau -->
-                            <input type="text" name="title" id="title" required="required" class="form" placeholder="Titre du morceau" />
+                            <input type="text" name="track_title" required="required" class="form" placeholder="Titre du morceau" />
+														<!-- Album -->
+                            <input type="text" name="record" class="form" placeholder="Nom de l'album" />
                             <!-- Artiste -->
-                            <input type="text" name="artiste" id="artiste" required="required" class="form" placeholder="Artiste" />
-                            <!-- Album -->
-                            <input type="text" name="album" id="album" class="form" placeholder="Album" />
+                            <input type="text" name="artiste_name" required="required" class="form" placeholder="Artiste" />
+                            <!-- Année -->
+														<div class="div_tres">
+															<label class="label_tres">L'année </label>
+	                            <input type="date" name="year" class="form" placeholder="Année" />
+														</div>
+														<!-- Label -->
+                            <input type="text" name="label" class="form" placeholder="Label" />
+														<!-- Fichier MP3 -->
+														<div class="div_tres">
+															<label class="label_tres">Fichier MP3 : </label>
+	                            <input type="file" name="file" class="form" placeholder="Fichier MP3" />
+														</div>
                         </div><!-- End Right Inputs -->
                         <!-- Bottom Submit -->
                         <div class="relative fullwidth col-xs-12">
