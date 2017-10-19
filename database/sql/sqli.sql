@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : db
--- Généré le :  mer. 18 oct. 2017 à 15:27
+-- Généré le :  jeu. 19 oct. 2017 à 12:40
 -- Version du serveur :  10.2.8-MariaDB-10.2.8+maria~jessie
 -- Version de PHP :  7.0.21
 
@@ -427,14 +427,14 @@ CREATE TABLE `auditors_treasure` (
   `first_name` varchar(25) NOT NULL,
   `age` int(11) NOT NULL,
   `email` varchar(25) NOT NULL,
-  `zipcode` int(5) NOT NULL,
-  `telephone` varchar(20) NOT NULL,
+  `zip_code` int(5) NOT NULL,
+  `telephone` varchar(20) DEFAULT NULL,
   `track_title` varchar(25) NOT NULL,
   `album` varchar(25) DEFAULT NULL,
   `artist_name` varchar(25) NOT NULL,
   `year` year(4) NOT NULL,
   `label` varchar(25) DEFAULT NULL,
-  `track_description` text DEFAULT NULL,
+  `track_description` text NOT NULL,
   `file` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -828,7 +828,7 @@ ALTER TABLE `agenda`
 -- AUTO_INCREMENT pour la table `auditors_treasure`
 --
 ALTER TABLE `auditors_treasure`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT pour la table `blog`

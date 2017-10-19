@@ -31,6 +31,7 @@ Route::get('jazzblog', 'StructureController@jazzblog');
 
 Route::get('audtre', 'StructureController@audtre');
 Route::get('confirmaudtre', 'StructureController@confirmaudtre');
+Route::post('/audtre', 'StructureController@storeAudtre');
 
 Route::get('trackhist', 'StructureController@trackhist');
 
