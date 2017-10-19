@@ -23,7 +23,7 @@
 <div class="separator mini"></div>
 <br>
 <p class="searchresult">
-  Auteurs : Manuel Marchand, Hugo Gomez, Suliman, Raphaël Renout<br />
+  Auteurs : Manuel Marchand, Hugo Gomez, Suliman Abdul Gadeir, Raphaël Renout<br />
   Date : Septembre / Octobre 2017<br />
   Formation : Licence Professionnelle spécialité Développeur Web<br />
 
