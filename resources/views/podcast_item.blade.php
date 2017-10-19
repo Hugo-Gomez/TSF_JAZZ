@@ -25,7 +25,7 @@
 
     <div class="separator"></div>
 
-    <ul class="playlist hidden">
+    <ul class="playlist-podcast hidden">
     @foreach ($podcast_items_hugo as $podcast_item)
         <li data-podcast="{{ $podcast_item->id }}"audiourl="http://www.tsfjazz.com/{{ $podcast_item->file }}" cover="../public/img/{{ $podcasts_hugo->thumbnail }}" artist="{{ $podcast_item->author }}">{{ $podcast_item->title }}</li>
     @endforeach

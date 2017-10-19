@@ -178,6 +178,13 @@
                     </ul>
                   </div>
 
+                  <div id="alxposts-1" class="widget widget_alx_posts">
+                    <div class="live-widget">Live
+                      <i class="fa fa-play"></i>
+                      <i class="fa fa-pause hidden"></i>
+                    </div>
+                  </div>
+
                   <div id="alxposts-2" class="widget widget_alx_posts">
                     <img src="../public/img/cote.png" alt="">
                   </div>
@@ -306,56 +313,56 @@
         <section class="container" id="footer-music-player">
           <div class="container-inner">
             <div class="pad group">
-            <!--<ul class="playlist hidden">
-		<li audiourl="http://tsfjazz.ice.infomaniak.ch/tsfjazz-high.mp3" cover="../public/img/podcast/TSF_JL.jpg" artist=""></li>
-	</ul>-->
-            <div class="main-music-player active">
-		<div id="mesh-main-player" class="jp-jplayer" style="width: 0px; height: 0px;" ><img id="jp_poster_0" style="width: 0px; height: 0px; display: none;"></div>
-		<div id="mesh-main-player-content" class="mesh-main-player">
-			<div class="container">
-				<div class="row">
-					<div class="left-player-side">
-						<div class="mesh-prev">
-							<i class="fa fa-step-backward"></i>
-						</div>
-						<div class="mesh-play visible">
-							<i class="fa fa-play"></i>
-						</div>
-						<div class="mesh-pause hidden">
-							<i class="fa fa-pause"></i>
-						</div>
-						<div class="mesh-next">
-							<i class="fa fa-step-forward"></i>
-						</div>
-						<button id="playlist-toggle" class="jplayerButton">
-							<span class="span-1"></span>
-							<span class="span-2"></span>
-							<span class="span-3"></span>
-						</button>
-					</div>
-					<div class="center-side player-live">
-						<div class="mesh-live-dot">•</div>
-						<div class="mesh-live-text"> Live</div>
-					</div>
-					<div class="center-side player-music">
-						<div class="mesh-current-time"></div>
-						<div class="mesh-seek-bar" style="width: 0%;">
-							<div class="mesh-play-bar" style="width: 0%;">
-							</div>
-						</div>
-						<div class="mesh-duration"></div>
-					</div>
-					<div class="right-player-side">
-						<div class="mesh-thumbnail">
-							<img src="" alt="">
-						</div>
-						<div class="mesh-title"></div>
-						<div class="mesh-artist"></div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+              <ul class="playlist-live hidden">
+                <li audiourl="http://tsfjazz.ice.infomaniak.ch/tsfjazz-high.mp3" cover="../public/img/podcast/TSF_JL.jpg" artist=""></li>
+              </ul>
+              <div class="main-music-player active">
+                <div id="mesh-main-player" class="jp-jplayer" style="width: 0px; height: 0px;" ><img id="jp_poster_0" style="width: 0px; height: 0px; display: none;"></div>
+                <div id="mesh-main-player-content" class="mesh-main-player">
+                  <div class="container">
+                    <div class="row">
+                      <div class="left-player-side">
+                        <div class="mesh-prev">
+                          <i class="fa fa-step-backward"></i>
+                        </div>
+                        <div class="mesh-play visible">
+                          <i class="fa fa-play"></i>
+                        </div>
+                        <div class="mesh-pause hidden">
+                          <i class="fa fa-pause"></i>
+                        </div>
+                        <div class="mesh-next">
+                          <i class="fa fa-step-forward"></i>
+                        </div>
+                        <button id="playlist-toggle" class="jplayerButton">
+                          <span class="span-1"></span>
+                          <span class="span-2"></span>
+                          <span class="span-3"></span>
+                        </button>
+                      </div>
+                      <div class="center-side player-live">
+                        <div class="mesh-live-dot">•</div>
+                        <div class="mesh-live-text"> Live</div>
+                      </div>
+                      <div class="center-side player-music">
+                        <div class="mesh-current-time"></div>
+                        <div class="mesh-seek-bar" style="width: 0%;">
+                          <div class="mesh-play-bar" style="width: 0%;">
+                          </div>
+                        </div>
+                        <div class="mesh-duration"></div>
+                      </div>
+                      <div class="right-player-side">
+                        <div class="mesh-thumbnail">
+                          <img src="" alt="">
+                        </div>
+                        <div class="mesh-title"></div>
+                        <div class="mesh-artist"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>

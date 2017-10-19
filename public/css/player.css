@@ -559,6 +559,10 @@ body.opacityPlaylist .main-music-player .mesh-title {
   cursor: pointer;
 }
 
+.live-widget .fa {
+  cursor: pointer;
+}
+
 /*
 .mesh-next .live, .mesh-next .live {
   color: #c7c7c7 !important;
