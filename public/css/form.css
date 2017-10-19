@@ -1,3 +1,7 @@
+.toggle-search{
+  height: 100% !important;
+}
+
 #contact{
    padding:10px 0 10px;
  }
@@ -63,6 +67,11 @@
    max-width: 100%;
  }
 
+.textarea_tres{
+  height: 162px;
+  max-height: 162px;
+  max-width: 100%;
+}
 /* Generic Button Styles */
 
  .button{

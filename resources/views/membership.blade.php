@@ -3,8 +3,8 @@
 @section('stylesheet')
 	<meta name="csrf-token" content="{{ csrf_token() }}">
 
-	<link rel="stylesheet" type="text/css" href="../public/css/form.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../public/css/form.css">
 @endsection
 
 @section('titre')

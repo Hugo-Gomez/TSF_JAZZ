@@ -3,8 +3,8 @@
 @section('stylesheet')
 	<meta name="csrf-token" content="{{ csrf_token() }}">
 
-	<link rel="stylesheet" type="text/css" href="../public/css/formtres.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../public/css/form.css">
 @endsection
 
 @section('titre')
@@ -12,7 +12,7 @@
 @endsection
 
 @section('contenu')
-  <p>Vous souhaitez écouter un morceau en particulier ou partager votre dernière trouvaille ? N'hésitez pas à nous transmettre vos coups de coeur. </p>
+  <p>Vous souhaitez nous partager votre dernière production ? C'est par ici :</p>
   <br />
 <div class="inner contact">
                 <!-- Form Area -->
@@ -29,13 +29,13 @@
                             <!-- Prénom -->
                             <input type="text" name="firstname" required="required" class="form" placeholder="Prénom" />
 														<!-- Age -->
-                            <input type="number" name="age" required="required" class="form" placeholder="Age" />
+                            <input type="number" name="age" required="required" maxlength="3" class="form" placeholder="Age" />
                             <!-- Email -->
                             <input type="email" name="mail" required="required" class="form" placeholder="Email" />
 														<!-- Numéro de téléphone -->
                             <input type="number" name="telephone" class="form" placeholder="Numéro de téléphone" />
 														<!-- Code postal -->
-                            <input type="number" name="zip_code" class="form" placeholder="Code postal" />
+                            <input type="number" name="zip_code" class="form" maxlength="5" placeholder="Code postal" />
 														<!-- Fichier MP3 -->
 														<div class="div_tres">
 															<label class="label_tres">Fichier MP3 : </label>
@@ -50,13 +50,13 @@
 														<!-- Album -->
                             <input type="text" name="album" class="form" placeholder="Nom de l'album" />
                             <!-- Artiste -->
-                            <input type="text" name="artist_name" required="required" class="form" placeholder="Artiste" />
+                            <input type="text" name="artist_name" required="required" class="form" placeholder="Artiste / Groupe" />
                             <!-- Année -->
-	                            <input type="number" name="year" required="required" class="form" placeholder="Année" />
+	                            <input type="number" name="year" maxlength="4" required="required" class="form" placeholder="Année" />
 														<!-- Label -->
                             <input type="text" name="label" class="form" placeholder="Label" />
 														<!-- Track description -->
-														<textarea name="track_description" required="required" class="form textarea"  placeholder="Décrivez en quelques mots..."></textarea>
+														<textarea name="track_description" required="required" class="form textarea_tres"  placeholder="Décrivez en quelques mots..."></textarea>
                         </div><!-- End Right Inputs -->
                         <!-- Bottom Submit -->
                         <div class="relative fullwidth col-xs-12">
@@ -66,14 +66,6 @@
                         <!-- Clear -->
                         <div class="clear"></div>
                     </form>
-
-                    <!-- Your Mail Message -->
-                    <div class="mail-message-area">
-                        <!-- Message -->
-                        <div class="alert gray-bg mail-message not-visible-message">
-                            <strong>Merci !</strong> Votre message a bien été transmis.
-                        </div>
-                    </div>
 
                 </div><!-- End Contact Form Area -->
             </div><!-- End Inner -->
