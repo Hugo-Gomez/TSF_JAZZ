@@ -27,7 +27,7 @@
                         <div class="row">
                             <a href="{{ url('podcast/admin') }}" ><div class="col-sm-4 col-lg-4 panel well-lg" style="background-color:lavenderblush;">PODCAST</div></a>
                             <a href="{{ url('program/admin') }}" ><div class="col-sm-4 col-lg-4 panel well-lg" style="background-color:lavender;">PROGRAMME</div></a>
-                            <a href="{{ url('agenda/admin') }}" ><div class="col-sm-4 col-lg-4 panel well-lg" style="background-color:lavenderblush;">Agenda</div></a>
+                            <a href="{{ url('agenda/admin') }}" ><div class="col-sm-4 col-lg-4 panel well-lg" style="background-color:lavenderblush;">AGENDA</div></a>
                         </div>
 
                         <div class="row">

@@ -3,14 +3,14 @@
 @section('content')
 
 <div class="container">
-  <p><a href="{{ url('admin') }}" > Dashboard </a></p>
-  <h2>Podcast Table</h2>
+  <p><a href="{{ url('admin') }}" >Retourner au Dashboard</a></p>
+  <h2>Podcasts</h2>
   <table class="table table-bordered">
     <thead>
       <tr class="info">
-        <th>Le titre</th>
-        <th>La description</th>
-        <th>La photo</th>
+        <th>Titre</th>
+        <th>Description</th>
+        <th>Photo</th>
         <th>Effacer</th>
       </tr>
     </thead>
@@ -22,7 +22,7 @@
         <th><img src="<?php echo asset("../public/img/$data_podcast->thumbnail")?>" alt="{{ $data_podcast->title }}" height="50" width="50"></th>
         <th class="danger">
             <a href="{{ url('podcast/delete/'.$data_podcast->id) }}" class="btn btn-danger">
-                <span class="glyphicon glyphicon-trash" aria-hidden="true">
+                <span aria-hidden="true">
                     Effacer
                 </span>
             </a>
@@ -32,19 +32,19 @@
     </tbody>
   </table>
 
-  <h3>Ajouter un nouveau </h3>
+  <h3>Ajouter un nouveau podcast</h3>
 
   <form method="POST" action="/server.php/podcast/admin" enctype="multipart/form-data">
 
   {!! csrf_field() !!}
 
     <div class="form-group">
-      <label>Le titre </label>
+      <label>Titre </label>
       <input type="text" name="titlePodcast" class="form-control" required="required">
     </div>
 
     <div class="form-group">
-      <label>La description</label>
+      <label>Description</label>
       <textarea name="descriptionPodcast" class="form-control" required="required"></textarea>
     </div>
 
@@ -54,7 +54,7 @@
     </div>
 
     <div class="form-group">
-      <button type="submit" class="btn btn-primary">S'ajouter</button>
+      <button type="submit" class="btn btn-primary">Ajouter</button>
     </div>
 
   </form> 

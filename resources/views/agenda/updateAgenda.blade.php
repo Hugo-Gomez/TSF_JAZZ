@@ -3,25 +3,25 @@
 @section('content')
 
 <div class="container">
-<p><a href="{{ url('agenda/admin') }}" > Return Back </a></p>
-<h3>Update The Agenda </h3>
+<p><a href="{{ url('agenda/admin') }}" >Retour</a></p>
+<h3>Mettre à jour l'évènement</h3>
 
   <form method="POST" action="/server.php/agenda/admin/{{ $agenda->id }}">
 
   {!! csrf_field() !!}
 
     <div class="form-group">
-      <label>Le titre </label>
+      <label>Titre </label>
       <input type="text" name="title" class="form-control" value="{{ $agenda->title }}" required="required">
     </div>
 
     <div class="form-group">
-      <label>le temps </label>
+      <label>Heure </label>
       <input type="text" name="time" class="form-control" value="{{ $agenda->time }}" required="required">
     </div>
 
     <div class="form-group">
-      <label>l'artiste </label>
+      <label>Artiste </label>
       <input type="text" name="artist" class="form-control" value="{{ $agenda->artist }}" required="required">
     </div>
 
@@ -36,12 +36,12 @@
     </div>
 
     <div class="form-group">
-      <label>L'adresse </label>
+      <label>Adresse </label>
       <input type="text" name="address" class="form-control" value="{{ $agenda->address }}" required="required">
     </div>
 
     <div class="form-group">
-      <label>La ville </label>
+      <label>Ville </label>
       <input type="text" name="town" class="form-control" value="{{ $agenda->town }}" required="required">
     </div>
 

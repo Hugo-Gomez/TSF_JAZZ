@@ -3,20 +3,20 @@
 @section('content')
 
 <div class="container">
-  <p><a href="{{ url('admin') }}" > Dashboard </a></p>
-  <h2>Agenda Table</h2>
+  <p><a href="{{ url('admin') }}" >Retourner au Dashboard</a></p>
+  <h2>Agenda</h2>
   <div class="table-responsive">
   <table class="table table-bordered">
     <thead>
       <tr class="info">
-        <th>Le titre</th>
-        <th>Le date</th>
-        <th>le temps</th>
-        <th>l'artiste</th>
+        <th>Titre</th>
+        <th>Date</th>
+        <th>Heure</th>
+        <th>Artiste</th>
         <th>Info</th>
         <th>Club</th>
-        <th>L'adresse</th>
-        <th>La ville</th>
+        <th>Adresse</th>
+        <th>Ville</th>
         <th>Code postal</th>
         <th>Téléphone</th>
         <th>Effacer</th>
@@ -37,7 +37,7 @@
         <th> {{ $data_agenda->telephone }} </th>   
         <th class="danger">
             <a href="{{ url('agenda/delete/'.$data_agenda->id) }}" class="btn btn-danger">
-                <span class="glyphicon glyphicon-trash" aria-hidden="true">
+                <span aria-hidden="true">
                     Effacer
                 </span>
             </a>
@@ -48,24 +48,24 @@
   </table>
   </div>
 
-  <h3>Ajouter un nouveau </h3>
+  <h3>Ajouter un évènement</h3>
 
   <form method="POST" action="/server.php/agenda/admin" enctype="multipart/form-data">
 
   {!! csrf_field() !!}
 
     <div class="form-group">
-      <label>Le titre </label>
+      <label>Titre </label>
       <input type="text" name="title" class="form-control" required="required">
     </div>
 
     <div class="form-group">
-      <label>le temps </label>
+      <label>Heure</label>
       <input type="text" name="time" class="form-control" required="required">
     </div>
 
     <div class="form-group">
-      <label>l'artiste </label>
+      <label>Artiste </label>
       <input type="text" name="artist" class="form-control" required="required">
     </div>
 
@@ -80,12 +80,12 @@
     </div>
 
     <div class="form-group">
-      <label>L'adresse </label>
+      <label>Adresse </label>
       <input type="text" name="address" class="form-control" required="required">
     </div>
 
     <div class="form-group">
-      <label>La ville </label>
+      <label>Ville </label>
       <input type="text" name="town" class="form-control" required="required">
     </div>
 
@@ -106,7 +106,7 @@
     </div> -->
 
     <div class="form-group">
-      <button type="submit" class="btn btn-primary">S'ajouter</button>
+      <button type="submit" class="btn btn-primary">Ajouter</button>
     </div>
 
   </form> 

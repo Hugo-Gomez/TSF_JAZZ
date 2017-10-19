@@ -3,15 +3,15 @@
 @section('content')
 
 <div class="container">
-  <p><a href="{{ url('admin') }}" > Dashboard </a></p>
-  <h2>Blog Table</h2>
+  <p><a href="{{ url('admin') }}" >Retourner au Dashboard</a></p>
+  <h2>Blogs</h2>
   <table class="table table-bordered">
     <thead>
       <tr class="info">
-        <th>L'auteur</th>
-        <th>La description</th>
-        <th>La lien</th>
-        <th>Le photo</th>
+        <th>Auteur</th>
+        <th>Description</th>
+        <th>Lien</th>
+        <th>Photo</th>
         <th>Effacer</th>
       </tr>
     </thead>
@@ -24,7 +24,7 @@
         <th><img  src="<?php echo asset("../public/img/$data_blog->thumbnail")?>" alt="{{ $data_blog->author }}" height="50" width="50"></th>
         <th class="danger">
             <a href="{{ url('blog/delete/'.$data_blog->id) }}" class="btn btn-danger">
-                <span class="glyphicon glyphicon-trash" aria-hidden="true">
+                <span aria-hidden="true">
                     Effacer
                 </span>
             </a>
@@ -41,17 +41,17 @@
   {!! csrf_field() !!}
 
     <div class="form-group">
-      <label>L'auteur </label>
+      <label>Auteur </label>
       <input type="text" name="authorBlog" class="form-control" required="required">
     </div>
 
     <div class="form-group">
-      <label>Le lien</label>
+      <label>Lien</label>
       <input type="text" name="linkBlog" class="form-control" required="required">
     </div>
 
     <div class="form-group">
-      <label>La description</label>
+      <label>Description</label>
       <textarea name="descriptionBlog" class="form-control" required="required"></textarea>
     </div>
 
@@ -62,7 +62,7 @@
     </div>
 
     <div class="form-group">
-      <button type="submit" class="btn btn-primary">S'ajouter</button>
+      <button type="submit" class="btn btn-primary">Ajouter</button>
     </div>
 
   </form> 

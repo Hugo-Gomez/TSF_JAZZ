@@ -3,20 +3,20 @@
 @section('content')
 
 <div class="container">
-<p><a href="{{ url('home') }}" > Return Back </a></p>
-<h3>Mettre à jour le News </h3>
+<p><a href="{{ url('home') }}" > Retour </a></p>
+<h3>Mettre à jour la News "{{ $news->title }}"</h3>
 
   <form method="POST" action="/server.php/admin/{{ $news->id }}">
 
   {!! csrf_field() !!}
 
     <div class="form-group">
-      <label>Le titre </label>
+      <label>Titre </label>
       <input type="text" name="titleNews" class="form-control" value="{{ $news->title }}">
     </div>
 
     <div class="form-group">
-      <label>La description</label>
+      <label>Description</label>
       <textarea name="descriptionNews" class="form-control"><?php echo $news->description; ?></textarea>
     </div>
 
