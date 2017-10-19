@@ -321,19 +321,6 @@ class AdminController extends Controller
         return view('treasure/treasureHome', compact('data_treasures'));
     }
 
-    public function storeTreasure(Request $request){
-
-        if(Input::hasFile('file_treasure')) {
-            //$imagePath = $request->file('img_treasure')->store('public/img/treasure');
-            $file_content = $request->file('file_treasure');
-            $filePath = Storage::disk('public')->put('treasure', $file_content);            
-            $this->treasureInputs['file'] = $filePath;
-        }
-        \DB::table('auditors_treasure')->insert($this->treasureInputs);
-
-        return redirect('/treasure/admin');
-    }
-
     public function destroyTreasure($id){
 
          $data_treasures = \DB::table('auditors_treasure')->where('id', '=', $id);
@@ -352,16 +339,6 @@ class AdminController extends Controller
          $treasure = \DB::table('auditors_treasure')->find($id);
          return view('treasure/updatetreasure', compact('treasure'));
 
-    }
-
-    public function updateTreasure(Request $request, $id){
-
-        \DB::table('auditors_treasure')
-                ->where('id', '=', $id)
-                ->update($this->treasureInputs);
-
-
-        return redirect('/treasure/admin');
     }
 
 }
