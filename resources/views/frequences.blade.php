@@ -22,8 +22,22 @@
             var map = new google.maps.Map(document.getElementById('map'), {
               // taille du zoom plus le point de centre quand la carte apparait (environ centre de la France actuellement)
               zoom: 6,
-              center: centre
+              center: centre,
+              mapTypeId: 'roadmap'
             });
+
+            var iconBase = '../public/img/markergeotest2.png';
+            var icons = {
+              parking: {
+                icon: iconBase + 'parking_lot_maps.png'
+              },
+              library: {
+                icon: iconBase + 'library_maps.png'
+              },
+              info: {
+                icon: iconBase + 'music_maps.png'
+              }
+            };
 
             //variable pour éviter de copier/coller tout le longt texte à chaque fois
             var infowindow = new google.maps.InfoWindow();
@@ -36,6 +50,7 @@
             var markeramiens = new google.maps.Marker({
               position: amiens,
               map: map,
+              icon: iconBase,
               title: 'Amiens : 99.8 MHz'
             });
 
@@ -52,6 +67,7 @@
             var markerbourg = new google.maps.Marker({
               position: bourg,
               map: map,
+              icon: iconBase,
               title: 'Bourg-en-Bresse : 98.5 MHz'
             });
 
@@ -67,6 +83,7 @@
             var markerchambery = new google.maps.Marker({
               position: chambery,
               map: map,
+              icon: iconBase,
               title: 'Chambéry : 91.4 MHz'
             });
 
@@ -82,6 +99,7 @@
             var markercotedazur = new google.maps.Marker({
               position: cotedazur,
               map: map,
+              icon: iconBase,
               title: 'Côtes d\'Azur : 98.1 MHz'
             });
 
@@ -97,6 +115,7 @@
             var markerlaval = new google.maps.Marker({
               position: laval,
               map: map,
+              icon: iconBase,
               title: 'Laval : 97.7 MHz'
             });
 
@@ -112,6 +131,7 @@
             var markernevers = new google.maps.Marker({
               position: nevers,
               map: map,
+              icon: iconBase,
               title: 'Nevers : 90.2 MHz'
             });
 
@@ -127,6 +147,7 @@
             var markerorleans = new google.maps.Marker({
               position: orleans,
               map: map,
+              icon: iconBase,
               title: 'Orléans : 106.7 MHz'
             });
 
@@ -142,6 +163,7 @@
             var markerparis = new google.maps.Marker({
               position: paris,
               map: map,
+              icon: iconBase,
               title: 'Paris : 89.9 MHz'
             });
 
@@ -157,6 +179,7 @@
             var markerpoitiers = new google.maps.Marker({
               position: poitiers,
               map: map,
+              icon: iconBase,
               title: 'Poitiers : 96.6 MHz'
             });
 
@@ -172,6 +195,7 @@
             var markervalence = new google.maps.Marker({
               position: valence,
               map: map,
+              icon: iconBase,
               title: 'Valence : 89.5 MHz'
             });
 

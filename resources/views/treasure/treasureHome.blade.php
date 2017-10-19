@@ -11,15 +11,16 @@
       <tr class="info">
         <th>Nom</th>
         <th>Prénom</th>
-        <th>Âge</th>
+        <th>Age</th>
         <th>Email</th>
+        <th>Code postal</th>
         <th>Téléphone</th>
         <th>Titre de la piste</th>
         <th>Nom de l'artiste</th>
         <th>Année</th>
         <th>Label</th>
         <th>Description de la piste</th>
-        <th>File</th>
+        <th>Fichier MP3</th>
         <th>Effacer</th>
       </tr>
     </thead>
@@ -28,15 +29,16 @@
       <tr>
         <th><a href="{{ url('treasure/admin/'.$data_treasure->id) }}" >  {{ $data_treasure->last_name }} </th>
         <th>{{ $data_treasure->first_name }}</th>
-        <th> {{ $data_treasure->age }} </th> 
-        <th> {{ $data_treasure->email }} </th> 
-        <th> {{ $data_treasure->telephone }} </th> 
+        <th> {{ $data_treasure->age }} </th>
+        <th> {{ $data_treasure->email }} </th>
+        <th> {{ $data_treasure->zip_code }} </th>
+        <th> {{ $data_treasure->telephone }} </th>
         <th> {{ $data_treasure->track_title }} </th>
-        <th> {{ $data_treasure->artist_name }} </th> 
-        <th> {{ $data_treasure->year }} </th> 
+        <th> {{ $data_treasure->artist_name }} </th>
+        <th> {{ $data_treasure->year }} </th>
         <th> {{ $data_treasure->label }} </th>
         <th> {{ $data_treasure->track_description }} </th>
-        <th> {{ $data_treasure->file }} </th>  
+        <th> {{ $data_treasure->file }} </th>
         <th class="danger">
             <a href="{{ url('treasure/delete/'.$data_treasure->id) }}" class="btn btn-danger">
                 <span aria-hidden="true">

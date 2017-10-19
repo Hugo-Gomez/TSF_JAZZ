@@ -31,6 +31,7 @@ class StructureController extends Controller
       $this->audtreInputs['first_name'] = Input::get('firstname');
       $this->audtreInputs['age'] = Input::get('age');
       $this->audtreInputs['email'] = Input::get('mail');
+      $this->audtreInputs['zip_code'] = Input::get('zip_code');
       $this->audtreInputs['telephone'] = Input::get('telephone');
       $this->audtreInputs['track_description'] = Input::get('track_description');
       $this->audtreInputs['track_title'] = Input::get('track_title');

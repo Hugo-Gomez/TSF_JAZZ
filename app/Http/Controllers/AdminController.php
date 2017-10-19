@@ -51,6 +51,7 @@ class AdminController extends Controller
         $this->treasureInputs['first_name'] = Input::get('first_nameTreasure');
         $this->treasureInputs['age'] = Input::get('ageTreasure');
         $this->treasureInputs['email'] = Input::get('emailTreasure');
+        $this->treasureInputs['zip_code'] = Input::get('zip_codeTreasure');
         $this->treasureInputs['telephone'] = Input::get('telephoneTreasure');
         $this->treasureInputs['track_title'] = Input::get('track_titleTreasure');
         $this->treasureInputs['artist_name'] = Input::get('artist_nameTreasure');
@@ -215,7 +216,7 @@ class AdminController extends Controller
         if(Input::hasFile('img_program')) {
             //$imagePath = $request->file('img_program')->store('public/img/program');
             $file_content = $request->file('img_program');
-            $imagePath = Storage::disk('public')->put('blog', $file_content);            
+            $imagePath = Storage::disk('public')->put('blog', $file_content);
             $this->programInputs['thumbnail'] = $imagePath;
         }
         \DB::table('program')->insert($this->programInputs);
