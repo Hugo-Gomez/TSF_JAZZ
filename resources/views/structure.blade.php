@@ -175,6 +175,14 @@
                     </ul>
                   </div>
 
+                  <div id="alxposts-1" class="widget widget_alx_posts">
+                    <div class="live-widget">
+                      <i class="fa fa-play"></i>
+                      <i class="fa fa-pause hidden"></i>
+                      Revenir au Live
+                    </div>
+                  </div>
+
                   <div id="alxposts-2" class="widget widget_alx_posts">
                     <img src="../public/img/cote.png" alt="">
                   </div>
