@@ -8,19 +8,25 @@
     <title>LP JAZZ</title>
 
     @yield('stylesheet')
+    <link href="../public/css/table.css" type="text/css" rel="stylesheet">
+    <link href="../public/css/player.css" type="text/css" rel="stylesheet">
     <link href="../public/css/style.css" type="text/css" rel="stylesheet">
     <link href="../public/css/responsive.css" type="text/css" rel="stylesheet">
     <link href="../public/css/custom.css" type="text/css" rel="stylesheet">
     <link href="../public/fonts/font-awesome.min.css" type="text/css" rel="stylesheet">
+
+ 
     <!-- NO NEED FOR NOW
       <link href="../public/css/default-ver=4.1.css" type="text/css" rel="stylesheet">
       <link href="../public/css/nivo-lightbox-ver=4.1.css" type="text/css" rel="stylesheet">
     -->
-    <script type='text/javascript' src="{!!url('../public/js/jquery-ver=1.11.1.js')!!}"></script>
+    <script type="text/javascript" src="../public/js/jquery-1.7.2.min.js"></script>
     <script type='text/javascript' src='../public/js/jquery-migrate.min-ver=1.2.1.js'></script>
     <script type='text/javascript' src='../public/js/nivo-lightbox.min-ver=4.1.js'></script>
     <script type='text/javascript' src='../public/js/front-ver=4.1.js'></script>
     <script type='text/javascript' src='../public/js/jquery.flexslider.min.js'></script>
+    <script type="text/javascript" src="../public/js/jquery-ui-1.8.21.custom.min.js"></script>
+    <script type="text/javascript" src="../public/js/player/main.js"></script>
     <!--[if lt IE 9]>
       <script src="wp-content/themes/hueman/js/ie/html5.js"></script>
       <script src="wp-content/themes/hueman/js/ie/selectivizr.js"></script>
@@ -312,7 +318,56 @@
         <section class="container" id="footer-music-player">
           <div class="container-inner">
             <div class="pad group">
-              MUSIC PLAYER
+              <ul class="playlist-live hidden">
+                <li audiourl="http://tsfjazz.ice.infomaniak.ch/tsfjazz-high.mp3" cover="../public/img/podcast/TSF_JL.jpg" artist=""></li>
+              </ul>
+              <div class="main-music-player active">
+                <div id="mesh-main-player" class="jp-jplayer" style="width: 0px; height: 0px;" ><img id="jp_poster_0" style="width: 0px; height: 0px; display: none;"></div>
+                <div id="mesh-main-player-content" class="mesh-main-player">
+                  <div class="container">
+                    <div class="row">
+                      <div class="left-player-side">
+                        <div class="mesh-prev">
+                          <i class="fa fa-step-backward"></i>
+                        </div>
+                        <div class="mesh-play visible">
+                          <i class="fa fa-play"></i>
+                        </div>
+                        <div class="mesh-pause hidden">
+                          <i class="fa fa-pause"></i>
+                        </div>
+                        <div class="mesh-next">
+                          <i class="fa fa-step-forward"></i>
+                        </div>
+                        <button id="playlist-toggle" class="jplayerButton">
+                          <span class="span-1"></span>
+                          <span class="span-2"></span>
+                          <span class="span-3"></span>
+                        </button>
+                      </div>
+                      <div class="center-side player-live">
+                        <div class="mesh-live-dot">•</div>
+                        <div class="mesh-live-text"> Live</div>
+                      </div>
+                      <div class="center-side player-music">
+                        <div class="mesh-current-time"></div>
+                        <div class="mesh-seek-bar" style="width: 0%;">
+                          <div class="mesh-play-bar" style="width: 0%;">
+                          </div>
+                        </div>
+                        <div class="mesh-duration"></div>
+                      </div>
+                      <div class="right-player-side">
+                        <div class="mesh-thumbnail">
+                          <img src="" alt="">
+                        </div>
+                        <div class="mesh-title"></div>
+                        <div class="mesh-artist"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -332,6 +387,9 @@
       <!--[if lt IE 9]>
     <script src="wp-content/themes/hueman/js/ie/respond.js"></script>
     <![endif]-->
+    <script type="text/javascript">
+      var APP_URL = {!! json_encode(url('/')) !!}
+    </script>
     @yield('javascript')
 
   </body>

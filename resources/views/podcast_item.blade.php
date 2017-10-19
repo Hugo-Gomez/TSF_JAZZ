@@ -11,26 +11,45 @@
 
 @section('contenu')
 
-    @foreach ($podcasts_hugo as $podcast)
         <div class="row">
             <div class="col m10 offset-m1">
                 <div class="col m3">
-                    <img src="../public/img/{{ $podcast->thumbnail }}"/>
+                    <img src="../public/img/{{ $podcasts_hugo->thumbnail }}"/>
                 </div>
                 <div class="col m9">
-                    <p class="pod-title">{{ $podcast->title }}</p>
-                    <p>{{ $podcast->description }}</p>
+                    <p class="pod-title">{{ $podcasts_hugo->title }}</p>
+                    <p>{{ $podcasts_hugo->description }}</p>
                 </div>
             </div>
         </div>
-    @endforeach
 
     <div class="separator pod"></div>
 
+    <ul class="playlist-podcast hidden">
     @foreach ($podcast_items_hugo as $podcast_item)
-            <div class="pod-thread">
-                 <span class="poditem-date">{{ date('d/m/Y', strtotime($podcast_item->date)) }} : </span><a href="#!"><span class="poditem-title">{{ $podcast_item->title }}</span></a><span> par </span><span class="poditem-author">{{ $podcast_item->author }}</span><span> // Durée : {{ $podcast_item->duration }}</span>
-            </div>
+        <li data-podcast="{{ $podcast_item->id }}"audiourl="http://www.tsfjazz.com/{{ $podcast_item->file }}" cover="../public/img/{{ $podcasts_hugo->thumbnail }}" artist="{{ $podcast_item->author }}">{{ $podcast_item->title }}</li>
     @endforeach
+	</ul>
+    <table class="table">
+        <thead>
+            <tr>
+                <th></th>
+                <th>Titre</th>
+                <th>Auteur</th>
+                <th>Durée</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach ($podcast_items_hugo as $podcast_item)
+                <tr data-podcast="{{ $podcast_item->id }}">
+                    <td class="mesh-podcast-action"><i class="fa fa-play"></i><i class="fa fa-pause hidden"></i></td>
+                    <td>{{ $podcast_item->title }}</td>
+                    <td>{{ $podcast_item->author }}</td>
+                    <td>{{ $podcast_item->duration }}</td>
+                </tr>
+            @endforeach
+        </tbody>
+    </table>
+        
 
 @endsection

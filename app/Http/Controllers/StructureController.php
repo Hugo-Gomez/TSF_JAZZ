@@ -88,12 +88,12 @@ class StructureController extends Controller
 	}
 
     function podcast_item($podcast_id) {
-      $news = DB::table('news')->get();
-      $podcasts = DB::table('podcast')->get();
-      $podcast_items = DB::table('podcast_item')->get();
-      $podcasts_hugo = DB::table('podcast')->get()->where('id', $podcast_id);
-      $podcast_items_hugo = DB::table('podcast_item')->get()->where('id_podcast', $podcast_id);
-      return view('podcast_item', compact('news', 'podcast_items_hugo', 'podcasts_hugo', 'podcasts', 'podcast_items'));
+        $news = DB::table('news')->get();
+        $podcasts = DB::table('podcast')->get();
+        $podcast_items = DB::table('podcast_item')->get();
+        $podcasts_hugo = DB::table('podcast')->where('id', $podcast_id)->first();
+        $podcast_items_hugo = DB::table('podcast_item')->get()->where('id_podcast', $podcast_id);
+        return view('podcast_item', compact('news', 'podcast_items_hugo', 'podcasts_hugo', 'podcasts', 'podcast_items'));
     }
 
 	function jazzblog() {
