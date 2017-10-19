@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div class="container">
+<div class="container" style="width: 1205px;">
   <p><a href="{{ url('admin') }}" >Retourner au Dashboard</a></p>
   <h2>Agenda</h2>
   <div class="table-responsive">
