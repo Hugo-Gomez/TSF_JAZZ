@@ -27,7 +27,7 @@
     <tbody>
   @foreach($data_treasures as $data_treasure)
       <tr>
-        <th><a href="{{ url('treasure/admin/'.$data_treasure->id) }}" >  {{ $data_treasure->last_name }} </th>
+        <th> {{ $data_treasure->last_name }} </th>
         <th>{{ $data_treasure->first_name }}</th>
         <th> {{ $data_treasure->age }} </th>
         <th> {{ $data_treasure->email }} </th>

@@ -3,7 +3,7 @@
 @section('content')
 
 <div class="container">
-  <p><a href="{{ url('admin') }}" > Dashboard </a></p>
+  <p><a href="{{ url('admin') }}" >Retourner au Dashboard </a></p>
   <h2>Contact</h2>
   <table class="table table-bordered">
     <thead>
