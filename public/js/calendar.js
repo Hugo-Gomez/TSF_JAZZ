@@ -5,13 +5,13 @@ function Calendar(id, size, labelSettings, colors) {
   this.labelSettings = labelSettings;
   this.colors = colors;
 
-  months = [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ]
-  label = [ "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday" ];
+  months = [ "Janvier", "Fevrier", "Mars", "Avril", "Mai", "Juin", "Juillet", "Aout", "Septembre", "Octobre", "Novembre", "Decembre" ]
+  label = [ "Dimanche", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi" ];
 
   this.months = months;
 
   this.label = [];
-  this.labels = []; 
+  this.labels = [];
   for (var i = 0; i < 7; i++)
     this.label.push(label[(label.indexOf(labelSettings[0]) + this.label.length >= label.length) ? Math.abs(label.length - (label.indexOf(labelSettings[0]) + this.label.length)) : (label.indexOf(labelSettings[0]) + this.label.length)]);
   for (var i = 0; i < 7; i++)
@@ -49,11 +49,11 @@ Calendar.prototype.draw = function () {
           backSlider.id = this.id + "-year-back";
           backSlider.insertAdjacentHTML('beforeend', backSvg);
           theContainers[i].appendChild(backSlider);
-          
+
           theText = document.createElement("SPAN");
           theText.id = this.id + "-" + theNames[i];
           theContainers[i].appendChild(theText);
-          
+
           nextSlider = document.createElement("DIV");
           nextSlider.id = this.id + "-year-next";
           nextSlider.insertAdjacentHTML('beforeend', nextSvg);
@@ -67,11 +67,11 @@ Calendar.prototype.draw = function () {
         backSlider.id = this.id + "-month-back";
         backSlider.insertAdjacentHTML('beforeend', backSvg);
         theContainers[i].appendChild(backSlider);
-        
+
         theText = document.createElement("SPAN");
         theText.id = this.id + "-" + theNames[i];
         theContainers[i].appendChild(theText);
-        
+
         nextSlider = document.createElement("DIV");
         nextSlider.id = this.id + "-month-next";
         nextSlider.insertAdjacentHTML('beforeend', nextSvg);
@@ -93,7 +93,7 @@ Calendar.prototype.draw = function () {
     theRows[i] = document.createElement("DIV");
     theRows[i].className = "row";
   }
-  
+
   for (var i = 0, j = 0; i < 42; i++) {
     theRadios[i] = document.createElement("INPUT");
     theRadios[i].className = "day-radios";
@@ -110,7 +110,7 @@ Calendar.prototype.draw = function () {
     theText.id = this.id + "-day-num-" + (i + 1);
 
     theDays[i].appendChild(theText);
-  
+
     theRows[j].appendChild(theRadios[i]);
     theRows[j].appendChild(theDays[i]);
 
@@ -122,7 +122,7 @@ Calendar.prototype.draw = function () {
   for (var i = 0; i < 6; i++) {
     theContainers[3].appendChild(theRows[i]);
   }
-  
+
   for (var i = 0; i < theContainers.length; i++) {
     theCalendar.appendChild(theContainers[i]);
   }
@@ -198,8 +198,8 @@ Organizer.prototype = {
       } else
         date.setFullYear(date.getFullYear() - 1);
     }
-    
-    this.calendar.update();  
+
+    this.calendar.update();
     this.update();
   },
   next: function (func) {
@@ -212,7 +212,7 @@ Organizer.prototype = {
         date.setDate(date.getDate() + 1);
       } else {
         this.next('month');
-        date.setDate(1);        
+        date.setDate(1);
       }
     } else {
       if (func == "month") {
@@ -228,7 +228,7 @@ Organizer.prototype = {
       } else
         date.setFullYear(date.getFullYear() + 1);
     }
-    
+
     this.calendar.update();
     this.update();
   },
@@ -250,7 +250,7 @@ Organizer.prototype = {
 Organizer.prototype.draw = function () {
   backSvg = '<svg style="width: 24px; height: 24px;" viewBox="0 0 24 24"><path fill="' + this.calendar.colors[3] + '" d="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z"></path></svg>';
   nextSvg = '<svg style="width: 24px; height: 24px;" viewBox="0 0 24 24"><path fill="' + this.calendar.colors[3] + '" d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"></path></svg>';
-  
+
   theOrganizer = document.createElement( "DIV");
   theOrganizer.className = "events " + this.calendar.size;
 
@@ -263,11 +263,11 @@ Organizer.prototype.draw = function () {
   backSlider.id = this.id + "-day-back";
   backSlider.insertAdjacentHTML('beforeend', backSvg);
   theDate.appendChild(backSlider);
-  
+
   theText = document.createElement("SPAN");
   theText.id = this.id + "-date";
   theDate.appendChild(theText);
-  
+
   nextSlider = document.createElement("DIV");
   nextSlider.id = this.id + "-day-next";
   nextSlider.insertAdjacentHTML('beforeend', nextSvg);
@@ -281,7 +281,7 @@ Organizer.prototype.draw = function () {
   theList.id = this.id + "-list";
 
   theRows.appendChild(theList);
-  
+
   theOrganizer.appendChild(theDate);
   theOrganizer.appendChild(theRows);
 
@@ -296,7 +296,7 @@ Organizer.prototype.update = function () {
 Organizer.prototype.list = function (data) {
   document.getElementById(this.id + "-list").innerHTML = "";
 
-  content = ""; 
+  content = "";
   for (var i = 0; i < data.length; i++) {
     content += '<li id="' + this.id + '-list-item-' + i + '"><div><span class="' + this.id + ' time" id="' + this.id + '-list-item-' + i + '-time">' + data[i].startTime + data[i].endTime + '</span><span class="' + this.id + ' m" id="' + this.id + '-list-item-' + i + '-m">' + data[i].mTime + '</span></div><p id="' + this.id + '-list-item-' + i + '-text">' + data[i].text + '</p></li>';
   }
@@ -328,7 +328,7 @@ Organizer.prototype.setOnClickListener = function (theCase, backCallback, nextCa
     case "day-slider":
       document.getElementById(organizerId + "-day-back").addEventListener('click', function () {
         theOrganizer.back('day');
-        backCallback();  
+        backCallback();
       });
       document.getElementById(organizerId + "-day-next").addEventListener('click', function () {
         theOrganizer.next('day');
@@ -406,7 +406,7 @@ function showEvents() {
     }
   }
   if (theDay == -1) return;
-  theEvents = data.years[theYear].months[theMonth].days[theDay].events;  
+  theEvents = data.years[theYear].months[theMonth].days[theDay].events;
   organizer.list(theEvents); // what's responsible for listing
 }
 
