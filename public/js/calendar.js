@@ -364,7 +364,7 @@ Organizer.prototype.setOnClickListener = function (theCase, backCallback, nextCa
 
 /* end of library; everything is explained below; i'm sorry for the messy code and my bad practices; please criticise me */
 
-var calendar = new Calendar("calendarContainer", "small", [ "Wednesday", 3 ], [ "#661515", "#731818", "#ffffff", "#f8bbd0" ]);
+var calendar = new Calendar("calendarContainer", "small", [ "Lundi", 4 ], [ "#661515", "#731818", "#ffffff", "#f8bbd0" ]);
 var organizer = new Organizer("organizerContainer", calendar);
 
 currentDay = calendar.date.getDate(); // used this in order to make anyday today depending on the current today

@@ -174,7 +174,7 @@
                         @endphp
 
                         @if ($o === $a)
-                          <li><a class="specialraph" href="#!"><span class="poditem-titlee"><i class="fa fa-play-circle-o"></i> {{ $podcast_items[$i]->title }}</span></a></li>
+                          <li><a class="specialraph" href="{{ url('/podcast'.$podcasts[$o-1]->id) }}"><span class="poditem-titlee"><i class="fa fa-play-circle-o"></i> {{ $podcast_items[$i]->title }}</span></a></li>
                           @php
                             $o=$o+1
                           @endphp
