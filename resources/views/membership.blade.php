@@ -13,7 +13,7 @@
 
 @section('contenu')
 <p>
-  Pour ne rater aucune actualité et recevoir chaque semaine par email des informations sur les émissions et les nouveautés de la radio LP Jazz, n'hésitez pas à vous incrire à notre Newsletter.
+  Pour ne rater aucune actualité et recevoir chaque semaine par email des informations sur les émissions et les nouveautés de la radio LP Jazz, n'hésitez pas à vous inscrire à notre Newsletter.
 </p>
 <br />
 
