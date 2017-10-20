@@ -17,7 +17,7 @@
     <link href="../public/css/custom.css" type="text/css" rel="stylesheet">
     <link href="../public/fonts/font-awesome.min.css" type="text/css" rel="stylesheet">
 
- 
+
     <!-- NO NEED FOR NOW
       <link href="../public/css/default-ver=4.1.css" type="text/css" rel="stylesheet">
       <link href="../public/css/nivo-lightbox-ver=4.1.css" type="text/css" rel="stylesheet">
