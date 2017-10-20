@@ -265,6 +265,7 @@ jQuery(document).ready(function() {
     });
 
     jQuery('.live-widget .fa-play').click(function (){
+        console.log('widget play');
         if (mode != 'live'){
             setLiveMode();
             stopAudio();
@@ -275,6 +276,7 @@ jQuery(document).ready(function() {
 
     jQuery('.live-widget .fa-pause').click(function (){
          jQuery('.mesh-pause').trigger('click');
+         console.log('widget pause');
     });
 
     // initialization - first element in playlist
@@ -315,7 +317,6 @@ jQuery(document).ready(function() {
     });
 
     //jQuery('#playlist-toggle').on('click', playerNext);
-
 
     if (jQuery('.main-music-player').css('display') === 'none')
         jQuery('.main-music-player').css('display', 'block');
