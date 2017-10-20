@@ -340,12 +340,12 @@
                         </div>
                         <div class="mesh-next">
                           <i class="fa fa-step-forward"></i>
-                        </div>
+                        </div><!--
                         <button id="playlist-toggle" class="jplayerButton">
                           <span class="span-1"></span>
                           <span class="span-2"></span>
                           <span class="span-3"></span>
-                        </button>
+                        </button>-->
                       </div>
                       <div class="center-side player-live">
                         <div class="mesh-live-dot">•</div>
