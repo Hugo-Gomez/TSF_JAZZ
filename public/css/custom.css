@@ -189,6 +189,29 @@ nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
     background-position: -126px;
     box-shadow: inset 0px 0px 1px black,0px 0px 10px -1px black;
   }
+/* Responsive map freq */
+	@media only screen and (min-width: 0px) and (max-width: 320px) {
+			#maptsf {
+				margin-left: 35px;
+			}
+		}
+
+		@media only screen and (min-width: 321px) and (max-width: 360px) {
+				#maptsf {
+					margin-left: 55px;
+				}
+			}
+
+@media only screen and (min-width: 361px) and (max-width: 375px) {
+		#maptsf {
+			margin-left: 60px;
+		}
+	}
+	@media only screen and (min-width: 376px) and (max-width: 414px) {
+			#maptsf {
+				margin-left: 80px;
+			}
+		}
 
 .freqtsfdroit
 {
