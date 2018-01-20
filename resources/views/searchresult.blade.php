@@ -97,7 +97,7 @@
 <!-- Program section -->
 
 <br>
-<h1 class="searchtitle" style="text-transform: uppercase;">Program</h1>
+<h1 class="searchtitle" style="text-transform: uppercase;">Programme</h1>
 <br>
 <div class="separator mini"></div>
 <br>
